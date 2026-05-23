@@ -19,12 +19,6 @@ body{
 
 #root{
   width:100%;
-  display:flex;
-  justify-content:center;
-}
-
-.app{
-  width:100%;
 }
 
 .container-custom{
