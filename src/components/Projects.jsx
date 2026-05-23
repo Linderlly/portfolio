@@ -1,4 +1,8 @@
 import quiz from '../assets/images/quiz.png'
+import ecommerce from '../assets/images/ecommerce.png'
+import memorygame from '../assets/images/memorygame.png'
+import gerenciador_alunos from '../assets/images/gerenciador_alunos.png'
+import gerenciador_tarefas from '../assets/images/gerenciador_tarefas.png'
 
 
 const projects = [
@@ -12,6 +16,44 @@ const projects = [
 
     link: 'https://linderlly.github.io/site-educacional/',
   },
+  {
+    title: 'E-Commerce',
+   description:
+      'Site de comércio eletrônico desenvolvido durante o Hackathon do curso de FullStack, utilizando Vue e Typescript, com foco em design moderno e experiência do usuário otimizada.',
+
+    image: ecommerce,
+
+    link: 'https://linderlly.github.io/ecommerce/#/',
+  },
+  {
+    title: 'Jogo da Memória',
+   description:
+      'Jogo interativo de memória desenvolvido para testar meus conhecimentos em JavaScript, HTML e CSS, com design responsivo e funcionalidades de pontuação.',
+
+    image: memorygame,
+
+    link: 'https://linderlly.github.io/memorygame/',
+  },
+  {
+    title: 'Gerenciador de Alunos',
+   description:
+      'Trablho de extensão da faculdade desenvolvido para gerenciar informações de alunos de uma escola, utilizando Javascript, juntamento com o Expo React Native, para criar um aplicativo móvel com funcionalidades de cadastro, consulta e atualização de dados dos alunos.',
+
+    image: gerenciador_alunos,
+
+    link: 'https://github.com/Linderlly/gerenciador-alunos',
+  }
+  ,
+  {
+    title: 'Gerenciador de Tarefas',
+   description:
+      'Aplicativo de gerenciamento de tarefas desenvolvido para organizar e acompanhar atividades diárias, utilizando Dart, Flutter e Firebase para sincronização em tempo real, com funcionalidades de criação, edição e exclusão de tarefas.',
+
+    image: gerenciador_tarefas,
+
+    link: 'https://github.com/Linderlly/gerenciador-tarefas',
+  }
+ 
 
 ]
 

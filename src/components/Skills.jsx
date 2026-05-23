@@ -14,6 +14,10 @@ const skills = [
   'Angular',
   'Python',
   'C#',
+  'Typescript',
+  'Oracle',
+  'Dart',
+  'Flutter',
 ]
 
 export default function Skills() {

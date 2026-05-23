@@ -21,6 +21,7 @@ import python from '../assets/certificates/python.pdf'
 import Seguranca from '../assets/certificates/Seguranca.pdf'
 import SQL from '../assets/certificates/SQL.pdf'
 import trabalhoEQ from '../assets/certificates/trabalhoEQ.pdf'
+import inovatech from '../assets/certificates/inovatech.pdf'
 
 import certificado1Img from '../assets/images/certificado1.png'
 import certificado2Img from '../assets/images/certificado2.png'
@@ -45,6 +46,7 @@ import pythonImg from '../assets/images/python.png'
 import SegurancaImg from '../assets/images/Seguranca.png'
 import SQLImg from '../assets/images/SQL.png'
 import trabalhoEQImg from '../assets/images/trabalhoEQ.png'
+import inovatechImg from '../assets/images/inovatech.png'
 
 import { FaFilePdf, FaExternalLinkAlt } from 'react-icons/fa'
 
@@ -282,6 +284,16 @@ const certificates = [
 
     pdf: trabalhoEQ,
   },
+  {
+    title: 'Inovatech Fametro',
+
+    description:
+      'Participação no Inovatech Fametro Manaus, evento de inovação e tecnologia, com apresentação de projetos e networking',
+
+    image: inovatechImg,
+
+    pdf: inovatech,
+  }
 ]
 
 export default function Certificates() {

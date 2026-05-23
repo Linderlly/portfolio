@@ -1,18 +1,44 @@
-export default function Contact() {
-  return (
-    <section className="py-24 px-6">
+import {
+  FaEnvelope,
+  FaLinkedin,
+  FaGithub,
+} from 'react-icons/fa'
 
-      <div className="container-custom">
+export default function Contact() {
+
+  return (
+
+    <section
+      id="contact"
+      className="
+        w-full
+        py-24
+        px-5
+        flex
+        justify-center
+      "
+    >
+
+      <div
+        className="
+          w-full
+          max-w-6xl
+        "
+      >
 
         <div
           className="
-            bg-slate-900
+            glass
+            rounded-3xl
+            p-8
+            md:p-14
             border
             border-slate-800
-            rounded-3xl
-            p-10
-            md:p-16
             text-center
+            flex
+            flex-col
+            items-center
+            justify-center
           "
         >
 
@@ -29,35 +55,145 @@ export default function Contact() {
 
           <p
             className="
-              text-gray-400
-              text-lg
-              leading-8
+              w-full
               max-w-2xl
-              mx-auto
-              mb-10
+              text-gray-400
+              text-base
+              md:text-xl
+              leading-8
+              text-center
+              mb-12
             "
           >
-            Vamos trabalhar juntos no seu próximo projeto
-            ou oportunidade profissional.
+            Vamos transformar ideias em projetos
+            modernos, profissionais e eficientes.
+
+            Entre em contato para trabalharmos juntos
+            no seu próximo projeto.
           </p>
 
-          <a
-            href="mailto:seuemail@gmail.com"
+          <div
             className="
-              inline-flex
-              items-center
+              w-full
+              flex
+              flex-col
+              lg:flex-row
               justify-center
-              bg-cyan-500
-              hover:bg-cyan-400
-              px-8
-              py-4
-              rounded-2xl
-              font-semibold
-              transition-all
+              items-center
+              gap-5
             "
           >
-            Entrar em Contato
-          </a>
+
+            <a
+              href="mailto:linderllysantana22@gmail.com"
+              className="
+                w-full
+                sm:w-[150px]
+                h-16
+
+                flex
+                items-center
+                justify-center
+                gap-3
+
+                bg-cyan-500
+                hover:bg-cyan-400
+
+                rounded-2xl
+
+                font-semibold
+                text-lg
+
+                transition-all
+                duration-300
+
+                hover:scale-105
+              "
+            >
+
+              <FaEnvelope className="text-xl" />
+
+              <span>
+                Email
+              </span>
+
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/linderlly-santana/"
+              target="_blank"
+              rel="noreferrer"
+              className="
+                w-full
+                sm:w-[150px]
+                h-16
+
+                flex
+                items-center
+                justify-center
+                gap-3
+
+                bg-slate-800
+                hover:bg-slate-700
+
+                rounded-2xl
+
+                font-semibold
+                text-lg
+
+                transition-all
+                duration-300
+
+                hover:scale-105
+              "
+            >
+
+              <FaLinkedin className="text-xl" />
+
+              <span>
+                LinkedIn
+              </span>
+
+            </a>
+
+            <a
+              href="https://github.com/Linderlly"
+              target="_blank"
+              rel="noreferrer"
+              className="
+                w-full
+                sm:w-[150px]
+                h-16
+
+                flex
+                items-center
+                justify-center
+                gap-3
+
+                bg-slate-800
+                hover:bg-slate-700
+
+                rounded-2xl
+
+                font-semibold
+                text-lg
+
+                transition-all
+                duration-300
+
+                hover:scale-105
+              "
+            >
+
+              <FaGithub className="text-xl" />
+
+              <span>
+                GitHub
+              </span>
+
+            </a>
+
+          </div>
 
         </div>
 
