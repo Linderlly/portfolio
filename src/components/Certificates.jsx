@@ -22,6 +22,10 @@ import Seguranca from '../assets/certificates/Seguranca.pdf'
 import SQL from '../assets/certificates/SQL.pdf'
 import trabalhoEQ from '../assets/certificates/trabalhoEQ.pdf'
 
+import certificado1Img from '../assets/images/certificado1.png'
+import certificado2Img from '../assets/images/certificado2.png'
+import certificado3Img from '../assets/images/certificado3.png'
+import certificado4Img from '../assets/images/certificado4.png'
 import angularImg from '../assets/images/angular.png'
 import ionicImg from '../assets/images/ionic.png'
 import cordovaImg from '../assets/images/cordova.png'
@@ -224,9 +228,9 @@ const certificates = [
     description:
       'Manutencão de Dispositivos Móveis, diagnóstico, reparo e manutenção de smartphones e tablets',
 
-    image: manutencaoImg,
+    image: manutencao_moveisImg,
 
-    pdf: manutencao,
+    pdf: manutencao_moveis,
   },
   {
     title: 'Power BI',
@@ -254,9 +258,9 @@ const certificates = [
     description:
       'Segurança na Era Digital, ameaças cibernéticas, proteção de dados e melhores práticas de segurança',
 
-    image: segurancaImg,
+    image: SegurancaImg,
 
-    pdf: seguranca,
+    pdf: Seguranca,
   },
   {
     title: 'Banco de Dados SQL',
