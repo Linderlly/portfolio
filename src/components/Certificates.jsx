@@ -2,11 +2,45 @@ import certificado1 from '../assets/certificates/certificado1.pdf'
 import certificado2 from '../assets/certificates/certificado2.pdf'
 import certificado3 from '../assets/certificates/certificado3.pdf'
 import certificado4 from '../assets/certificates/certificado4.pdf'
+import angular from '../assets/certificates/angular.pdf'
+import ionic from '../assets/certificates/ionic.pdf'
+import cordova from '../assets/certificates/cordova.pdf'
+import C_sharp_basico from '../assets/certificates/C_sharp_basico.pdf'
+import C_sharp_intermediario from '../assets/certificates/C_sharp_intermediario.pdf'
+import C_sharp_av1 from '../assets/certificates/C_sharp_av1.pdf'
+import C_sharp_av2 from '../assets/certificates/C_sharp_av2.pdf'
+import Excel from '../assets/certificates/excel.pdf'
+import Excel_Av1 from '../assets/certificates/Excel_Av1.pdf'
+import Excel_Av2 from '../assets/certificates/Excel_Av2.pdf'
+import games from '../assets/certificates/games.pdf'
+import IA from '../assets/certificates/IA.pdf'
+import logica from '../assets/certificates/logica.pdf'
+import manutencao_moveis from '../assets/certificates/manutencao_moveis.pdf'
+import PowerBI from '../assets/certificates/PowerBI.pdf'
+import python from '../assets/certificates/python.pdf'
+import Seguranca from '../assets/certificates/Seguranca.pdf'
+import SQL from '../assets/certificates/SQL.pdf'
+import trabalhoEQ from '../assets/certificates/trabalhoEQ.pdf'
 
-import certificado1Img from '../assets/images/certificado1.png'
-import certificado2Img from '../assets/images/certificado2.png'
-import certificado3Img from '../assets/images/certificado3.png'
-import certificado4Img from '../assets/images/certificado4.png'
+import angularImg from '../assets/images/angular.png'
+import ionicImg from '../assets/images/ionic.png'
+import cordovaImg from '../assets/images/cordova.png'
+import C_sharp_basicoImg from '../assets/images/C_sharp_basico.png'
+import C_sharp_intermediarioImg from '../assets/images/C_sharp_intermediario.png'
+import C_sharp_av1Img from '../assets/images/C_sharp_av1.png'
+import C_sharp_av2Img from '../assets/images/C_sharp_av2.png'
+import ExcelImg from '../assets/images/excel.png'
+import Excel_Av1Img from '../assets/images/Excel_Av1.png'
+import Excel_Av2Img from '../assets/images/Excel_Av2.png'
+import gamesImg from '../assets/images/games.png'
+import IAImg from '../assets/images/IA.png'
+import logicaImg from '../assets/images/logica.png'
+import manutencao_moveisImg from '../assets/images/manutencao_moveis.png'
+import PowerBIImg from '../assets/images/PowerBI.png'
+import pythonImg from '../assets/images/python.png'
+import SegurancaImg from '../assets/images/Seguranca.png'
+import SQLImg from '../assets/images/SQL.png'
+import trabalhoEQImg from '../assets/images/trabalhoEQ.png'
 
 import { FaFilePdf, FaExternalLinkAlt } from 'react-icons/fa'
 
@@ -53,6 +87,196 @@ const certificates = [
     image: certificado4Img,
 
     pdf: certificado4,
+  },
+  {
+    title: 'C# básico',
+
+    description:
+      'C-Sharp básico, tipos de dados, estruturas de controle, funções e arrays',
+
+    image: C_sharp_basicoImg,
+
+    pdf: C_sharp_basico,
+  },
+  {
+    title: 'C# Intermediário',
+
+    description:
+      'C-Sharp intermediário, orientação a objetos, bancos de dados e desenvolvimento de aplicações',
+
+    image: C_sharp_intermediarioImg,
+
+    pdf: C_sharp_intermediario,
+  },
+  {
+    title: 'C# Avançado I',
+
+    description:
+      'C-Sharp avançado, programação funcional, design patterns e arquitetura de software',
+
+    image: C_sharp_av1Img,
+
+    pdf: C_sharp_av1,
+  },
+  {
+    title: 'C# Avançado II',
+
+    description:
+      'C-Sharp avançado II, desenvolvimento de aplicações web e integração com serviços',
+
+    image: C_sharp_av2Img,
+
+    pdf: C_sharp_av2,
+  },
+  {
+    title: 'Angular',
+
+    description:
+      'Angular, TypeScript e desenvolvimento de aplicações web',
+
+    image: angularImg,
+
+    pdf: angular,
+  },
+  {
+    title: 'Ionic',
+
+    description:
+      'Ionic, TypeScript e desenvolvimento de aplicações móveis',
+
+    image: ionicImg,
+
+    pdf: ionic,
+  },
+  {
+    title: 'Cordova',
+
+    description:
+      'Cordova, TypeScript e desenvolvimento de aplicações móveis',
+
+    image: cordovaImg,
+
+    pdf: cordova,
+  },
+  {
+    title: 'Excel',
+
+    description:
+      'Excel, fórmulas, funções e análise de dados',
+
+    image: ExcelImg,
+
+    pdf: Excel,
+  },
+  {
+    title: 'Excel Avançado I',
+
+    description:
+      'Excel avançado, tabelas dinâmicas, gráficos e análise de dados avançada',
+
+    image: Excel_Av1Img,
+
+    pdf: Excel_Av1,
+  },
+  {
+    title: 'Excel Avançado II',
+
+    description:
+      'Excel avançado II, análise de dados e automação com VBA',
+
+    image: Excel_Av2Img,
+
+    pdf: Excel_Av2,
+  },
+  {
+    title: 'Desenvolvimento de Games',
+
+    description:
+      'Desenvolvimento de Games 2D com Construct 3',
+
+    image: gamesImg,
+
+    pdf: games,
+  },
+  {
+    title: 'Inteligência Artificial',
+
+    description:
+      'Inteligencia Artificial, prompts, criação de imagens e vídeos com IA',
+
+    image: IAImg,
+
+    pdf: IA,
+  },
+  {
+    title: 'Lógica de Programação',
+
+    description:
+      'Lógica de Programação, algoritmos, estruturas de dados e resolução de problemas',
+
+    image: logicaImg,
+
+    pdf: logica,
+  },
+  {
+    title: 'Manutenção de Dispositivos Móveis',
+
+    description:
+      'Manutencão de Dispositivos Móveis, diagnóstico, reparo e manutenção de smartphones e tablets',
+
+    image: manutencaoImg,
+
+    pdf: manutencao,
+  },
+  {
+    title: 'Power BI',
+
+    description:
+      'Power BI, análise de dados, visualização e criação de dashboards',
+
+    image: PowerBIImg,
+
+    pdf: PowerBI,
+  },
+  {
+    title: 'Python',
+
+    description:
+      'Python, programação básica, bibliotecas e desenvolvimento de aplicações',
+
+    image: pythonImg,
+
+    pdf: python,
+  },
+  {
+    title: 'Segurança na Era Digital',
+
+    description:
+      'Segurança na Era Digital, ameaças cibernéticas, proteção de dados e melhores práticas de segurança',
+
+    image: segurancaImg,
+
+    pdf: seguranca,
+  },
+  {
+    title: 'Banco de Dados SQL',
+
+    description:
+      'Banco de Dados SQL, modelagem de dados, consultas e administração de bancos de dados',
+
+    image: SQLImg,
+
+    pdf: SQL,
+  },
+  {
+    title: 'Trabalho em Equipe',
+
+    description:
+      'Trabalho em Equipe, comunicação, colaboração e gestão de conflitos',
+
+    image: trabalhoEQImg,
+
+    pdf: trabalhoEQ,
   },
 ]
 
