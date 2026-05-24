@@ -21,369 +21,180 @@ Error generating stack: `+e.message+`
           border-cyan-400\r
           border-t-transparent\r
           rounded-full\r
-        `})})}var du={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},fu=S.createContext&&S.createContext(du),pu=[`attr`,`size`,`title`];function mu(e,t){if(e==null)return{};var n,r,i=hu(e,t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(e);for(r=0;r<a.length;r++)n=a[r],t.indexOf(n)===-1&&{}.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function hu(e,t){if(e==null)return{};var n={};for(var r in e)if({}.hasOwnProperty.call(e,r)){if(t.indexOf(r)!==-1)continue;n[r]=e[r]}return n}function gu(){return gu=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)({}).hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},gu.apply(null,arguments)}function _u(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function vu(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?_u(Object(n),!0).forEach(function(t){yu(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):_u(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function yu(e,t,n){return(t=bu(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function bu(e){var t=xu(e,`string`);return typeof t==`symbol`?t:t+``}function xu(e,t){if(typeof e!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t||`default`);if(typeof r!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function Su(e){return e&&e.map((e,t)=>S.createElement(e.tag,vu({key:t},e.attr),Su(e.child)))}function Cu(e){return t=>S.createElement(wu,gu({attr:vu({},e.attr)},t),Su(e.child))}function wu(e){var t=t=>{var{attr:n,size:r,title:i}=e,a=mu(e,pu),o=r||t.size||`1em`,s;return t.className&&(s=t.className),e.className&&(s=(s?s+` `:``)+e.className),S.createElement(`svg`,gu({stroke:`currentColor`,fill:`currentColor`,strokeWidth:`0`},t.attr,n,a,{className:s,style:vu(vu({color:e.color||t.color},t.style),e.style),height:o,width:o,xmlns:`http://www.w3.org/2000/svg`}),i&&S.createElement(`title`,null,i),e.children)};return fu===void 0?t(du):S.createElement(fu.Consumer,null,e=>t(e))}function Tu(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z`},child:[]}]})(e)}function Eu(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 496 512`},child:[{tag:`path`,attr:{d:`M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z`},child:[]}]})(e)}function Du(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 352 512`},child:[{tag:`path`,attr:{d:`M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z`},child:[]}]})(e)}function Ou(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z`},child:[]}]})(e)}function ku(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z`},child:[]}]})(e)}function Au(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 384 512`},child:[{tag:`path`,attr:{d:`M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z`},child:[]}]})(e)}function ju(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z`},child:[]}]})(e)}function Mu(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z`},child:[]}]})(e)}function Nu(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z`},child:[]}]})(e)}var Pu=(0,S.createContext)();function Fu({children:e}){let[t,n]=(0,S.useState)(!0);return(0,S.useEffect)(()=>{t?document.documentElement.classList.add(`dark`):document.documentElement.classList.remove(`dark`)},[t]),(0,U.jsx)(Pu.Provider,{value:{darkMode:t,setDarkMode:n},children:e})}function Iu(){let{darkMode:e,setDarkMode:t}=(0,S.useContext)(Pu),[n,r]=(0,S.useState)(!1);return(0,U.jsxs)(`header`,{className:`\r
-        fixed\r
-        top-0\r
-        left-0\r
-        w-full\r
-        glass\r
-        z-50\r
-      `,children:[(0,U.jsxs)(`nav`,{className:`\r
-          container-custom\r
-          px-6\r
-          py-4\r
-          flex\r
-          items-center\r
-          justify-between\r
-        `,children:[(0,U.jsx)(`h1`,{className:`\r
-            text-2xl\r
-            font-bold\r
-            gradient-text\r
-          `,children:`Linderlly Santana`}),(0,U.jsxs)(`ul`,{className:`\r
-            hidden\r
-            md:flex\r
-            items-center\r
-            gap-8\r
-            text-gray-300\r
-          `,children:[(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#about`,children:`Sobre`})}),(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#projects`,children:`Projetos`})}),(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#contact`,children:`Contato`})})]}),(0,U.jsxs)(`div`,{className:`\r
-            hidden\r
-            md:flex\r
-            items-center\r
-            gap-5\r
-            text-2xl\r
-          `,children:[(0,U.jsx)(`button`,{onClick:()=>t(!e),children:e?(0,U.jsx)(Ou,{}):(0,U.jsx)(ku,{})}),(0,U.jsx)(`a`,{href:`https://github.com/Linderlly`,target:`_blank`,rel:`noreferrer`,children:(0,U.jsx)(Eu,{})}),(0,U.jsx)(`a`,{href:`https://www.linkedin.com/in/linderlly-santana/`,target:`_blank`,rel:`noreferrer`,children:(0,U.jsx)(Tu,{})})]}),(0,U.jsx)(`button`,{className:`md:hidden text-2xl`,onClick:()=>r(!n),children:n?(0,U.jsx)(Du,{}):(0,U.jsx)(Nu,{})})]}),n&&(0,U.jsx)(`div`,{className:`\r
-            md:hidden\r
-            glass\r
-            border-t\r
-            border-slate-800\r
-          `,children:(0,U.jsxs)(`ul`,{className:`\r
-              flex\r
-              flex-col\r
-              items-center\r
-              gap-6\r
-              py-8\r
-            `,children:[(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#about`,children:`Sobre`})}),(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#projects`,children:`Projetos`})}),(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#contact`,children:`Contato`})})]})})]})}var Lu=`/portfolio/assets/profile-BX0BO7Eq.png`;function Ru(){return(0,U.jsx)(`section`,{className:`\r
-        min-h-screen\r
-        flex\r
-        items-center\r
-        justify-center\r
-        px-6\r
-        pt-28\r
-      `,children:(0,U.jsx)(`div`,{className:`container-custom`,children:(0,U.jsxs)(cu.div,{initial:{opacity:0,y:50},animate:{opacity:1,y:0},transition:{duration:1},className:`\r
-            flex\r
-            flex-col\r
-            items-center\r
-            text-center\r
-          `,children:[(0,U.jsx)(`img`,{src:Lu,alt:`Linderlly Santana`,className:`\r
-              w-44\r
-              h-44\r
-              md:w-56\r
-              md:h-56\r
-              rounded-full\r
-              object-cover\r
-              border-4\r
-              border-cyan-400\r
-              shadow-2xl\r
-              shadow-cyan-500/20\r
+        `})})}var du={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},fu=S.createContext&&S.createContext(du),pu=[`attr`,`size`,`title`];function mu(e,t){if(e==null)return{};var n,r,i=hu(e,t);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(e);for(r=0;r<a.length;r++)n=a[r],t.indexOf(n)===-1&&{}.propertyIsEnumerable.call(e,n)&&(i[n]=e[n])}return i}function hu(e,t){if(e==null)return{};var n={};for(var r in e)if({}.hasOwnProperty.call(e,r)){if(t.indexOf(r)!==-1)continue;n[r]=e[r]}return n}function gu(){return gu=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var n=arguments[t];for(var r in n)({}).hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},gu.apply(null,arguments)}function _u(e,t){var n=Object.keys(e);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(e);t&&(r=r.filter(function(t){return Object.getOwnPropertyDescriptor(e,t).enumerable})),n.push.apply(n,r)}return n}function vu(e){for(var t=1;t<arguments.length;t++){var n=arguments[t]==null?{}:arguments[t];t%2?_u(Object(n),!0).forEach(function(t){yu(e,t,n[t])}):Object.getOwnPropertyDescriptors?Object.defineProperties(e,Object.getOwnPropertyDescriptors(n)):_u(Object(n)).forEach(function(t){Object.defineProperty(e,t,Object.getOwnPropertyDescriptor(n,t))})}return e}function yu(e,t,n){return(t=bu(t))in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function bu(e){var t=xu(e,`string`);return typeof t==`symbol`?t:t+``}function xu(e,t){if(typeof e!=`object`||!e)return e;var n=e[Symbol.toPrimitive];if(n!==void 0){var r=n.call(e,t||`default`);if(typeof r!=`object`)return r;throw TypeError(`@@toPrimitive must return a primitive value.`)}return(t===`string`?String:Number)(e)}function Su(e){return e&&e.map((e,t)=>S.createElement(e.tag,vu({key:t},e.attr),Su(e.child)))}function Cu(e){return t=>S.createElement(wu,gu({attr:vu({},e.attr)},t),Su(e.child))}function wu(e){var t=t=>{var{attr:n,size:r,title:i}=e,a=mu(e,pu),o=r||t.size||`1em`,s;return t.className&&(s=t.className),e.className&&(s=(s?s+` `:``)+e.className),S.createElement(`svg`,gu({stroke:`currentColor`,fill:`currentColor`,strokeWidth:`0`},t.attr,n,a,{className:s,style:vu(vu({color:e.color||t.color},t.style),e.style),height:o,width:o,xmlns:`http://www.w3.org/2000/svg`}),i&&S.createElement(`title`,null,i),e.children)};return fu===void 0?t(du):S.createElement(fu.Consumer,null,e=>t(e))}function Tu(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z`},child:[]}]})(e)}function Eu(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 496 512`},child:[{tag:`path`,attr:{d:`M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z`},child:[]}]})(e)}function Du(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 352 512`},child:[{tag:`path`,attr:{d:`M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z`},child:[]}]})(e)}function Ou(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z`},child:[]}]})(e)}function ku(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z`},child:[]}]})(e)}function Au(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 384 512`},child:[{tag:`path`,attr:{d:`M181.9 256.1c-5-16-4.9-46.9-2-46.9 8.4 0 7.6 36.9 2 46.9zm-1.7 47.2c-7.7 20.2-17.3 43.3-28.4 62.7 18.3-7 39-17.2 62.9-21.9-12.7-9.6-24.9-23.4-34.5-40.8zM86.1 428.1c0 .8 13.2-5.4 34.9-40.2-6.7 6.3-29.1 24.5-34.9 40.2zM248 160h136v328c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V24C0 10.7 10.7 0 24 0h200v136c0 13.2 10.8 24 24 24zm-8 171.8c-20-12.2-33.3-29-42.7-53.8 4.5-18.5 11.6-46.6 6.2-64.2-4.7-29.4-42.4-26.5-47.8-6.8-5 18.3-.4 44.1 8.1 77-11.6 27.6-28.7 64.6-40.8 85.8-.1 0-.1.1-.2.1-27.1 13.9-73.6 44.5-54.5 68 5.6 6.9 16 10 21.5 10 17.9 0 35.7-18 61.1-61.8 25.8-8.5 54.1-19.1 79-23.2 21.7 11.8 47.1 19.5 64 19.5 29.2 0 31.2-32 19.7-43.4-13.9-13.6-54.3-9.7-73.6-7.2zM377 105L279 7c-4.5-4.5-10.6-7-17-7h-6v128h128v-6.1c0-6.3-2.5-12.4-7-16.9zm-74.1 255.3c4.1-2.7-2.5-11.9-42.8-9 37.1 15.8 42.8 9 42.8 9z`},child:[]}]})(e)}function ju(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M432,320H400a16,16,0,0,0-16,16V448H64V128H208a16,16,0,0,0,16-16V80a16,16,0,0,0-16-16H48A48,48,0,0,0,0,112V464a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V336A16,16,0,0,0,432,320ZM488,0h-128c-21.37,0-32.05,25.91-17,41l35.73,35.73L135,320.37a24,24,0,0,0,0,34L157.67,377a24,24,0,0,0,34,0L435.28,133.32,471,169c15,15,41,4.5,41-17V24A24,24,0,0,0,488,0Z`},child:[]}]})(e)}function Mu(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 512 512`},child:[{tag:`path`,attr:{d:`M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z`},child:[]}]})(e)}function Nu(e){return Cu({tag:`svg`,attr:{viewBox:`0 0 448 512`},child:[{tag:`path`,attr:{d:`M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z`},child:[]}]})(e)}var Pu=(0,S.createContext)();function Fu({children:e}){let[t,n]=(0,S.useState)(!0);return(0,S.useEffect)(()=>{t?document.documentElement.classList.add(`dark`):document.documentElement.classList.remove(`dark`)},[t]),(0,U.jsx)(Pu.Provider,{value:{darkMode:t,setDarkMode:n},children:e})}function Iu(){let{darkMode:e,setDarkMode:t}=(0,S.useContext)(Pu),[n,r]=(0,S.useState)(!1),i=()=>r(!1);return(0,U.jsxs)(`header`,{className:`fixed top-0 left-0 w-full glass z-50`,children:[(0,U.jsxs)(`nav`,{className:`container-custom px-4 md:px-6 py-3 md:py-4 flex items-center justify-between`,children:[(0,U.jsx)(`h1`,{className:`text-xl md:text-2xl font-bold gradient-text`,children:`Linderlly Santana`}),(0,U.jsxs)(`ul`,{className:`hidden md:flex items-center gap-6 lg:gap-8 text-gray-300 text-sm lg:text-base`,children:[(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#about`,className:`hover:text-cyan-400 transition-colors`,children:`Sobre`})}),(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#projects`,className:`hover:text-cyan-400 transition-colors`,children:`Projetos`})}),(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#certificates`,className:`hover:text-cyan-400 transition-colors`,children:`Certificados`})}),(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#contact`,className:`hover:text-cyan-400 transition-colors`,children:`Contato`})})]}),(0,U.jsxs)(`div`,{className:`hidden md:flex items-center gap-4 lg:gap-5 text-xl lg:text-2xl`,children:[(0,U.jsx)(`button`,{onClick:()=>t(!e),className:`hover:text-cyan-400 transition-colors`,children:e?(0,U.jsx)(Ou,{}):(0,U.jsx)(ku,{})}),(0,U.jsx)(`a`,{href:`https://github.com/Linderlly`,target:`_blank`,rel:`noreferrer`,className:`hover:text-cyan-400 transition-colors`,children:(0,U.jsx)(Eu,{})}),(0,U.jsx)(`a`,{href:`https://www.linkedin.com/in/linderlly-santana/`,target:`_blank`,rel:`noreferrer`,className:`hover:text-cyan-400 transition-colors`,children:(0,U.jsx)(Tu,{})})]}),(0,U.jsx)(`button`,{className:`md:hidden text-2xl`,onClick:()=>r(!n),children:n?(0,U.jsx)(Du,{}):(0,U.jsx)(Nu,{})})]}),n&&(0,U.jsx)(`div`,{className:`md:hidden glass border-t border-slate-800`,children:(0,U.jsxs)(`ul`,{className:`flex flex-col items-center gap-5 py-6 text-base`,children:[(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#about`,onClick:i,className:`hover:text-cyan-400 transition-colors`,children:`Sobre`})}),(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#projects`,onClick:i,className:`hover:text-cyan-400 transition-colors`,children:`Projetos`})}),(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#certificates`,onClick:i,className:`hover:text-cyan-400 transition-colors`,children:`Certificados`})}),(0,U.jsx)(`li`,{children:(0,U.jsx)(`a`,{href:`#contact`,onClick:i,className:`hover:text-cyan-400 transition-colors`,children:`Contato`})})]})})]})}var Lu=`/portfolio/assets/profile-BX0BO7Eq.png`;function Ru(){return(0,U.jsx)(`section`,{className:`\r
+      min-h-[70vh] md:min-h-screen\r
+      flex items-center justify-center\r
+      px-5 pt-20 md:pt-28 pb-8 md:pb-0\r
+    `,children:(0,U.jsx)(`div`,{className:`container-custom`,children:(0,U.jsxs)(cu.div,{initial:{opacity:0,y:40},animate:{opacity:1,y:0},transition:{duration:1},className:`flex flex-col items-center text-center`,children:[(0,U.jsx)(`img`,{src:Lu,alt:`Linderlly Santana`,className:`\r
+              w-28 h-28 \r
+              sm:w-36 sm:h-36 \r
+              md:w-56 md:h-56\r
+              rounded-full object-cover\r
+              border-4 border-cyan-400\r
+              shadow-2xl shadow-cyan-500/20\r
             `}),(0,U.jsx)(`h1`,{className:`\r
-              text-5xl\r
-              md:text-7xl\r
-              font-extrabold\r
-              mt-8\r
-              gradient-text\r
-            `,children:`Linderlly Santana`}),(0,U.jsx)(`p`,{className:`\r
-              text-gray-400\r
-              text-lg\r
-              md:text-2xl\r
-              mt-4\r
-              max-w-2xl\r
-            `,children:`Engenheiro de Software`})]})})})}function zu(){return(0,U.jsx)(`section`,{id:`about`,className:`py-24 px-6`,children:(0,U.jsx)(`div`,{className:`container-custom`,children:(0,U.jsxs)(`div`,{className:`\r
-            glass\r
-            rounded-3xl\r
-            p-8\r
-            md:p-16\r
-            hover:border-cyan-400\r
-            transition-all\r
-            duration-300\r
-          `,children:[(0,U.jsx)(`h2`,{className:`\r
-              text-4xl\r
-              md:text-5xl\r
-              font-bold\r
-              text-center\r
-              mb-12\r
-            `,children:`Sobre Mim`}),(0,U.jsx)(`div`,{className:`\r
-              flex\r
-              justify-center\r
-            `,children:(0,U.jsx)(`p`,{className:`\r
-                w-full\r
-                max-w-4xl\r
-                text-center\r
-                text-gray-400\r
-                text-lg\r
-                md:text-xl\r
-                leading-9\r
-              `,children:`Sou estudante de Bacharelado em Engenharia de Software, atualmente em fase de conclusão da graduação, com formatura prevista para setembro de 2026. Apaixonado por tecnologia, desenvolvimento web e educação tecnológica, possuo experiência como instrutor de informática, atuando no planejamento e condução de aulas, suporte acadêmico e acompanhamento do desenvolvimento de alunos em diferentes áreas da tecnologia. Tenho conhecimentos em Desenvolvimento Web utilizando HTML, CSS, JavaScript, Node.js e Angular, além de experiência com linguagens como Java, Python e C#. Também possuo familiaridade com bancos de dados como MySQL, PostgreSQL, Oracle e SQL Server. Ao longo da minha trajetória, desenvolvi habilidades importantes como comunicação, trabalho em equipe, liderança, criatividade e resolução de problemas, sempre buscando unir conhecimento técnico com uma abordagem prática, inovadora e didática. Estou em busca de oportunidades para crescer profissionalmente na área de tecnologia, contribuindo com dedicação, aprendizado contínuo e desenvolvimento de soluções que gerem impacto positivo para pessoas e empresas.`})})]})})})}var Bu=[`HTML`,`CSS`,`JavaScript`,`React`,`Node.js`,`Tailwind`,`Firebase`,`Git`,`MySQL`,`PostgreSQL`,`Oracle`,`SQL Server`,`Angular`,`Python`,`C#`,`Typescript`,`Oracle`,`Dart`,`Flutter`];function Vu(){return(0,U.jsx)(`section`,{className:`py-24 px-6`,children:(0,U.jsxs)(`div`,{className:`container-custom`,children:[(0,U.jsx)(`h2`,{className:`\r
-            text-4xl\r
-            md:text-5xl\r
-            font-bold\r
-            text-center\r
-            mb-16\r
-          `,children:`Tecnologias`}),(0,U.jsx)(`div`,{className:`\r
-            grid\r
-            grid-cols-2\r
-            md:grid-cols-4\r
-            gap-6\r
-          `,children:Bu.map((e,t)=>(0,U.jsx)(`div`,{className:`\r
+            text-3xl sm:text-4xl md:text-7xl\r
+            font-extrabold\r
+            mt-5 md:mt-8\r
+            gradient-text\r
+            leading-tight\r
+          `,children:`Linderlly Santana`}),(0,U.jsx)(`p`,{className:`\r
+            text-gray-400\r
+            text-sm sm:text-base md:text-2xl\r
+            mt-2 md:mt-4\r
+            max-w-xl\r
+            leading-relaxed\r
+          `,children:`Engenheiro de Software`})]})})})}function zu(){return(0,U.jsx)(`section`,{id:`about`,className:`py-12 md:py-20 px-4 md:px-6`,children:(0,U.jsx)(`div`,{className:`container-custom`,children:(0,U.jsxs)(`div`,{className:`\r
+          glass rounded-3xl\r
+          p-6 md:p-16\r
+          hover:border-cyan-400\r
+          transition-all duration-300\r
+        `,children:[(0,U.jsx)(`h2`,{className:`\r
+            text-3xl md:text-5xl\r
+            font-bold text-center\r
+            mb-8 md:mb-12\r
+          `,children:`Sobre Mim`}),(0,U.jsx)(`div`,{className:`flex justify-center`,children:(0,U.jsx)(`p`,{className:`\r
+              w-full max-w-4xl\r
+              text-center text-gray-400\r
+              text-base md:text-xl\r
+              leading-7 md:leading-9\r
+            `,children:`Sou estudante de Bacharelado em Engenharia de Software, atualmente em fase de conclusão da graduação, com formatura prevista para setembro de 2026. Apaixonado por tecnologia, desenvolvimento web e educação tecnológica, possuo experiência como instrutor de informática, atuando no planejamento e condução de aulas, suporte acadêmico e acompanhamento do desenvolvimento de alunos em diferentes áreas da tecnologia. Tenho conhecimentos em Desenvolvimento Web utilizando HTML, CSS, JavaScript, Node.js e Angular, além de noções com linguagens como Java, Python e C#. Também possuo familiaridade com bancos de dados como MySQL, PostgreSQL, Oracle e SQL Server. Ao longo da minha trajetória, desenvolvi habilidades importantes como comunicação, trabalho em equipe, liderança, criatividade e resolução de problemas, sempre buscando unir conhecimento técnico com uma abordagem prática, inovadora e didática. Estou em busca de oportunidades para crescer profissionalmente na área de tecnologia, contribuindo com dedicação, aprendizado contínuo e desenvolvimento de soluções que gerem impacto positivo para pessoas e empresas.`})})]})})})}var Bu=[`HTML`,`CSS`,`JavaScript`,`React`,`Node.js`,`Tailwind`,`Firebase`,`Git`,`MySQL`,`PostgreSQL`,`Oracle`,`SQL Server`,`Angular`,`Python`,`C#`,`Typescript`,`Dart`,`Flutter`];function Vu(){return(0,U.jsx)(`section`,{className:`py-12 md:py-20 px-4 md:px-6`,children:(0,U.jsxs)(`div`,{className:`container-custom`,children:[(0,U.jsx)(`h2`,{className:`\r
+          text-3xl md:text-5xl\r
+          font-bold text-center\r
+          mb-10 md:mb-16\r
+        `,children:`Tecnologias`}),(0,U.jsx)(`div`,{className:`\r
+          grid grid-cols-2 md:grid-cols-4\r
+          gap-4 md:gap-6\r
+        `,children:Bu.map((e,t)=>(0,U.jsx)(`div`,{className:`\r
                 bg-slate-900\r
-                border\r
-                border-slate-800\r
+                border border-slate-800\r
                 rounded-2xl\r
-                p-8\r
+                p-5 md:p-8\r
                 text-center\r
                 hover:border-cyan-400\r
                 hover:-translate-y-2\r
-                transition-all\r
-              `,children:(0,U.jsx)(`h3`,{className:`font-semibold text-lg`,children:e})},t))})]})})}var Hu=[{title:`Quiz Educacional`,description:`Site educacional voltado para aprendizado e interatividade, utilizando tecnologias como HTML, CSS, JavaScript, Firebase e outras ferramentas do ecossistema web.`,image:`/portfolio/assets/quiz-Dd2BzUhv.png`,link:`https://linderlly.github.io/site-educacional/`},{title:`E-Commerce`,description:`Site de comércio eletrônico desenvolvido durante o Hackathon do curso de FullStack, utilizando Vue e Typescript, com foco em design moderno e experiência do usuário otimizada.`,image:`/portfolio/assets/ecommerce-D--a7ozP.png`,link:`https://linderlly.github.io/ecommerce/#/`},{title:`Jogo da Memória`,description:`Jogo interativo de memória desenvolvido para testar meus conhecimentos em JavaScript, HTML e CSS, com design responsivo e funcionalidades de pontuação.`,image:`/portfolio/assets/memorygame-DxTkC-hn.png`,link:`https://linderlly.github.io/memorygame/`},{title:`Gerenciador de Alunos`,description:`Trablho de extensão da faculdade desenvolvido para gerenciar informações de alunos de uma escola, utilizando Javascript, juntamento com o Expo React Native, para criar um aplicativo móvel com funcionalidades de cadastro, consulta e atualização de dados dos alunos.`,image:`/portfolio/assets/gerenciador_alunos-DEaFAIVP.png`,link:`https://github.com/Linderlly/gerenciador-alunos`},{title:`Gerenciador de Tarefas`,description:`Aplicativo de gerenciamento de tarefas desenvolvido para organizar e acompanhar atividades diárias, utilizando Dart, Flutter e Firebase para sincronização em tempo real, com funcionalidades de criação, edição e exclusão de tarefas.`,image:`/portfolio/assets/gerenciador_tarefas-BApAFdfu.png`,link:`https://github.com/Linderlly/gerenciador-tarefas`}];function Uu(){return(0,U.jsx)(`section`,{id:`projects`,className:`py-24 px-6`,children:(0,U.jsxs)(`div`,{className:`container-custom`,children:[(0,U.jsx)(`h2`,{className:`\r
-            text-4xl\r
-            md:text-5xl\r
-            font-bold\r
-            text-center\r
-            mb-16\r
-          `,children:`Projetos`}),(0,U.jsx)(`div`,{className:`\r
-            grid\r
-            grid-cols-1\r
-            md:grid-cols-2\r
-            lg:grid-cols-3\r
-            gap-8\r
-          `,children:Hu.map((e,t)=>(0,U.jsxs)(`a`,{href:e.link,target:`_blank`,rel:`noreferrer`,className:`\r
-                bg-slate-900/70\r
-                backdrop-blur-lg\r
-                border\r
-                border-slate-800\r
-                rounded-3xl\r
-                overflow-hidden\r
-                hover:-translate-y-3\r
-                hover:border-cyan-400\r
-                hover:shadow-2xl\r
-                hover:shadow-cyan-500/10\r
-                transition-all\r
-                duration-500\r
-                flex\r
-                flex-col\r
-              `,children:[(0,U.jsx)(`div`,{className:`overflow-hidden`,children:(0,U.jsx)(`img`,{src:e.image,alt:e.title,className:`\r
-                    h-56\r
-                    w-full\r
-                    object-cover\r
-                    hover:scale-110\r
-                    transition-transform\r
-                    duration-700\r
-                  `})}),(0,U.jsxs)(`div`,{className:`\r
-                  p-7\r
-                  flex\r
-                  flex-col\r
-                  flex-1\r
-                  justify-between\r
-                `,children:[(0,U.jsxs)(`div`,{children:[(0,U.jsx)(`h3`,{className:`\r
-                      text-2xl\r
-                      font-bold\r
-                      mb-4\r
-                      leading-tight\r
-                    `,children:e.title}),(0,U.jsx)(`p`,{className:`\r
-                      text-gray-400\r
-                      leading-7\r
-                      text-base\r
-                    `,children:e.description})]}),(0,U.jsx)(`button`,{className:`\r
-                    mt-8\r
-                    bg-cyan-500\r
-                    hover:bg-cyan-400\r
-                    hover:scale-105\r
-                    py-3\r
-                    rounded-xl\r
-                    font-semibold\r
-                    transition-all\r
-                    duration-300\r
-                  `,children:`Acessar Projeto`})]})]},t))})]})})}var Wu=[{title:`Programação de sistemas da informação`,description:`Programação I e Modelagem de sistemas`,image:`/portfolio/assets/certificado1-De1WlRc6.png`,pdf:`/portfolio/assets/certificado1-Dd184tpo.pdf`},{title:`Gerência de projetos de T.I`,description:`Medidas de esforço de desenvolvimento de Software e Gestão de projetos para T.I`,image:`/portfolio/assets/certificado2-btipgBom.png`,pdf:`/portfolio/assets/certificado2-wX9ZDl30.pdf`},{title:`Direitos e Privacidade dos usuários`,description:`Gestão de segurança da informação e Linhas de produtos de Software`,image:`/portfolio/assets/certificado3-B87NkKpS.png`,pdf:`/portfolio/assets/certificado3-By3N7_rE.pdf`},{title:`Aplicação melhorada contínua`,description:`Modelagem de dados, Modelagem de Sistemas e Métodos Ágeis`,image:`/portfolio/assets/certificado4-DHyW9hAP.png`,pdf:`/portfolio/assets/certificado4-DQILR1KU.pdf`},{title:`C# básico`,description:`C-Sharp básico, tipos de dados, estruturas de controle, funções e arrays`,image:`/portfolio/assets/C_sharp_basico-qyHO6upf.png`,pdf:`/portfolio/assets/C_sharp_basico-66PQ844w.pdf`},{title:`C# Intermediário`,description:`C-Sharp intermediário, orientação a objetos, bancos de dados e desenvolvimento de aplicações`,image:`/portfolio/assets/C_sharp_intermediario-BXEcIzkR.png`,pdf:`/portfolio/assets/C_sharp_intermediario-CCjfDXFV.pdf`},{title:`C# Avançado I`,description:`C-Sharp avançado, programação funcional, design patterns e arquitetura de software`,image:`/portfolio/assets/C_sharp_av1-CiXNVMO4.png`,pdf:`/portfolio/assets/C_sharp_av1-BiqQ4dPB.pdf`},{title:`C# Avançado II`,description:`C-Sharp avançado II, desenvolvimento de aplicações web e integração com serviços`,image:`/portfolio/assets/C_sharp_av2-BsrvDx1V.png`,pdf:`/portfolio/assets/C_sharp_av2-CqhqafvS.pdf`},{title:`Angular`,description:`Angular, TypeScript e desenvolvimento de aplicações web`,image:`/portfolio/assets/angular-C9r2FEPL.png`,pdf:`/portfolio/assets/angular-DIYNQvbd.pdf`},{title:`Ionic`,description:`Ionic, TypeScript e desenvolvimento de aplicações móveis`,image:`/portfolio/assets/ionic-5X0KEep2.png`,pdf:`/portfolio/assets/ionic-CsBUMKVx.pdf`},{title:`Cordova`,description:`Cordova, TypeScript e desenvolvimento de aplicações móveis`,image:`/portfolio/assets/cordova-YNvv85A4.png`,pdf:`/portfolio/assets/cordova-D5jfnsuw.pdf`},{title:`Excel`,description:`Excel, fórmulas, funções e análise de dados`,image:`/portfolio/assets/excel-6gNN2oSg.png`,pdf:`/portfolio/assets/excel-Dd96Dhjn.pdf`},{title:`Excel Avançado I`,description:`Excel avançado, tabelas dinâmicas, gráficos e análise de dados avançada`,image:`/portfolio/assets/Excel_Av1-CXiGKex6.png`,pdf:`/portfolio/assets/Excel_Av1-BHH0D5Xh.pdf`},{title:`Excel Avançado II`,description:`Excel avançado II, análise de dados e automação com VBA`,image:`/portfolio/assets/Excel_Av2-B3KVKg_W.png`,pdf:`/portfolio/assets/Excel_Av2-DyDxBmSM.pdf`},{title:`Desenvolvimento de Games`,description:`Desenvolvimento de Games 2D com Construct 3`,image:`/portfolio/assets/games-CjbjAEiQ.png`,pdf:`/portfolio/assets/games-BaTeYPJr.pdf`},{title:`Inteligência Artificial`,description:`Inteligencia Artificial, prompts, criação de imagens e vídeos com IA`,image:`/portfolio/assets/IA-6sP4jOkQ.png`,pdf:`/portfolio/assets/IA-Bx6SwStw.pdf`},{title:`Lógica de Programação`,description:`Lógica de Programação, algoritmos, estruturas de dados e resolução de problemas`,image:`/portfolio/assets/logica-B1guUbNh.png`,pdf:`/portfolio/assets/logica-DawVjDXs.pdf`},{title:`Manutenção de Dispositivos Móveis`,description:`Manutencão de Dispositivos Móveis, diagnóstico, reparo e manutenção de smartphones e tablets`,image:`/portfolio/assets/manutencao_moveis-DT98nUNU.png`,pdf:`/portfolio/assets/manutencao_moveis-BNqV2TZo.pdf`},{title:`Power BI`,description:`Power BI, análise de dados, visualização e criação de dashboards`,image:`/portfolio/assets/PowerBI-D5OB3hg2.png`,pdf:`/portfolio/assets/PowerBI-ijtXGOvA.pdf`},{title:`Python`,description:`Python, programação básica, bibliotecas e desenvolvimento de aplicações`,image:`/portfolio/assets/python-Cy8JEtbD.png`,pdf:`/portfolio/assets/python-BjF1t7Qs.pdf`},{title:`Segurança na Era Digital`,description:`Segurança na Era Digital, ameaças cibernéticas, proteção de dados e melhores práticas de segurança`,image:`/portfolio/assets/Seguranca-K45logcy.png`,pdf:`/portfolio/assets/Seguranca-CcrPYbN4.pdf`},{title:`Banco de Dados SQL`,description:`Banco de Dados SQL, modelagem de dados, consultas e administração de bancos de dados`,image:`/portfolio/assets/SQL-CrbG0qD5.png`,pdf:`/portfolio/assets/SQL-LfQax7Zh.pdf`},{title:`Trabalho em Equipe`,description:`Trabalho em Equipe, comunicação, colaboração e gestão de conflitos`,image:`/portfolio/assets/trabalhoEQ-D_DHwvbk.png`,pdf:`/portfolio/assets/trabalhoEQ-D-2W6W_M.pdf`},{title:`Inovatech Fametro`,description:`Participação no Inovatech Fametro Manaus, evento de inovação e tecnologia, com apresentação de projetos e networking`,image:`/portfolio/assets/inovatech-CupJ68zl.png`,pdf:`/portfolio/assets/inovatech-D_A9F43-.pdf`}];function Z(){return(0,U.jsx)(`section`,{id:`certificates`,className:`py-24 px-6`,children:(0,U.jsxs)(`div`,{className:`container-custom`,children:[(0,U.jsx)(`h2`,{className:`\r
-            text-4xl\r
-            md:text-5xl\r
-            font-bold\r
-            text-center\r
-            mb-16\r
-          `,children:`Certificados`}),(0,U.jsx)(`div`,{className:`\r
-            grid\r
-            grid-cols-1\r
-            md:grid-cols-2\r
-            gap-8\r
-          `,children:Wu.map((e,t)=>(0,U.jsxs)(`div`,{className:`\r
-                bg-slate-900/70\r
-                backdrop-blur-lg\r
-                border\r
-                border-slate-800\r
-                rounded-3xl\r
-                overflow-hidden\r
-                hover:border-cyan-400\r
+                transition-all duration-300\r
+              `,children:(0,U.jsx)(`h3`,{className:`font-semibold text-sm md:text-lg`,children:e})},t))})]})})}var Hu=[{title:`Quiz Educacional`,description:`Plataforma educacional interativa desenvolvida com HTML, CSS, JavaScript e Firebase.`,image:`/portfolio/assets/quiz-Dd2BzUhv.png`,link:`https://linderlly.github.io/site-educacional/`},{title:`E-Commerce`,description:`Projeto de comércio eletrônico criado com Vue e TypeScript durante Hackathon Full Stack.`,image:`/portfolio/assets/ecommerce-D--a7ozP.png`,link:`https://linderlly.github.io/ecommerce/#/`},{title:`Jogo da Memória`,description:`Game responsivo desenvolvido para praticar JavaScript, HTML e CSS com sistema de pontuação.`,image:`/portfolio/assets/memorygame-DxTkC-hn.png`,link:`https://linderlly.github.io/memorygame/`},{title:`Gerenciador de Alunos`,description:`Aplicativo mobile desenvolvido com React Native para gerenciamento escolar.`,image:`/portfolio/assets/gerenciador_alunos-DEaFAIVP.png`,link:`https://github.com/Linderlly/gerenciador-alunos`},{title:`Gerenciador de Tarefas`,description:`Aplicativo criado com Flutter e Firebase para organização de tarefas em tempo real.`,image:`/portfolio/assets/gerenciador_tarefas-BApAFdfu.png`,link:`https://github.com/Linderlly/gerenciador-tarefas`}];function Uu(){return(0,U.jsx)(`section`,{id:`projects`,className:`py-10 md:py-20 px-4 md:px-5`,children:(0,U.jsxs)(`div`,{className:`container-custom`,children:[(0,U.jsx)(`h2`,{className:`\r
+          text-3xl md:text-5xl\r
+          font-bold text-center\r
+          mb-8 md:mb-16\r
+        `,children:`Projetos`}),(0,U.jsx)(`div`,{className:`\r
+          grid\r
+          grid-cols-1 sm:grid-cols-2 lg:grid-cols-3\r
+          gap-5 md:gap-8\r
+        `,children:Hu.map((e,t)=>(0,U.jsxs)(`a`,{href:e.link,target:`_blank`,rel:`noreferrer`,className:`\r
+                bg-slate-900/70 backdrop-blur-lg\r
+                border border-slate-800\r
+                rounded-3xl overflow-hidden\r
                 hover:-translate-y-2\r
-                hover:shadow-2xl\r
-                hover:shadow-cyan-500/10\r
-                transition-all\r
-                duration-500\r
-                flex\r
-                flex-col\r
+                hover:border-cyan-400\r
+                hover:shadow-2xl hover:shadow-cyan-500/10\r
+                transition-all duration-500\r
+                flex flex-col\r
               `,children:[(0,U.jsx)(`div`,{className:`overflow-hidden`,children:(0,U.jsx)(`img`,{src:e.image,alt:e.title,className:`\r
-                    h-56\r
-                    w-full\r
-                    object-cover\r
-                    hover:scale-105\r
-                    transition-transform\r
-                    duration-700\r
+                    h-36 md:h-56\r
+                    w-full object-cover\r
+                    hover:scale-110\r
+                    transition-transform duration-700\r
                   `})}),(0,U.jsxs)(`div`,{className:`\r
-                  p-7\r
-                  flex\r
-                  flex-col\r
-                  flex-1\r
-                `,children:[(0,U.jsx)(`h3`,{className:`\r
-                    text-2xl\r
+                p-4 md:p-7\r
+                flex flex-col flex-1 justify-between\r
+              `,children:[(0,U.jsxs)(`div`,{children:[(0,U.jsx)(`h3`,{className:`\r
+                    text-lg md:text-2xl\r
                     font-bold\r
-                    mb-4\r
+                    mb-2 md:mb-3\r
+                    leading-tight\r
                   `,children:e.title}),(0,U.jsx)(`p`,{className:`\r
                     text-gray-400\r
-                    leading-7\r
-                    text-base\r
-                    flex-1\r
-                  `,children:e.description}),(0,U.jsxs)(`div`,{className:`\r
-                    flex\r
-                    gap-4\r
-                    mt-8\r
-                  `,children:[(0,U.jsxs)(`a`,{href:e.pdf,target:`_blank`,rel:`noreferrer`,className:`\r
-                      flex-1\r
-                      flex\r
-                      items-center\r
-                      justify-center\r
-                      gap-3\r
-                      bg-red-500\r
-                      hover:bg-red-400\r
-                      py-3\r
+                    leading-6 md:leading-7\r
+                    text-xs md:text-base\r
+                  `,children:e.description})]}),(0,U.jsx)(`button`,{className:`\r
+                  mt-4 md:mt-6\r
+                  bg-cyan-500 hover:bg-cyan-400\r
+                  hover:scale-105\r
+                  py-2.5 md:py-3\r
+                  rounded-xl\r
+                  text-sm md:text-base\r
+                  font-semibold\r
+                  transition-all duration-300\r
+                `,children:`Acessar Projeto`})]})]},t))})]})})}var Wu=[{title:`Programação de sistemas da informação`,description:`Programação I e Modelagem de sistemas`,image:`/portfolio/assets/certificado1-De1WlRc6.png`,pdf:`/portfolio/assets/certificado1-Dd184tpo.pdf`},{title:`Gerência de projetos de T.I`,description:`Medidas de esforço de desenvolvimento de Software e Gestão de projetos para T.I`,image:`/portfolio/assets/certificado2-btipgBom.png`,pdf:`/portfolio/assets/certificado2-wX9ZDl30.pdf`},{title:`Direitos e Privacidade dos usuários`,description:`Gestão de segurança da informação e Linhas de produtos de Software`,image:`/portfolio/assets/certificado3-B87NkKpS.png`,pdf:`/portfolio/assets/certificado3-By3N7_rE.pdf`},{title:`Aplicação melhorada contínua`,description:`Modelagem de dados, Modelagem de Sistemas e Métodos Ágeis`,image:`/portfolio/assets/certificado4-DHyW9hAP.png`,pdf:`/portfolio/assets/certificado4-DQILR1KU.pdf`},{title:`C# básico`,description:`C-Sharp básico, tipos de dados, estruturas de controle, funções e arrays`,image:`/portfolio/assets/C_sharp_basico-qyHO6upf.png`,pdf:`/portfolio/assets/C_sharp_basico-66PQ844w.pdf`},{title:`C# Intermediário`,description:`C-Sharp intermediário, orientação a objetos, bancos de dados e desenvolvimento de aplicações`,image:`/portfolio/assets/C_sharp_intermediario-BXEcIzkR.png`,pdf:`/portfolio/assets/C_sharp_intermediario-CCjfDXFV.pdf`},{title:`C# Avançado I`,description:`C-Sharp avançado, programação funcional, design patterns e arquitetura de software`,image:`/portfolio/assets/C_sharp_av1-CiXNVMO4.png`,pdf:`/portfolio/assets/C_sharp_av1-BiqQ4dPB.pdf`},{title:`C# Avançado II`,description:`C-Sharp avançado II, desenvolvimento de aplicações web e integração com serviços`,image:`/portfolio/assets/C_sharp_av2-BsrvDx1V.png`,pdf:`/portfolio/assets/C_sharp_av2-CqhqafvS.pdf`},{title:`Angular`,description:`Angular, TypeScript e desenvolvimento de aplicações web`,image:`/portfolio/assets/angular-C9r2FEPL.png`,pdf:`/portfolio/assets/angular-DIYNQvbd.pdf`},{title:`Ionic`,description:`Ionic, TypeScript e desenvolvimento de aplicações móveis`,image:`/portfolio/assets/ionic-5X0KEep2.png`,pdf:`/portfolio/assets/ionic-CsBUMKVx.pdf`},{title:`Cordova`,description:`Cordova, TypeScript e desenvolvimento de aplicações móveis`,image:`/portfolio/assets/cordova-YNvv85A4.png`,pdf:`/portfolio/assets/cordova-D5jfnsuw.pdf`},{title:`Excel`,description:`Excel, fórmulas, funções e análise de dados`,image:`/portfolio/assets/excel-6gNN2oSg.png`,pdf:`/portfolio/assets/excel-Dd96Dhjn.pdf`},{title:`Excel Avançado I`,description:`Excel avançado, tabelas dinâmicas, gráficos e análise de dados avançada`,image:`/portfolio/assets/Excel_Av1-CXiGKex6.png`,pdf:`/portfolio/assets/Excel_Av1-BHH0D5Xh.pdf`},{title:`Excel Avançado II`,description:`Excel avançado II, análise de dados e automação com VBA`,image:`/portfolio/assets/Excel_Av2-B3KVKg_W.png`,pdf:`/portfolio/assets/Excel_Av2-DyDxBmSM.pdf`},{title:`Desenvolvimento de Games`,description:`Desenvolvimento de Games 2D com Construct 3`,image:`/portfolio/assets/games-CjbjAEiQ.png`,pdf:`/portfolio/assets/games-BaTeYPJr.pdf`},{title:`Inteligência Artificial`,description:`Inteligencia Artificial, prompts, criação de imagens e vídeos com IA`,image:`/portfolio/assets/IA-6sP4jOkQ.png`,pdf:`/portfolio/assets/IA-Bx6SwStw.pdf`},{title:`Lógica de Programação`,description:`Lógica de Programação, algoritmos, estruturas de dados e resolução de problemas`,image:`/portfolio/assets/logica-B1guUbNh.png`,pdf:`/portfolio/assets/logica-DawVjDXs.pdf`},{title:`Manutenção de Dispositivos Móveis`,description:`Manutencão de Dispositivos Móveis, diagnóstico, reparo e manutenção de smartphones e tablets`,image:`/portfolio/assets/manutencao_moveis-DT98nUNU.png`,pdf:`/portfolio/assets/manutencao_moveis-BNqV2TZo.pdf`},{title:`Power BI`,description:`Power BI, análise de dados, visualização e criação de dashboards`,image:`/portfolio/assets/PowerBI-D5OB3hg2.png`,pdf:`/portfolio/assets/PowerBI-ijtXGOvA.pdf`},{title:`Python`,description:`Python, programação básica, bibliotecas e desenvolvimento de aplicações`,image:`/portfolio/assets/python-Cy8JEtbD.png`,pdf:`/portfolio/assets/python-BjF1t7Qs.pdf`},{title:`Segurança na Era Digital`,description:`Segurança na Era Digital, ameaças cibernéticas, proteção de dados e melhores práticas de segurança`,image:`/portfolio/assets/Seguranca-K45logcy.png`,pdf:`/portfolio/assets/Seguranca-CcrPYbN4.pdf`},{title:`Banco de Dados SQL`,description:`Banco de Dados SQL, modelagem de dados, consultas e administração de bancos de dados`,image:`/portfolio/assets/SQL-CrbG0qD5.png`,pdf:`/portfolio/assets/SQL-LfQax7Zh.pdf`},{title:`Trabalho em Equipe`,description:`Trabalho em Equipe, comunicação, colaboração e gestão de conflitos`,image:`/portfolio/assets/trabalhoEQ-D_DHwvbk.png`,pdf:`/portfolio/assets/trabalhoEQ-D-2W6W_M.pdf`},{title:`Inovatech Fametro`,description:`Participação no Inovatech Fametro Manaus, evento de inovação e tecnologia`,image:`/portfolio/assets/inovatech-CupJ68zl.png`,pdf:`/portfolio/assets/inovatech-D_A9F43-.pdf`}];function Z(){return(0,U.jsx)(`section`,{id:`certificates`,className:`py-12 md:py-20 px-4 md:px-6`,children:(0,U.jsxs)(`div`,{className:`container-custom`,children:[(0,U.jsx)(`h2`,{className:`\r
+          text-3xl md:text-5xl\r
+          font-bold text-center\r
+          mb-10 md:mb-16\r
+        `,children:`Certificados`}),(0,U.jsx)(`div`,{className:`\r
+          grid grid-cols-1 md:grid-cols-2\r
+          gap-5 md:gap-8\r
+        `,children:Wu.map((e,t)=>(0,U.jsxs)(`div`,{className:`\r
+                bg-slate-900/70 backdrop-blur-lg\r
+                border border-slate-800\r
+                rounded-3xl overflow-hidden\r
+                hover:border-cyan-400\r
+                hover:-translate-y-2\r
+                hover:shadow-2xl hover:shadow-cyan-500/10\r
+                transition-all duration-500\r
+                flex flex-col\r
+              `,children:[(0,U.jsx)(`div`,{className:`overflow-hidden`,children:(0,U.jsx)(`img`,{src:e.image,alt:e.title,className:`\r
+                    h-44 md:h-56\r
+                    w-full object-cover\r
+                    hover:scale-105\r
+                    transition-transform duration-700\r
+                  `})}),(0,U.jsxs)(`div`,{className:`p-5 md:p-7 flex flex-col flex-1`,children:[(0,U.jsx)(`h3`,{className:`text-lg md:text-2xl font-bold mb-3 md:mb-4`,children:e.title}),(0,U.jsx)(`p`,{className:`text-gray-400 leading-6 md:leading-7 text-sm md:text-base flex-1`,children:e.description}),(0,U.jsxs)(`div`,{className:`flex gap-3 md:gap-4 mt-6 md:mt-8`,children:[(0,U.jsxs)(`a`,{href:e.pdf,target:`_blank`,rel:`noreferrer`,className:`\r
+                      flex-1 flex items-center justify-center gap-2 md:gap-3\r
+                      bg-red-500 hover:bg-red-400\r
+                      py-2.5 md:py-3\r
                       rounded-xl\r
-                      font-semibold\r
+                      font-semibold text-sm md:text-base\r
                       transition-all\r
                     `,children:[(0,U.jsx)(Au,{}),`PDF`]}),(0,U.jsxs)(`a`,{href:e.image,target:`_blank`,rel:`noreferrer`,className:`\r
-                      flex-1\r
-                      flex\r
-                      items-center\r
-                      justify-center\r
-                      gap-3\r
-                      bg-cyan-500\r
-                      hover:bg-cyan-400\r
-                      py-3\r
+                      flex-1 flex items-center justify-center gap-2 md:gap-3\r
+                      bg-cyan-500 hover:bg-cyan-400\r
+                      py-2.5 md:py-3\r
                       rounded-xl\r
-                      font-semibold\r
+                      font-semibold text-sm md:text-base\r
                       transition-all\r
-                    `,children:[(0,U.jsx)(ju,{}),`Visualizar`]})]})]})]},t))})]})})}function Gu(){return(0,U.jsx)(`section`,{id:`contact`,className:`\r
-        w-full\r
-        py-24\r
-        px-5\r
-        flex\r
-        justify-center\r
-      `,children:(0,U.jsx)(`div`,{className:`\r
-          w-full\r
-          max-w-6xl\r
-        `,children:(0,U.jsxs)(`div`,{className:`\r
-            glass\r
-            rounded-3xl\r
-            p-8\r
-            md:p-14\r
-            border\r
-            border-slate-800\r
+                    `,children:[(0,U.jsx)(ju,{}),`Visualizar`]})]})]})]},t))})]})})}function Gu(){return(0,U.jsx)(`section`,{id:`contact`,className:`w-full py-12 md:py-20 px-4 md:px-5 flex justify-center`,children:(0,U.jsx)(`div`,{className:`w-full max-w-6xl`,children:(0,U.jsxs)(`div`,{className:`\r
+          glass rounded-3xl\r
+          p-6 md:p-14\r
+          border border-slate-800\r
+          text-center\r
+          flex flex-col items-center justify-center\r
+        `,children:[(0,U.jsx)(`h2`,{className:`text-3xl md:text-5xl font-bold mb-4 md:mb-6`,children:`Contato`}),(0,U.jsxs)(`p`,{className:`\r
+            w-full max-w-2xl\r
+            text-gray-400\r
+            text-sm md:text-xl\r
+            leading-7 md:leading-8\r
             text-center\r
-            flex\r
-            flex-col\r
-            items-center\r
-            justify-center\r
-          `,children:[(0,U.jsx)(`h2`,{className:`\r
-              text-4xl\r
-              md:text-5xl\r
-              font-bold\r
-              mb-6\r
-            `,children:`Contato`}),(0,U.jsx)(`p`,{className:`\r
-              w-full\r
-              max-w-2xl\r
-              text-gray-400\r
-              text-base\r
-              md:text-xl\r
-              leading-8\r
-              text-center\r
-              mb-12\r
-            `,children:`Vamos transformar ideias em projetos modernos, profissionais e eficientes. Entre em contato para trabalharmos juntos no seu próximo projeto.`}),(0,U.jsxs)(`div`,{className:`\r
-              w-full\r
-              flex\r
-              flex-col\r
-              lg:flex-row\r
-              justify-center\r
-              items-center\r
-              gap-5\r
-            `,children:[(0,U.jsxs)(`a`,{href:`mailto:linderllysantana22@gmail.com`,className:`\r
-                w-full\r
-                sm:w-[150px]\r
-                h-16\r
-\r
-                flex\r
-                items-center\r
-                justify-center\r
-                gap-3\r
-\r
-                bg-cyan-500\r
-                hover:bg-cyan-400\r
-\r
+            mb-8 md:mb-12\r
+          `,children:[`Vamos transformar ideias em projetos modernos, profissionais e eficientes.`,(0,U.jsx)(`br`,{className:`hidden md:block`}),`Entre em contato para trabalharmos juntos no seu próximo projeto.`]}),(0,U.jsxs)(`div`,{className:`\r
+            w-full\r
+            flex flex-col lg:flex-row\r
+            justify-center items-center\r
+            gap-4 md:gap-5\r
+          `,children:[(0,U.jsxs)(`a`,{href:`mailto:linderllysantana22@gmail.com`,className:`\r
+                w-full sm:w-[140px] md:w-[150px]\r
+                h-14 md:h-16\r
+                flex items-center justify-center gap-2 md:gap-3\r
+                bg-cyan-500 hover:bg-cyan-400\r
                 rounded-2xl\r
-\r
-                font-semibold\r
-                text-lg\r
-\r
-                transition-all\r
-                duration-300\r
-\r
+                font-semibold text-base md:text-lg\r
+                transition-all duration-300\r
                 hover:scale-105\r
-              `,children:[(0,U.jsx)(Mu,{className:`text-xl`}),(0,U.jsx)(`span`,{children:`Email`})]}),(0,U.jsxs)(`a`,{href:`https://www.linkedin.com/in/linderlly-santana/`,target:`_blank`,rel:`noreferrer`,className:`\r
-                w-full\r
-                sm:w-[150px]\r
-                h-16\r
-\r
-                flex\r
-                items-center\r
-                justify-center\r
-                gap-3\r
-\r
-                bg-slate-800\r
-                hover:bg-slate-700\r
-\r
+              `,children:[(0,U.jsx)(Mu,{className:`text-lg md:text-xl`}),(0,U.jsx)(`span`,{children:`Email`})]}),(0,U.jsxs)(`a`,{href:`https://www.linkedin.com/in/linderlly-santana/`,target:`_blank`,rel:`noreferrer`,className:`\r
+                w-full sm:w-[140px] md:w-[150px]\r
+                h-14 md:h-16\r
+                flex items-center justify-center gap-2 md:gap-3\r
+                bg-slate-800 hover:bg-slate-700\r
                 rounded-2xl\r
-\r
-                font-semibold\r
-                text-lg\r
-\r
-                transition-all\r
-                duration-300\r
-\r
+                font-semibold text-base md:text-lg\r
+                transition-all duration-300\r
                 hover:scale-105\r
-              `,children:[(0,U.jsx)(Tu,{className:`text-xl`}),(0,U.jsx)(`span`,{children:`LinkedIn`})]}),(0,U.jsxs)(`a`,{href:`https://github.com/Linderlly`,target:`_blank`,rel:`noreferrer`,className:`\r
-                w-full\r
-                sm:w-[150px]\r
-                h-16\r
-\r
-                flex\r
-                items-center\r
-                justify-center\r
-                gap-3\r
-\r
-                bg-slate-800\r
-                hover:bg-slate-700\r
-\r
+              `,children:[(0,U.jsx)(Tu,{className:`text-lg md:text-xl`}),(0,U.jsx)(`span`,{children:`LinkedIn`})]}),(0,U.jsxs)(`a`,{href:`https://github.com/Linderlly`,target:`_blank`,rel:`noreferrer`,className:`\r
+                w-full sm:w-[140px] md:w-[150px]\r
+                h-14 md:h-16\r
+                flex items-center justify-center gap-2 md:gap-3\r
+                bg-slate-800 hover:bg-slate-700\r
                 rounded-2xl\r
-\r
-                font-semibold\r
-                text-lg\r
-\r
-                transition-all\r
-                duration-300\r
-\r
+                font-semibold text-base md:text-lg\r
+                transition-all duration-300\r
                 hover:scale-105\r
-              `,children:[(0,U.jsx)(Eu,{className:`text-xl`}),(0,U.jsx)(`span`,{children:`GitHub`})]})]})]})})})}function Ku(){return(0,U.jsx)(`footer`,{className:`py-8 px-6 border-t border-slate-800`,children:(0,U.jsx)(`div`,{className:`container-custom`,children:(0,U.jsx)(`p`,{className:`text-center text-gray-500`,children:`© 2026 — Desenvolvido por Linderlly Santana`})})})}function qu(){let[e,t]=(0,S.useState)(!0);return(0,S.useEffect)(()=>{setTimeout(()=>{t(!1)},1800)},[]),e?(0,U.jsx)(uu,{}):(0,U.jsxs)(`div`,{className:`app`,children:[(0,U.jsx)(Iu,{}),(0,U.jsxs)(`main`,{children:[(0,U.jsx)(Ru,{}),(0,U.jsx)(zu,{}),(0,U.jsx)(Vu,{}),(0,U.jsx)(Uu,{}),(0,U.jsx)(Z,{}),(0,U.jsx)(Gu,{})]}),(0,U.jsx)(Ku,{})]})}lu.createRoot(document.getElementById(`root`)).render((0,U.jsx)(S.StrictMode,{children:(0,U.jsx)(Fu,{children:(0,U.jsx)(qu,{})})}));
+              `,children:[(0,U.jsx)(Eu,{className:`text-lg md:text-xl`}),(0,U.jsx)(`span`,{children:`GitHub`})]})]})]})})})}function Ku(){return(0,U.jsx)(`footer`,{className:`py-6 md:py-8 px-4 md:px-6 border-t border-slate-800`,children:(0,U.jsx)(`div`,{className:`container-custom`,children:(0,U.jsx)(`p`,{className:`text-center text-gray-500 text-sm md:text-base`,children:`© 2026 — Desenvolvido por Linderlly Santana`})})})}function qu(){let[e,t]=(0,S.useState)(!0);return(0,S.useEffect)(()=>{setTimeout(()=>{t(!1)},1800)},[]),e?(0,U.jsx)(uu,{}):(0,U.jsxs)(`div`,{className:`app`,children:[(0,U.jsx)(Iu,{}),(0,U.jsxs)(`main`,{children:[(0,U.jsx)(Ru,{}),(0,U.jsx)(zu,{}),(0,U.jsx)(Vu,{}),(0,U.jsx)(Uu,{}),(0,U.jsx)(Z,{}),(0,U.jsx)(Gu,{})]}),(0,U.jsx)(Ku,{})]})}lu.createRoot(document.getElementById(`root`)).render((0,U.jsx)(S.StrictMode,{children:(0,U.jsx)(Fu,{children:(0,U.jsx)(qu,{})})}));
