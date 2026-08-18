@@ -39,13 +39,14 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-10 md:py-20 px-4 md:px-5">
+    <section id="projects" style={{ paddingTop: '10px', paddingBottom: '10px' }} className="px-4 md:px-5">
       <div className="container-custom">
-        <h2 className="
-          text-3xl md:text-5xl
-          font-bold text-center
-          mb-8 md:mb-16
-        ">
+        <h2 style={{ 
+          fontSize: 'clamp(1.875rem, 4vw, 3rem)', 
+          fontWeight: 'bold', 
+          textAlign: 'center',
+          marginBottom: '40px'
+        }}>
           Projetos
         </h2>
 
@@ -69,18 +70,24 @@ export default function Projects() {
                 hover:shadow-2xl hover:shadow-cyan-500/10
                 transition-all duration-500
                 flex flex-col
-              "
-            >
+              ">
               <div className="overflow-hidden">
                 <img
-                  src={project.image}
-                  alt={project.title}
-                  className="
-                    h-36 md:h-56
-                    w-full object-cover
-                    hover:scale-110
-                    transition-transform duration-700
-                  "
+                    src={project.image}
+                    alt={project.title}
+                    loading="lazy"
+                    decoding="async"
+                    width="800"
+                    height="450"
+                    className="
+                      h-44
+                      md:h-56
+                      w-full
+                      object-cover
+                      transition-transform
+                      duration-700
+                      hover:scale-110
+                    "
                 />
               </div>
 

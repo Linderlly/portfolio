@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="py-12 md:py-20 px-4 md:px-6">
+    <section id="about" style={{ paddingTop: '10px', paddingBottom: '10px' }} className="px-4 md:px-6">
       <div className="container-custom">
         <div className="
           glass rounded-3xl
@@ -8,11 +8,12 @@ export default function About() {
           hover:border-cyan-400
           transition-all duration-300
         ">
-          <h2 className="
-            text-3xl md:text-5xl
-            font-bold text-center
-            mb-8 md:mb-12
-          ">
+          <h2 style={{ 
+            fontSize: 'clamp(1.875rem, 4vw, 3rem)', 
+            fontWeight: 'bold', 
+            textAlign: 'center',
+            marginBottom: '40px'
+          }}>
             Sobre Mim
           </h2>
 

@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+
+import { ThemeContext } from './context/ThemeContext'
 
 import Loader from './components/Loader'
 
@@ -13,13 +15,17 @@ import Footer from './components/Footer'
 
 export default function App() {
 
+  const { darkMode } = useContext(ThemeContext)
+
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
 
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setLoading(false)
-    }, 1800)
+    }, 500)
+
+    return () => clearTimeout(timer)
 
   }, [])
 
@@ -29,7 +35,19 @@ export default function App() {
 
   return (
 
-    <div className="app">
+    <div
+      className={`
+        min-h-screen
+        transition-all
+        duration-500
+
+        ${
+          darkMode
+            ? 'bg-slate-950 text-white'
+            : 'bg-slate-50 text-slate-900'
+        }
+      `}
+    >
 
       <Navbar />
 
@@ -37,13 +55,23 @@ export default function App() {
 
         <Hero />
 
+        <div style={{ height: '40px' }}></div>
+
         <About />
+
+        <div style={{ height: '40px' }}></div>
 
         <Skills />
 
+        <div style={{ height: '40px' }}></div>
+
         <Projects />
 
+        <div style={{ height: '40px' }}></div>
+
         <Certificates />
+
+        <div style={{ height: '40px' }}></div>
 
         <Contact />
 

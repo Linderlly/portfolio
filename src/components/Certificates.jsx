@@ -79,13 +79,14 @@ const certificates = [
 
 export default function Certificates() {
   return (
-    <section id="certificates" className="py-12 md:py-20 px-4 md:px-6">
+    <section id="certificates" style={{ paddingTop: '10px', paddingBottom: '10px' }} className="px-4 md:px-6">
       <div className="container-custom">
-        <h2 className="
-          text-3xl md:text-5xl
-          font-bold text-center
-          mb-10 md:mb-16
-        ">
+        <h2 style={{ 
+          fontSize: 'clamp(1.875rem, 4vw, 3rem)', 
+          fontWeight: 'bold', 
+          textAlign: 'center',
+          marginBottom: '40px'
+        }}>
           Certificados
         </h2>
 
@@ -109,15 +110,19 @@ export default function Certificates() {
             >
               <div className="overflow-hidden">
                 <img
-                  src={certificate.image}
-                  alt={certificate.title}
-                  className="
-                    h-44 md:h-56
-                    w-full object-cover
-                    hover:scale-105
-                    transition-transform duration-700
-                  "
-                />
+                    src={certificate.image}
+                    alt={certificate.title}
+                    loading="lazy"
+                    decoding="async"
+                    width="800"
+                    height="600"
+                    className="
+                      w-full
+                      h-48
+                      md:h-56
+                      object-cover
+                    "
+                  />
               </div>
 
               <div className="p-5 md:p-7 flex flex-col flex-1">

@@ -2,7 +2,7 @@ import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa'
 
 export default function Contact() {
   return (
-    <section id="contact" className="w-full py-12 md:py-20 px-4 md:px-5 flex justify-center">
+    <section id="contact" style={{ paddingTop: '10px', paddingBottom: '10px' }} className="w-full px-4 md:px-5 flex justify-center">
       <div className="w-full max-w-6xl">
         <div className="
           glass rounded-3xl
@@ -11,7 +11,12 @@ export default function Contact() {
           text-center
           flex flex-col items-center justify-center
         ">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
+          <h2 style={{ 
+            fontSize: 'clamp(1.875rem, 4vw, 3rem)', 
+            fontWeight: 'bold', 
+            textAlign: 'center',
+            marginBottom: '40px'
+          }}>
             Contato
           </h2>
 

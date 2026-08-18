@@ -8,13 +8,14 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="py-12 md:py-20 px-4 md:px-6">
+    <section id="skills" style={{ paddingTop: '10px', paddingBottom: '10px' }} className="px-4 md:px-6">
       <div className="container-custom">
-        <h2 className="
-          text-3xl md:text-5xl
-          font-bold text-center
-          mb-10 md:mb-16
-        ">
+        <h2 style={{ 
+          fontSize: 'clamp(1.875rem, 4vw, 3rem)', 
+          fontWeight: 'bold', 
+          textAlign: 'center',
+          marginBottom: '40px'
+        }}>
           Tecnologias
         </h2>
 
