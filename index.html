@@ -22,7 +22,35 @@
 <meta name="author" content="Linderlly Santana" />
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/portfolio/assets/index-Dh3i4_Ao.js"></script>
+  
+    <!-- Script para limpar dados corrompidos -->
+    <script>
+      (function() {
+        try {
+          // Verifica se o tema está corrompido
+          const theme = localStorage.getItem('theme');
+          if (theme !== null) {
+            JSON.parse(theme);
+          }
+        } catch (e) {
+          console.warn('Tema corrompido, resetando...');
+          localStorage.removeItem('theme');
+        }
+        
+        try {
+          // Verifica se o idioma está corrompido
+          const lang = localStorage.getItem('language');
+          if (lang !== null && lang !== 'pt' && lang !== 'en') {
+            localStorage.removeItem('language');
+          }
+        } catch (e) {
+          console.warn('Idioma corrompido, resetando...');
+          localStorage.removeItem('language');
+        }
+      })();
+    </script>
+  
+    <script type="module" crossorigin src="/portfolio/assets/index-00SggFQd.js"></script>
     <link rel="stylesheet" crossorigin href="/portfolio/assets/index-D_NvjC1n.css">
   </head>
   <body>
