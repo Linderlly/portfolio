@@ -20,16 +20,40 @@ const translations = {
 const LanguageContext = createContext(null)
 
 export function LanguageProvider({ children }) {
-  // Inicializa com o idioma salvo ou padrão (pt)
+  /**
+   * Inicializa o idioma com segurança:
+   * 1. Tenta ler do localStorage
+   * 2. Se não existir ou for inválido, usa 'pt'
+   */
   const [language, setLanguage] = useState(() => {
-    const saved = localStorage.getItem('language')
-    return saved || 'pt'
+    try {
+      const saved = localStorage.getItem('language')
+      if (saved === null) return 'pt'
+      
+      // Verifica se o valor salvo é válido
+      if (saved === 'pt' || saved === 'en') {
+        return saved
+      }
+      
+      // Se for inválido, remove e usa o padrão
+      localStorage.removeItem('language')
+      return 'pt'
+    } catch (error) {
+      console.warn('Erro ao ler idioma do localStorage:', error)
+      return 'pt'
+    }
   })
 
-  // Persiste o idioma no localStorage
+  /**
+   * Persiste o idioma no localStorage
+   */
   useEffect(() => {
-    localStorage.setItem('language', language)
-    document.documentElement.lang = language === 'pt' ? 'pt-BR' : 'en-US'
+    try {
+      localStorage.setItem('language', language)
+      document.documentElement.lang = language === 'pt' ? 'pt-BR' : 'en-US'
+    } catch (error) {
+      console.warn('Erro ao salvar idioma no localStorage:', error)
+    }
   }, [language])
 
   /**

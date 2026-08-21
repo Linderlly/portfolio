@@ -11,10 +11,28 @@ import { createContext, useEffect, useState } from 'react'
 export const ThemeContext = createContext(null)
 
 export function ThemeProvider({ children }) {
-  // Inicializa com o tema salvo no localStorage ou padrão (dark)
+  /**
+   * Inicializa o tema com segurança:
+   * 1. Tenta ler do localStorage
+   * 2. Se não existir ou for inválido, usa o sistema ou padrão (dark)
+   */
   const [darkMode, setDarkMode] = useState(() => {
-    const saved = localStorage.getItem('theme')
-    return saved ? JSON.parse(saved) : true
+    try {
+      const saved = localStorage.getItem('theme')
+      
+      // Se não houver valor salvo, usa a preferência do sistema
+      if (saved === null) {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+      }
+      
+      // Tenta fazer o parse do JSON
+      return JSON.parse(saved)
+    } catch (error) {
+      // Se o JSON for inválido, remove o valor corrompido e usa o padrão
+      console.warn('Erro ao ler tema do localStorage:', error)
+      localStorage.removeItem('theme')
+      return true // Padrão: dark mode
+    }
   })
 
   /**
@@ -30,13 +48,28 @@ export function ThemeProvider({ children }) {
       htmlElement.classList.remove('dark')
     }
     
-    localStorage.setItem('theme', JSON.stringify(darkMode))
+    try {
+      localStorage.setItem('theme', JSON.stringify(darkMode))
+    } catch (error) {
+      console.warn('Erro ao salvar tema no localStorage:', error)
+    }
   }, [darkMode])
 
-  const toggleTheme = () => setDarkMode(prev => !prev)
+  /**
+   * Alterna entre os temas claro e escuro
+   */
+  const toggleTheme = () => {
+    setDarkMode(prev => !prev)
+  }
+
+  const value = {
+    darkMode,
+    setDarkMode,
+    toggleTheme
+  }
 
   return (
-    <ThemeContext.Provider value={{ darkMode, toggleTheme }}>
+    <ThemeContext.Provider value={value}>
       {children}
     </ThemeContext.Provider>
   )
