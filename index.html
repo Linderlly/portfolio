@@ -1,33 +1,43 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/portfolio/assets/flavicon-Cv4-nm6p.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Título - APENAS UM -->
     <title>Portfólio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <title>Linderlly Santana | Engenheiro de Software</title>
-
+    
+    <!-- Favicon - CAMINHO CORRETO -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+    
+    <!-- Meta tags -->
     <meta
-  name="description"
-  content="Portfólio profissional de Linderlly Santana, Engenheiro de Software especializado em aplicações modernas e desenvolvimento web."
-/>
-
+      name="description"
+      content="Portfólio profissional de Linderlly Santana, Engenheiro de Software especializado em aplicações modernas e desenvolvimento web."
+    />
     <meta
-  name="keywords"
-  content="engenheiro de software, react, javascript, portfolio"
-/>
-
-<meta name="author" content="Linderlly Santana" />
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+      name="keywords"
+      content="engenheiro de software, react, javascript, portfolio, desenvolvimento web, full stack"
+    />
+    <meta name="author" content="Linderlly Santana" />
+    <meta name="theme-color" content="#06b6d4" />
+    
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:title" content="Linderlly Santana | Engenheiro de Software" />
+    <meta property="og:description" content="Portfólio profissional de Linderlly Santana, Engenheiro de Software especializado em aplicações modernas." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://linderlly.github.io/portfolio/" />
+    
+    <!-- Preconnect para fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
     <!-- Script para limpar dados corrompidos -->
     <script>
       (function() {
         try {
-          // Verifica se o tema está corrompido
           const theme = localStorage.getItem('theme');
           if (theme !== null) {
             JSON.parse(theme);
@@ -38,7 +48,6 @@
         }
         
         try {
-          // Verifica se o idioma está corrompido
           const lang = localStorage.getItem('language');
           if (lang !== null && lang !== 'pt' && lang !== 'en') {
             localStorage.removeItem('language');
@@ -49,7 +58,7 @@
         }
       })();
     </script>
-  
+    
     <script type="module" crossorigin src="/portfolio/assets/index-00SggFQd.js"></script>
     <link rel="stylesheet" crossorigin href="/portfolio/assets/index-D_NvjC1n.css">
   </head>
