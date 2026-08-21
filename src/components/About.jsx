@@ -1,32 +1,52 @@
+/**
+ * Seção "Sobre Mim"
+ * Apresenta informações pessoais e profissionais
+ * 
+ * @component
+ * @author Linderlly Santana
+ */
+
+import { useLanguage } from '../context/LanguageContext'
+
 export default function About() {
+  const { t } = useLanguage()
+
   return (
-    <section id="about" style={{ paddingTop: '10px', paddingBottom: '10px' }} className="px-4 md:px-6">
+    <section 
+      id="about" 
+      className="px-4 md:px-6 py-10 md:py-16"
+    >
       <div className="container-custom">
         <div className="
-          glass rounded-3xl
+          rounded-3xl
           p-6 md:p-16
-          hover:border-cyan-400
           transition-all duration-300
+          bg-white/70 dark:bg-slate-900/70
+          backdrop-blur-xl
+          border border-slate-200/50 dark:border-slate-800/50
+          shadow-lg shadow-slate-200/20 dark:shadow-slate-800/20
+          hover:shadow-xl hover:shadow-cyan-500/5 dark:hover:shadow-cyan-500/10
+          hover:border-cyan-400/30 dark:hover:border-cyan-400/30
         ">
-          <h2 style={{ 
-            fontSize: 'clamp(1.875rem, 4vw, 3rem)', 
-            fontWeight: 'bold', 
-            textAlign: 'center',
-            marginBottom: '40px'
-          }}>
-            Sobre Mim
+          <h2 className="
+            text-center font-bold
+            text-3xl md:text-5xl
+            mb-8 md:mb-12
+            text-slate-900 dark:text-white
+          ">
+            {t('about.title')}
           </h2>
 
           <div className="flex justify-center">
             <p className="
               w-full max-w-4xl
-              text-center text-gray-400
+              text-center
+              text-slate-700 dark:text-slate-300
               text-base md:text-xl
               leading-7 md:leading-9
+              whitespace-pre-line
             ">
-              Sou estudante de Bacharelado em Engenharia de Software, atualmente em fase de conclusão da graduação, com formatura prevista para setembro de 2026. Apaixonado por tecnologia, desenvolvimento web e educação tecnológica, possuo experiência como instrutor de informática, atuando no planejamento e condução de aulas, suporte acadêmico e acompanhamento do desenvolvimento de alunos em diferentes áreas da tecnologia.
-              Tenho conhecimentos em Desenvolvimento Web utilizando HTML, CSS, JavaScript, Node.js e Angular, além de noções com linguagens como Java, Python e C#. Também possuo familiaridade com bancos de dados como MySQL, PostgreSQL, Oracle e SQL Server.
-              Ao longo da minha trajetória, desenvolvi habilidades importantes como comunicação, trabalho em equipe, liderança, criatividade e resolução de problemas, sempre buscando unir conhecimento técnico com uma abordagem prática, inovadora e didática.
+              {t('about.content')}
             </p>
           </div>
         </div>

@@ -1,40 +1,36 @@
+/**
+ * Componente de carregamento da aplicação
+ * Exibe um spinner animado enquanto o conteúdo carrega
+ * 
+ * @component
+ * @author Linderlly Santana
+ */
+
 import { motion } from 'framer-motion'
 
 export default function Loader() {
   return (
-    <div
-      className="
-        fixed
-        inset-0
-        bg-slate-950
-        flex
-        items-center
-        justify-center
-        z-[999]
-      "
-    >
-
+    <div className="
+      fixed inset-0
+      bg-slate-950
+      flex items-center justify-center
+      z-[999]
+    ">
       <motion.div
-        animate={{
-          rotate:360
-        }}
-
+        animate={{ rotate: 360 }}
         transition={{
-          duration:1,
-          repeat:Infinity,
-          ease:'linear'
+          duration: 1,
+          repeat: Infinity,
+          ease: 'linear'
         }}
-
         className="
-          w-16
-          h-16
-          border-4
-          border-cyan-400
+          w-16 h-16
+          border-4 border-cyan-400
           border-t-transparent
           rounded-full
+          shadow-lg shadow-cyan-500/20
         "
       />
-
     </div>
   )
 }

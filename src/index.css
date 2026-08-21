@@ -1,33 +1,58 @@
+/**
+ * Estilos globais do portfólio
+ * Configurações de reset, tipografia, utilitários e temas
+ */
+
 @import "tailwindcss";
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+/* ===== Reset e Configurações Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html{
-  scroll-behavior:smooth;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  font-family:'Inter',sans-serif;
-  overflow-x:hidden;
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-#root{
-  width:100%;
+#root {
+  width: 100%;
+  min-height: 100vh;
 }
 
-.container-custom{
-  width:100%;
-  max-width:1200px;
-  margin:0 auto;
-  padding-inline:24px;
+/* ===== Utilitários Customizados ===== */
+.container-custom {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-inline: 24px;
 }
 
-.glass{
-  backdrop-filter:blur(14px);
+/* Efeito Glassmorphism - Melhorado para ambos os modos */
+.glass {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Modo escuro - glass */
+.dark .glass {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Modo claro - glass */
+:not(.dark) .glass {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 /* Gradiente de texto */
@@ -38,7 +63,7 @@ body{
   background-clip: text;
 }
 
-/* Espaçamento extra entre seções */
+/* ===== Espaçamento entre seções (responsivo) ===== */
 .section-spacer {
   height: 64px;
 }
@@ -53,4 +78,396 @@ body{
   .section-spacer {
     height: 128px;
   }
+}
+
+/* ===== Efeito de elevação ao passar o mouse ===== */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(6, 182, 212, 0.15);
+}
+
+/* ===== Scrollbar Personalizada ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #06b6d4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22d3ee;
+}
+
+/* ===== Animações ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ===== Animação de rotação lenta para o botão de idioma ===== */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+/* ===== Estilos para o botão de idioma em mobile ===== */
+@media (max-width: 480px) {
+  .language-toggle-container {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .language-toggle-container .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+/* ===== Suporte para touch devices ===== */
+@media (hover: none) {
+  .language-toggle-container .group-hover\:opacity-100 {
+    opacity: 0 !important;
+  }
+  
+  .language-toggle-container .group-hover\:text-cyan-300 {
+    color: #22d3ee !important;
+  }
+}
+
+/* ===== CORREÇÕES PARA MODO CLARO ===== */
+
+/* Cards em modo claro */
+:not(.dark) .bg-slate-900\/70 {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: #e2e8f0 !important;
+}
+
+:not(.dark) .border-slate-800 {
+  border-color: #e2e8f0 !important;
+}
+
+:not(.dark) .hover\:border-cyan-400:hover {
+  border-color: #06b6d4 !important;
+}
+
+/* Textos em modo claro */
+:not(.dark) .text-gray-400 {
+  color: #475569 !important;
+}
+
+:not(.dark) .text-slate-500 {
+  color: #475569 !important;
+}
+
+:not(.dark) .text-slate-600 {
+  color: #334155 !important;
+}
+
+:not(.dark) .text-gray-300 {
+  color: #475569 !important;
+}
+
+:not(.dark) .text-slate-300 {
+  color: #1e293b !important;
+}
+
+:not(.dark) .text-slate-400 {
+  color: #475569 !important;
+}
+
+/* Títulos em modo claro */
+:not(.dark) h1,
+:not(.dark) h2,
+:not(.dark) h3,
+:not(.dark) h4,
+:not(.dark) h5,
+:not(.dark) h6 {
+  color: #0f172a !important;
+}
+
+/* Parágrafos em modo claro */
+:not(.dark) p {
+  color: #334155 !important;
+}
+
+/* Links de navegação em modo claro */
+:not(.dark) .text-gray-300 {
+  color: #475569 !important;
+}
+
+:not(.dark) .hover\:text-cyan-400:hover {
+  color: #06b6d4 !important;
+}
+
+/* Botões em modo claro */
+:not(.dark) .bg-slate-800 {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+:not(.dark) .bg-slate-800:hover {
+  background: #cbd5e1 !important;
+}
+
+/* Badges de tecnologias em modo claro */
+:not(.dark) .bg-cyan-500\/10 {
+  background: rgba(6, 182, 212, 0.1) !important;
+}
+
+:not(.dark) .text-cyan-400 {
+  color: #0891b2 !important;
+}
+
+:not(.dark) .border-cyan-500\/20 {
+  border-color: rgba(6, 182, 212, 0.2) !important;
+}
+
+/* Footer em modo claro */
+:not(.dark) .border-t {
+  border-color: #e2e8f0 !important;
+}
+
+:not(.dark) .text-gray-500 {
+  color: #64748b !important;
+}
+
+/* Hover em cards no modo claro */
+:not(.dark) .hover\:shadow-2xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
+}
+
+:not(.dark) .hover\:shadow-cyan-500\/10:hover {
+  box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.2) !important;
+}
+
+/* Glass em modo claro para cards */
+:not(.dark) .bg-slate-900\/70 {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Categoria de skills em modo claro */
+:not(.dark) .text-cyan-400\/60 {
+  color: rgba(6, 182, 212, 0.7) !important;
+}
+
+/* ===== CORREÇÃO: Cards com fundo no modo escuro ===== */
+.dark .bg-white\/80 {
+  background: rgba(15, 23, 42, 0.7) !important;
+}
+
+.dark .bg-slate-900\/70 {
+  background: rgba(15, 23, 42, 0.7) !important;
+}
+
+.dark .border-slate-200 {
+  border-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Corrigir textos no modo escuro dentro dos cards */
+.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+.dark .text-slate-600 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-slate-700 {
+  color: #cbd5e1 !important;
+}
+
+/* Corrigir botões no modo escuro */
+.dark .bg-slate-200 {
+  background: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+
+.dark .bg-slate-200:hover {
+  background: #334155 !important;
+}
+
+.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+/* Glass effect no modo escuro para botão de idioma */
+.dark .language-toggle-container .glass {
+  background: rgba(15, 23, 42, 0.8) !important;
+}
+
+/* Navbar - Correção do fundo */
+header {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+.dark header {
+  background: rgba(15, 23, 42, 0.85) !important;
+}
+
+/* About - Correção do glass effect */
+#about .rounded-3xl {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+.dark #about .rounded-3xl {
+  background: rgba(15, 23, 42, 0.7) !important;
+}
+
+/* Contact - Correção do glass effect */
+#contact .rounded-3xl {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+.dark #contact .rounded-3xl {
+  background: rgba(15, 23, 42, 0.7) !important;
+}
+
+/* Footer - Correção */
+footer {
+  background: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.dark footer {
+  background: rgba(15, 23, 42, 0.3) !important;
+}
+
+/* Skills - Correção */
+#skills .bg-white\/70 {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.dark #skills .bg-white\/70 {
+  background: rgba(15, 23, 42, 0.7) !important;
+}
+
+/* Projects - Correção */
+#projects .bg-white\/70 {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.dark #projects .bg-white\/70 {
+  background: rgba(15, 23, 42, 0.7) !important;
+}
+
+/* Certificates - Correção */
+#certificates .bg-white\/70 {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.dark #certificates .bg-white\/70 {
+  background: rgba(15, 23, 42, 0.7) !important;
+}
+
+/* Correção de textos em modo escuro */
+.dark .text-slate-700 {
+  color: #cbd5e1 !important;
+}
+
+.dark .text-slate-600 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+/* Correção de bordas em modo escuro */
+.dark .border-slate-200\/50 {
+  border-color: rgba(51, 65, 85, 0.5) !important;
+}
+
+/* Hover em modo escuro */
+.dark .hover\:border-cyan-400:hover {
+  border-color: #22d3ee !important;
+}
+
+.dark .hover\:shadow-cyan-500\/10:hover {
+  box-shadow: 0 20px 60px -12px rgba(6, 182, 212, 0.15) !important;
+}
+
+/* Força todos os títulos a ficarem brancos no modo escuro */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark .text-slate-900 {
+  color: #ffffff !important;
+}
+
+/* Títulos com gradiente mantêm o efeito */
+.dark .gradient-text {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Subtítulos e textos secundários no modo escuro */
+.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+/* Descrições em modo escuro */
+.dark .text-gray-400 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+.dark .text-slate-500 {
+  color: #94a3b8 !important;
 }

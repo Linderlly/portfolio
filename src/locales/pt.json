@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "projects": "Projetos",
+    "certificates": "Certificados",
+    "contact": "Contato"
+  },
+  "hero": {
+    "name": "Linderlly Santana",
+    "title": "Engenheiro de Software",
+    "description": "Desenvolvedor Full Stack JR com foco em aplicações web modernas, responsivas e escaláveis utilizando React, JavaScript, Firebase, Node.js e outras tecnologias do ecossistema web."
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "content": "Sou estudante de Bacharelado em Engenharia de Software, atualmente em fase de conclusão da graduação, com formatura prevista para setembro de 2026. Apaixonado por tecnologia, desenvolvimento web e educação tecnológica, possuo experiência como instrutor de informática, atuando no planejamento e condução de aulas, suporte acadêmico e acompanhamento do desenvolvimento de alunos em diferentes áreas da tecnologia.\n\nTenho conhecimentos em Desenvolvimento Web utilizando HTML, CSS, JavaScript, Node.js e Angular, além de noções com linguagens como Java, Python e C#. Também possuo familiaridade com bancos de dados como MySQL, PostgreSQL, Oracle e SQL Server.\n\nAo longo da minha trajetória, desenvolvi habilidades importantes como comunicação, trabalho em equipe, liderança, criatividade e resolução de problemas, sempre buscando unir conhecimento técnico com uma abordagem prática, inovadora e didática."
+  },
+  "skills": {
+    "title": "Tecnologias tenho conhecimento"
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "viewProject": "Ver Projeto →"
+  },
+  "certificates": {
+    "title": "Meus Certificados",
+    "pdf": "PDF",
+    "view": "Visualizar"
+  },
+  "contact": {
+    "title": "Vamos conversar?",
+    "description": "Vamos transformar ideias em projetos modernos, profissionais e eficientes.\nEntre em contato para trabalharmos juntos no seu próximo projeto.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "developed": "Desenvolvido por",
+    "by": "Linderlly Santana"
+  },
+  "loader": {
+    "loading": "Carregando..."
+  },
+  "certificatesData": [
+    {
+      "title": "Programação de sistemas da informação",
+      "description": "Programação I e Modelagem de sistemas"
+    },
+    {
+      "title": "Gerência de projetos de T.I",
+      "description": "Medidas de esforço de desenvolvimento de Software e Gestão de projetos para T.I"
+    },
+    {
+      "title": "Direitos e Privacidade dos usuários",
+      "description": "Gestão de segurança da informação e Linhas de produtos de Software"
+    },
+    {
+      "title": "Aplicação melhorada contínua",
+      "description": "Modelagem de dados, Modelagem de Sistemas e Métodos Ágeis"
+    },
+    {
+      "title": "C# básico",
+      "description": "C-Sharp básico, tipos de dados, estruturas de controle, funções e arrays"
+    },
+    {
+      "title": "C# Intermediário",
+      "description": "C-Sharp intermediário, orientação a objetos, bancos de dados e desenvolvimento de aplicações"
+    },
+    {
+      "title": "C# Avançado I",
+      "description": "C-Sharp avançado, programação funcional, design patterns e arquitetura de software"
+    },
+    {
+      "title": "C# Avançado II",
+      "description": "C-Sharp avançado II, desenvolvimento de aplicações web e integração com serviços"
+    },
+    {
+      "title": "Angular",
+      "description": "Angular, TypeScript e desenvolvimento de aplicações web"
+    },
+    {
+      "title": "Ionic",
+      "description": "Ionic, TypeScript e desenvolvimento de aplicações móveis"
+    },
+    {
+      "title": "Cordova",
+      "description": "Cordova, TypeScript e desenvolvimento de aplicações móveis"
+    },
+    {
+      "title": "Excel",
+      "description": "Excel, fórmulas, funções e análise de dados"
+    },
+    {
+      "title": "Excel Avançado I",
+      "description": "Excel avançado, tabelas dinâmicas, gráficos e análise de dados avançada"
+    },
+    {
+      "title": "Excel Avançado II",
+      "description": "Excel avançado II, análise de dados e automação com VBA"
+    },
+    {
+      "title": "Desenvolvimento de Games",
+      "description": "Desenvolvimento de Games 2D com Construct 3"
+    },
+    {
+      "title": "Inteligência Artificial",
+      "description": "Inteligencia Artificial, prompts, criação de imagens e vídeos com IA"
+    },
+    {
+      "title": "Lógica de Programação",
+      "description": "Lógica de Programação, algoritmos, estruturas de dados e resolução de problemas"
+    },
+    {
+      "title": "Manutenção de Dispositivos Móveis",
+      "description": "Manutencão de Dispositivos Móveis, diagnóstico, reparo e manutenção de smartphones e tablets"
+    },
+    {
+      "title": "Power BI",
+      "description": "Power BI, análise de dados, visualização e criação de dashboards"
+    },
+    {
+      "title": "Python",
+      "description": "Python, programação básica, bibliotecas e desenvolvimento de aplicações"
+    },
+    {
+      "title": "Segurança na Era Digital",
+      "description": "Segurança na Era Digital, ameaças cibernéticas, proteção de dados e melhores práticas de segurança"
+    },
+    {
+      "title": "Banco de Dados SQL",
+      "description": "Banco de Dados SQL, modelagem de dados, consultas e administração de bancos de dados"
+    },
+    {
+      "title": "Trabalho em Equipe",
+      "description": "Trabalho em Equipe, comunicação, colaboração e gestão de conflitos"
+    },
+    {
+      "title": "Inovatech Fametro",
+      "description": "Participação no Inovatech Fametro Manaus, evento de inovação e tecnologia"
+    }
+  ],
+  "projectsData": [
+    {
+      "title": "Quiz Educacional",
+      "description": "Plataforma educacional interativa desenvolvida com HTML, CSS, JavaScript e Firebase para aprendizado gamificado."
+    },
+    {
+      "title": "E-Commerce",
+      "description": "Projeto de comércio eletrônico criado com Vue e TypeScript durante Hackathon Full Stack com funcionalidades completas."
+    },
+    {
+      "title": "Jogo da Memória",
+      "description": "Game responsivo desenvolvido para praticar JavaScript, HTML e CSS com sistema de pontuação e níveis de dificuldade."
+    },
+    {
+      "title": "Gerenciador de Alunos",
+      "description": "Aplicativo mobile desenvolvido com React Native para gerenciamento escolar com CRUD completo."
+    },
+    {
+      "title": "Gerenciador de Tarefas",
+      "description": "Aplicativo criado com Flutter e Firebase para organização de tarefas em tempo real e colaboração."
+    }
+  ]
+}

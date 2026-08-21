@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "certificates": "Certificates",
+    "contact": "Contact"
+  },
+  "hero": {
+    "name": "Linderlly Santana",
+    "title": "Software Engineer",
+    "description": "Junior Full Stack Developer focused on modern, responsive, and scalable web applications, utilizing React, JavaScript, Firebase, Node.js, and other technologies within the web ecosystem."
+  },
+  "about": {
+    "title": "About Me",
+    "content": "I am a Bachelor's student in Software Engineering, currently in the final phase of graduation, with graduation expected in September 2026. Passionate about technology, web development and tech education, I have experience as a computer instructor, working on lesson planning and delivery, academic support and monitoring student development in different areas of technology.\n\nI have knowledge in Web Development using HTML, CSS, JavaScript, Node.js and Angular, as well as notions of languages such as Java, Python and C#. I am also familiar with databases such as MySQL, PostgreSQL, Oracle and SQL Server.\n\nThroughout my journey, I have developed important skills such as communication, teamwork, leadership, creativity and problem solving, always seeking to combine technical knowledge with a practical, innovative and didactic approach."
+  },
+  "skills": {
+    "title": "Technologies I'm familiar with"
+  },
+  "projects": {
+    "title": "My Projects",
+    "viewProject": "View Project →"
+  },
+  "certificates": {
+    "title": "My Certificates",
+    "pdf": "PDF",
+    "view": "View"
+  },
+  "contact": {
+    "title": "Let's talk?",
+    "description": "Let's transform ideas into modern, professional and efficient projects.\nContact me to work together on your next project.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "footer": {
+    "developed": "Developed by",
+    "by": "Linderlly Santana"
+  },
+  "loader": {
+    "loading": "Loading..."
+  },
+  "certificatesData": [
+    {
+      "title": "Information Systems Programming",
+      "description": "Programming I and Systems Modeling"
+    },
+    {
+      "title": "IT Project Management",
+      "description": "Software Development Effort Measures and IT Project Management"
+    },
+    {
+      "title": "User Rights and Privacy",
+      "description": "Information Security Management and Software Product Lines"
+    },
+    {
+      "title": "Continuous Improvement Application",
+      "description": "Data Modeling, Systems Modeling and Agile Methods"
+    },
+    {
+      "title": "C# Basic",
+      "description": "C-Sharp basic, data types, control structures, functions and arrays"
+    },
+    {
+      "title": "C# Intermediate",
+      "description": "C-Sharp intermediate, object orientation, databases and application development"
+    },
+    {
+      "title": "C# Advanced I",
+      "description": "C-Sharp advanced, functional programming, design patterns and software architecture"
+    },
+    {
+      "title": "C# Advanced II",
+      "description": "C-Sharp advanced II, web application development and service integration"
+    },
+    {
+      "title": "Angular",
+      "description": "Angular, TypeScript and web application development"
+    },
+    {
+      "title": "Ionic",
+      "description": "Ionic, TypeScript and mobile application development"
+    },
+    {
+      "title": "Cordova",
+      "description": "Cordova, TypeScript and mobile application development"
+    },
+    {
+      "title": "Excel",
+      "description": "Excel, formulas, functions and data analysis"
+    },
+    {
+      "title": "Excel Advanced I",
+      "description": "Excel advanced, pivot tables, charts and advanced data analysis"
+    },
+    {
+      "title": "Excel Advanced II",
+      "description": "Excel advanced II, data analysis and automation with VBA"
+    },
+    {
+      "title": "Game Development",
+      "description": "2D Game Development with Construct 3"
+    },
+    {
+      "title": "Artificial Intelligence",
+      "description": "Artificial Intelligence, prompts, image and video creation with AI"
+    },
+    {
+      "title": "Programming Logic",
+      "description": "Programming Logic, algorithms, data structures and problem solving"
+    },
+    {
+      "title": "Mobile Device Maintenance",
+      "description": "Mobile Device Maintenance, diagnosis, repair and maintenance of smartphones and tablets"
+    },
+    {
+      "title": "Power BI",
+      "description": "Power BI, data analysis, visualization and dashboard creation"
+    },
+    {
+      "title": "Python",
+      "description": "Python, basic programming, libraries and application development"
+    },
+    {
+      "title": "Digital Age Security",
+      "description": "Digital Age Security, cyber threats, data protection and security best practices"
+    },
+    {
+      "title": "SQL Database",
+      "description": "SQL Database, data modeling, queries and database administration"
+    },
+    {
+      "title": "Teamwork",
+      "description": "Teamwork, communication, collaboration and conflict management"
+    },
+    {
+      "title": "Inovatech Fametro",
+      "description": "Participation in Inovatech Fametro Manaus, innovation and technology event"
+    }
+  ],
+  "projectsData": [
+    {
+      "title": "Educational Quiz",
+      "description": "Interactive educational platform developed with HTML, CSS, JavaScript and Firebase for gamified learning."
+    },
+    {
+      "title": "E-Commerce",
+      "description": "E-commerce project created with Vue and TypeScript during Full Stack Hackathon with complete functionalities."
+    },
+    {
+      "title": "Memory Game",
+      "description": "Responsive game developed to practice JavaScript, HTML and CSS with scoring system and difficulty levels."
+    },
+    {
+      "title": "Student Manager",
+      "description": "Mobile application developed with React Native for school management with complete CRUD."
+    },
+    {
+      "title": "Task Manager",
+      "description": "Application created with Flutter and Firebase for real-time task organization and collaboration."
+    }
+  ]
+}
