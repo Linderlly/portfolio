@@ -1,12 +1,12 @@
 /**
- * Seção de projetos do portfólio
- * Exibe cards com projetos, imagens e links para demonstração
+ * Exibe cards com projetos, imagens e links com animação em cascata
  * 
  * @component
  * @author Linderlly Santana
  */
 
 import { useLanguage } from '../context/LanguageContext'
+import AnimatedSection from './AnimatedSection'
 import quiz from '../assets/images/quiz.png'
 import ecommerce from '../assets/images/ecommerce.png'
 import memorygame from '../assets/images/memorygame.png'
@@ -79,9 +79,9 @@ function ProjectCard({ project, t }) {
         hover:shadow-2xl hover:shadow-cyan-500/10
         transition-all duration-500
         flex flex-col
+        h-full
       "
     >
-      {/* Imagem com zoom no hover */}
       <div className="overflow-hidden">
         <img
           src={project.image}
@@ -98,7 +98,6 @@ function ProjectCard({ project, t }) {
         />
       </div>
 
-      {/* Conteúdo do card */}
       <div className="p-4 md:p-7 flex flex-col flex-1 justify-between">
         <div>
           <h3 className="
@@ -115,7 +114,6 @@ function ProjectCard({ project, t }) {
           </p>
         </div>
 
-        {/* Badges de tecnologias */}
         <div className="flex flex-wrap gap-2 mt-3 md:mt-4">
           {project.tech.map((tech, i) => (
             <span
@@ -159,21 +157,30 @@ export default function Projects() {
       className="px-4 md:px-5 py-10 md:py-16"
     >
       <div className="container-custom">
-        <h2 className="
-          text-center font-bold
-          text-3xl md:text-5xl
-          mb-8 md:mb-12
-          text-slate-900 dark:text-white
-        ">
-          {t('projects.title')}
-        </h2>
+        <AnimatedSection direction="up" delay={0.1}>
+          <h2 className="
+            text-center font-bold
+            text-3xl md:text-5xl
+            mb-8 md:mb-12
+            text-slate-900 dark:text-white
+          ">
+            {t('projects.title')}
+          </h2>
+        </AnimatedSection>
 
         <div className="
           grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
           gap-5 md:gap-8
         ">
-          {PROJECTS_DATA.map(project => (
-            <ProjectCard key={project.id} project={project} t={t} />
+          {PROJECTS_DATA.map((project, index) => (
+            <AnimatedSection 
+              key={project.id} 
+              direction="up" 
+              delay={0.1 * index}
+              distance={40}
+            >
+              <ProjectCard project={project} t={t} />
+            </AnimatedSection>
           ))}
         </div>
       </div>

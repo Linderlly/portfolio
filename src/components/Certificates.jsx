@@ -8,6 +8,7 @@
 
 import { FaFilePdf, FaExternalLinkAlt } from 'react-icons/fa'
 import { useLanguage } from '../context/LanguageContext'
+import AnimatedSection from './AnimatedSection'
 
 // ===== IMPORTS DOS ARQUIVOS PDF =====
 import certificado1 from '../assets/certificates/certificado1.pdf'
@@ -334,25 +335,33 @@ export default function Certificates() {
       className="px-4 md:px-6 py-10 md:py-16"
     >
       <div className="container-custom">
-        <h2 className="
-          text-center font-bold
-          text-3xl md:text-5xl
-          mb-8 md:mb-12
-          text-slate-900 dark:text-white
-        ">
-          {t('certificates.title')}
-        </h2>
+        <AnimatedSection direction="up" delay={0.1}>
+          <h2 className="
+            text-center font-bold
+            text-3xl md:text-5xl
+            mb-8 md:mb-12
+            text-slate-900 dark:text-white
+          ">
+            {t('certificates.title')}
+          </h2>
+        </AnimatedSection>
 
         <div className="
           grid grid-cols-1 md:grid-cols-2
           gap-5 md:gap-8
         ">
-          {CERTIFICATES_DATA.map((certificate) => (
-            <CertificateCard 
+          {CERTIFICATES_DATA.map((certificate, index) => (
+            <AnimatedSection 
               key={certificate.id} 
-              certificate={certificate} 
-              t={t}
-            />
+              direction={index % 2 === 0 ? 'left' : 'right'}
+              delay={0.05 * (index % 4)}
+              distance={40}
+            >
+              <CertificateCard 
+                certificate={certificate} 
+                t={t}
+              />
+            </AnimatedSection>
           ))}
         </div>
       </div>
