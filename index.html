@@ -4,61 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Título - APENAS UM -->
-    <title>Portfólio</title>
+    <!-- Título -->
+    <title>Linderlly Santana | Engenheiro de Software</title>
     
-    <!-- Favicon - CAMINHO CORRETO -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="apple-touch-icon" href="./public/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
     
-    <!-- Meta tags -->
+    <!-- SEO Básico -->
     <meta
       name="description"
-      content="Portfólio profissional de Linderlly Santana, Engenheiro de Software especializado em aplicações modernas e desenvolvimento web."
+      content="Portfólio profissional de Linderlly Santana, Engenheiro de Software, com conhecimentos em aplicações web modernas, React, JavaScript, Node.js e Firebase."
     />
     <meta
       name="keywords"
-      content="engenheiro de software, react, javascript, portfolio, desenvolvimento web, full stack"
+      content="Linderlly Santana, engenheiro de software, desenvolvedor full stack JR, react, javascript, node.js, portfolio, manaus, amazonas, brasil"
     />
     <meta name="author" content="Linderlly Santana" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Portuguese" />
     <meta name="theme-color" content="#06b6d4" />
     
-    <!-- Open Graph / Redes Sociais -->
-    <meta property="og:title" content="Linderlly Santana | Engenheiro de Software" />
-    <meta property="og:description" content="Portfólio profissional de Linderlly Santana, Engenheiro de Software especializado em aplicações modernas." />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://linderlly.github.io/portfolio/" />
+    
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://linderlly.github.io/portfolio/" />
+    <meta property="og:title" content="Linderlly Santana | Engenheiro de Software" />
+    <meta property="og:description" content="Portfólio profissional com projetos de desenvolvimento web moderno, React, JavaScript, Node.js e Firebase." />
+    <meta property="og:image" content="https://linderlly.github.io/portfolio/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Linderlly Santana - Engenheiro de Software" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Linderlly Santana" />
     
-    <!-- Preconnect para fontes -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Linderlly Santana | Engenheiro de Software" />
+    <meta name="twitter:description" content="Portfólio profissional com projetos de desenvolvimento web moderno." />
+    <meta name="twitter:image" content="https://linderlly.github.io/portfolio/og-image.png" />
+    <meta name="twitter:image:alt" content="Linderlly Santana - Engenheiro de Software" />
+    
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     
-    <!-- Script para limpar dados corrompidos -->
+    <!-- Script de limpeza do localStorage -->
     <script>
       (function() {
         try {
           const theme = localStorage.getItem('theme');
-          if (theme !== null) {
-            JSON.parse(theme);
-          }
+          if (theme !== null) JSON.parse(theme);
         } catch (e) {
-          console.warn('Tema corrompido, resetando...');
           localStorage.removeItem('theme');
         }
-        
         try {
           const lang = localStorage.getItem('language');
           if (lang !== null && lang !== 'pt' && lang !== 'en') {
             localStorage.removeItem('language');
           }
         } catch (e) {
-          console.warn('Idioma corrompido, resetando...');
           localStorage.removeItem('language');
         }
       })();
     </script>
-    
   </head>
   <body>
     <div id="root"></div>

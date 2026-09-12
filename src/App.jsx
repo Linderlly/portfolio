@@ -21,6 +21,8 @@ import Certificates from './components/Certificates'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import LanguageToggle from './components/LanguageToggle'
+import ScrollProgress from './components/ScrollProgress'
+import ScrollToTop from './components/ScrollToTop'
 
 export default function App() {
   const { darkMode } = useContext(ThemeContext)
@@ -46,6 +48,7 @@ export default function App() {
           ${darkMode ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}
         `}
       >
+        <ScrollProgress />
         <Navbar />
         <main>
           <Hero />
@@ -61,9 +64,10 @@ export default function App() {
           <Contact />
         </main>
         <Footer />
-        
-        {/* Botão flutuante de idioma */}
+
+        {/* Botões flutuantes */}
         <LanguageToggle />
+        <ScrollToTop />
       </div>
     </LanguageProvider>
   )
