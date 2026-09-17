@@ -1,9 +1,11 @@
 {
   "nav": {
-    "about": "Sobre",
-    "projects": "Projetos",
-    "certificates": "Certificados",
-    "contact": "Contato"
+  "about": "Sobre",
+  "skills": "Tecnologias",
+  "experiences": "Experiências",
+  "projects": "Projetos",
+  "certificates": "Certificados",
+  "contact": "Contato"
   },
   "hero": {
     "name": "Linderlly Santana",
@@ -22,9 +24,14 @@
     "viewProject": "Ver Projeto →"
   },
   "certificates": {
-    "title": "Meus Certificados",
-    "pdf": "PDF",
-    "view": "Visualizar"
+  "title": "Certificados",
+  "subtitle": "Uma seleção dos meus principais certificados",
+  "pageTitle": "Meus Certificados",
+  "pageSubtitle": "Todos os certificados que conquistei ao longo da minha trajetória",
+  "viewAll": "Ver todos os certificados",
+  "back": "Voltar",
+  "pdf": "PDF",
+  "view": "Visualizar"
   },
   "contact": {
     "title": "Vamos conversar?",
@@ -39,6 +46,16 @@
   },
   "loader": {
     "loading": "Carregando..."
+  },
+  "experiences": {
+  "title": "Minhas Experiências",
+  "subtitle": "Um resumo da minha trajetória profissional e acadêmica",
+  "viewAll": "Ver todas as experiências",
+  "back": "Voltar",
+  "pageTitle": "Experiências",
+  "pageSubtitle": "Minha trajetória profissional e acadêmica em detalhes",
+  "highlights": "Principais Atividades",
+  "technologies": "Tecnologias"
   },
   "certificatesData": [
     {
@@ -160,4 +177,5 @@
       "description": "Aplicativo criado com Flutter e Firebase para organização de tarefas em tempo real e colaboração."
     }
   ]
+  
 }

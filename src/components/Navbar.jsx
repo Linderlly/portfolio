@@ -27,6 +27,8 @@ export default function Navbar() {
   /** Links de navegação principais */
   const NAV_LINKS = [
     { href: '#about', label: t('nav.about') },
+    { href: '#skills', label: t('nav.skills') },
+    { href: '#experiences', label: t('nav.experiences') },
     { href: '#projects', label: t('nav.projects') },
     { href: '#certificates', label: t('nav.certificates') },
     { href: '#contact', label: t('nav.contact') }

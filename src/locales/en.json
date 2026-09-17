@@ -1,9 +1,11 @@
 {
   "nav": {
-    "about": "About",
-    "projects": "Projects",
-    "certificates": "Certificates",
-    "contact": "Contact"
+  "about": "About",
+  "skills": "Skills",
+  "experiences": "Experiences",
+  "projects": "Projects",
+  "certificates": "Certificates",
+  "contact": "Contact"
   },
   "hero": {
     "name": "Linderlly Santana",
@@ -22,9 +24,14 @@
     "viewProject": "View Project →"
   },
   "certificates": {
-    "title": "My Certificates",
-    "pdf": "PDF",
-    "view": "View"
+  "title": "Certificates",
+  "subtitle": "A selection of my main certificates",
+  "pageTitle": "My Certificates",
+  "pageSubtitle": "All the certificates I earned throughout my journey",
+  "viewAll": "View all certificates",
+  "back": "Back",
+  "pdf": "PDF",
+  "view": "View"
   },
   "contact": {
     "title": "Let's talk?",
@@ -39,6 +46,16 @@
   },
   "loader": {
     "loading": "Loading..."
+  },
+  "experiences": {
+  "title": "My Experiences",
+  "subtitle": "A summary of my professional and academic journey",
+  "viewAll": "View all experiences",
+  "back": "Back",
+  "pageTitle": "Experiences",
+  "pageSubtitle": "My professional and academic journey in detail",
+  "highlights": "Key Activities",
+  "technologies": "Technologies"
   },
   "certificatesData": [
     {
