@@ -26,7 +26,7 @@ export default function CertificatesSection() {
   return (
     <section 
       id="certificates" 
-      className="px-4 md:px-6 py-10 md:py-16"
+      className="px-4 md:px-6 py-10 md:py-16 scroll-mt-24"
     >
       <div className="container-custom">
         {/* Título da seção */}
@@ -174,9 +174,11 @@ export default function CertificatesSection() {
           ))}
         </div>
 
+        <div className="h-16 md:h-24" aria-hidden="true" />
+
         {/* Botão "Ver todos os certificados" */}
         <AnimatedSection direction="up" delay={0.4}>
-          <div className="flex justify-center mt-10 md:mt-14">
+          <div className="flex justify-center">
             <button
               onClick={handleViewAll}
               className="
@@ -205,6 +207,8 @@ export default function CertificatesSection() {
             </button>
           </div>
         </AnimatedSection>
+
+        <div className="h-16 md:h-24" aria-hidden="true" />
       </div>
     </section>
   )

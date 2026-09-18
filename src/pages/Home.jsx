@@ -13,7 +13,7 @@ import Hero from '../components/Hero'
 import About from '../components/About'
 import Skills from '../components/Skills'
 import ExperiencesSection from '../components/ExperiencesSection'
-import Projects from '../components/Projects'
+import ProjectsSection from '../components/ProjectsSection'
 import CertificatesSection from '../components/CertificatesSection'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
@@ -42,7 +42,7 @@ export default function Home() {
         <div className="section-spacer" />
         <ExperiencesSection />
         <div className="section-spacer" />
-        <Projects />
+        <ProjectsSection />
         <div className="section-spacer" />
         <CertificatesSection />
         <div className="section-spacer" />

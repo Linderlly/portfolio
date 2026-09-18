@@ -1,6 +1,6 @@
 /**
- * Seção de apresentação principal
- * Exibe foto, nome, título e descrição com animação
+ * Hero.jsx - Seção de apresentação principal
+ * Foto com anel giratório animado (funciona em ambos os modos)
  * 
  * @component
  * @author Linderlly Santana
@@ -31,22 +31,73 @@ export default function Hero() {
           }}
           className="flex flex-col items-center text-center"
         >
-          {/* Foto de Perfil com animação sutil */}
-          <motion.img
-            src={profile}
-            alt="Linderlly Santana - Software Engineer"
-            width={224}
-            height={224}
-            className="
-              w-28 h-28 sm:w-36 sm:h-36 md:w-56 md:h-56
-              rounded-full object-cover
-              border-4 border-cyan-400
-              shadow-2xl shadow-cyan-500/20
-            "
+          {/* FOTO COM ANEL GIRATÓRIO */}
+          <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-          />
+            className="relative w-28 h-28 sm:w-36 sm:h-36 md:w-56 md:h-56"
+          >
+            {/* Anel externo giratório */}
+            <div
+              className="
+                absolute inset-0
+                rounded-full
+                animate-spin-slow
+              "
+              style={{
+                background: 'conic-gradient(from 0deg, transparent 0deg, #06b6d4 90deg, transparent 180deg, #06b6d4 270deg, transparent 360deg)',
+                animationDuration: '4s'
+              }}
+            />
+
+            {/* Anel externo giratório */}
+            <div
+              className="
+                absolute inset-0
+                rounded-full
+                animate-spin-reverse
+              "
+              style={{
+                background: 'conic-gradient(from 180deg, transparent 0deg, #22d3ee 90deg, transparent 180deg, #22d3ee 270deg, transparent 360deg)',
+                animationDuration: '6s'
+              }}
+            />
+
+            {/* Anel de fundo */}
+            <div className="
+              absolute inset-[3px]
+              rounded-full
+              bg-white dark:bg-slate-950
+              z-[1]
+            " />
+
+            {/* Foto de perfil */}
+            <img
+              src={profile}
+              alt="Linderlly Santana - Software Engineer"
+              width={224}
+              height={224}
+              className="
+                absolute inset-[6px]
+                w-[calc(100%-12px)] h-[calc(100%-12px)]
+                rounded-full
+                object-cover
+                z-[2]
+                border-2 border-cyan-400/20
+              "
+            />
+
+            {/* Brilho sutil pulsante */}
+            <div className="
+              absolute inset-0
+              rounded-full
+              bg-cyan-500/20 dark:bg-cyan-500/30
+              blur-2xl
+              -z-10
+              animate-pulse-slow
+            " />
+          </motion.div>
 
           {/* Nome com gradiente */}
           <h1 className="

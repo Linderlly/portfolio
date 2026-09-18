@@ -14,6 +14,7 @@ import Loader from './components/Loader'
 import Home from './pages/Home'
 import ExperiencesPage from './pages/ExperiencesPage'
 import CertificatesPage from './pages/CertificatesPage'
+import ProjectsPage from './pages/ProjectsPage'
 
 export default function App() {
   const { darkMode } = useContext(ThemeContext)
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/experiencias" element={<ExperiencesPage />} />
           <Route path="/certificados" element={<CertificatesPage />} />
+          <Route path="/projetos" element={<ProjectsPage />} />
         </Routes>
       </BrowserRouter>
     </LanguageProvider>

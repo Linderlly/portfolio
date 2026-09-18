@@ -106,6 +106,40 @@ export const experiences = [
         technologies: ['React', 'Vue.JS', 'Firebase', 'TypeScript'],
         logo: null
     },
+    {
+        id: 4,
+        type: 'work',
+        period: '09/2024 - 04/2026',
+        company: 'Microlins F1 Cursos',
+        role: {
+            pt: 'Suporte Técnico',
+            en: 'Technical Support Specialist'
+        },
+        location: {
+            pt: 'Manaus - AM',
+            en: 'Manaus - AM'
+        },
+        description: {
+            pt: 'Prestação de suporte técnico a alunos, colaboradores e usuários da unidade; \nManutenção preventiva e corretiva de computadores e equipamentos; \nFormatação, configuração e preparação de computadores para utilização; \nInstalação, configuração e manutenção de softwares e sistemas; \nConfiguração e manutenção da infraestrutura de rede da unidade; \nRealização de testes e diagnóstico de problemas de conectividade, incluindo redes cabeadas e Wi-Fi; \nRealização e apoio em processos de backup e restauração de dados; \nIdentificação e resolução de problemas de hardware, software e rede;',
+            en: 'Providing technical support to students, colleagues, and users of the institution; \nPerforming preventive and corrective maintenance on computers and equipment; \nFormatting, configuring, and preparing computers for use; \nInstalling, configuring, and maintaining software and systems; \nConfiguring and maintaining the institution\'s network infrastructure; \nConducting tests and diagnosing connectivity issues, including wired and Wi-Fi networks; \nPerforming and assisting in data backup and restoration processes; \nIdentifying and resolving hardware, software, and network problems;'
+        },
+       highlights: {
+      pt: [
+        'Suporte técnico ao usuário',
+        'Instalação e configuração de softwares e sistemas',
+        'Infraestrutura de rede e conectividade',
+        'Proatividade na resolução de problemas'
+      ],
+      en: [
+        'User technical support',
+        'Software and system installation and configuration',
+        'Network infrastructure and connectivity',
+        'Proactive problem resolution'
+      ]
+    },
+        technologies: ['Manutenção de equipamentos', 'Redes', 'Infraestrutura', 'Backup', 'Proatividade', 'Resolução de problemas'],
+        logo: null
+    },
 ]
 
 export const experienceTypes = {

@@ -39,7 +39,7 @@ export default function ExperiencesSection() {
   return (
     <section 
       id="experiences" 
-      className="px-4 md:px-6 py-10 md:py-16"
+      className="px-4 md:px-6 py-10 md:py-16 scroll-mt-24"
     >
       <div className="container-custom">
         {/* Título da seção */}
@@ -202,9 +202,11 @@ export default function ExperiencesSection() {
           })}
         </div>
 
+        <div className="h-16 md:h-24" aria-hidden="true" />
+
         {/* Botão "Ver todas as experiências" */}
         <AnimatedSection direction="up" delay={0.4}>
-          <div className="flex justify-center mt-10 md:mt-14">
+          <div className="flex justify-center">
             <button
               onClick={handleViewAll}
               className="
@@ -233,6 +235,8 @@ export default function ExperiencesSection() {
             </button>
           </div>
         </AnimatedSection>
+
+        <div className="h-16 md:h-24" aria-hidden="true" />
       </div>
     </section>
   )

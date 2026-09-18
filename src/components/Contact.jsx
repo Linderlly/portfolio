@@ -1,5 +1,6 @@
 /**
- * Inclui animação de entrada
+ * Contact.jsx - Seção de contato com links para redes sociais
+ * Botões lado a lado em mobile e desktop
  * 
  * @component
  * @author Linderlly Santana
@@ -7,7 +8,6 @@
 
 import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa'
 import { useLanguage } from '../context/LanguageContext'
-import AnimatedSection from './AnimatedSection'
 
 export default function Contact() {
   const { t } = useLanguage()
@@ -25,99 +25,90 @@ export default function Contact() {
       href: 'https://www.linkedin.com/in/linderlly-santana/',
       icon: FaLinkedin,
       label: t('contact.linkedin'),
-      color: 'bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-white shadow-lg shadow-slate-200/30 dark:shadow-slate-800/30 hover:shadow-slate-300/50 dark:hover:shadow-slate-700/50'
+      color: 'bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-white'
     },
     {
       id: 'github',
       href: 'https://github.com/Linderlly',
       icon: FaGithub,
       label: t('contact.github'),
-      color: 'bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-white shadow-lg shadow-slate-200/30 dark:shadow-slate-800/30 hover:shadow-slate-300/50 dark:hover:shadow-slate-700/50'
+      color: 'bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-white'
     }
   ]
 
   return (
     <section 
       id="contact" 
-      className="px-4 md:px-5 py-10 md:py-16 flex justify-center"
+      className="px-4 md:px-5 py-10 md:py-16 flex justify-center scroll-mt-24"
     >
       <div className="w-full max-w-6xl">
-        <AnimatedSection direction="up" delay={0.1}>
-          <div className="
-            rounded-3xl
-            p-6 md:p-14
-            text-center
-            flex flex-col items-center justify-center
-            bg-white/70 dark:bg-slate-900/70
-            backdrop-blur-xl
-            border border-slate-200/50 dark:border-slate-800/50
-            shadow-lg shadow-slate-200/20 dark:shadow-slate-800/20
-            hover:shadow-xl hover:shadow-cyan-500/5 dark:hover:shadow-cyan-500/10
-            hover:border-cyan-400/30 dark:hover:border-cyan-400/30
-            transition-all duration-300
+        <div className="
+          rounded-3xl
+          p-6 md:p-14
+          text-center
+          flex flex-col items-center justify-center
+          bg-white dark:bg-slate-900
+          border-2 border-slate-200 dark:border-slate-800
+          shadow-lg shadow-slate-200/20 dark:shadow-slate-800/20
+          hover:shadow-xl hover:shadow-cyan-500/5 dark:hover:shadow-cyan-500/10
+          hover:border-cyan-400/30
+          transition-all duration-300
+        ">
+          <h2 className="
+            font-bold
+            text-3xl md:text-5xl
+            mb-6 md:mb-8
+            text-slate-900 dark:text-white
           ">
-            <AnimatedSection direction="up" delay={0.2}>
-              <h2 className="
-                font-bold
-                text-3xl md:text-5xl
-                mb-6 md:mb-8
-                text-slate-900 dark:text-white
-              ">
-                {t('contact.title')}
-              </h2>
-            </AnimatedSection>
+            {t('contact.title')}
+          </h2>
 
-            <AnimatedSection direction="up" delay={0.3}>
-              <p className="
-                w-full max-w-2xl
-                text-slate-700 dark:text-slate-300
-                text-sm md:text-xl
-                leading-7 md:leading-8
-                text-center
-                mb-8 md:mb-12
-                whitespace-pre-line
-              ">
-                {t('contact.description')}
-              </p>
-            </AnimatedSection>
+          <p className="
+            w-full max-w-2xl
+            text-slate-700 dark:text-slate-300
+            text-sm md:text-xl
+            leading-7 md:leading-8
+            text-center
+            mb-8 md:mb-12
+            whitespace-pre-line
+          ">
+            {t('contact.description')}
+          </p>
 
-            <div className="
-              w-full
-              flex flex-col sm:flex-row
-              justify-center items-center
-              gap-4 md:gap-5
-            ">
-              {CONTACT_LINKS.map(({ id, href, icon: Icon, label, color }, index) => (
-                <AnimatedSection 
-                  key={id} 
-                  direction="up" 
-                  delay={0.4 + (0.1 * index)}
-                  distance={30}
-                >
-                  <a
-                    href={href}
-                    target={id !== 'email' ? '_blank' : undefined}
-                    rel={id !== 'email' ? 'noreferrer' : undefined}
-                    className={`
-                      w-full sm:w-auto min-w-[140px]
-                      h-14 md:h-16 px-6 md:px-8
-                      flex items-center justify-center gap-2 md:gap-3
-                      ${color}
-                      rounded-2xl
-                      font-semibold text-base md:text-lg
-                      transition-all duration-300
-                      hover:scale-105
-                      hover:-translate-y-1
-                    `}
-                  >
-                    <Icon className="text-lg md:text-xl" />
-                    <span>{label}</span>
-                  </a>
-                </AnimatedSection>
-              ))}
-            </div>
+          {/* Botões */}
+          <div className="
+            w-full
+            flex flex-row
+            justify-center items-center
+            gap-3 sm:gap-4 md:gap-5
+          ">
+            {CONTACT_LINKS.map(({ id, href, icon: Icon, label, color }) => (
+              <a
+                key={id}
+                href={href}
+                target={id !== 'email' ? '_blank' : undefined}
+                rel={id !== 'email' ? 'noreferrer' : undefined}
+                className={`
+                  flex-1 sm:flex-initial
+                  min-w-0 sm:min-w-[140px]
+                  h-14 md:h-16
+                  px-3 sm:px-6 md:px-8
+                  flex items-center justify-center gap-2 md:gap-3
+                  ${color}
+                  rounded-2xl
+                  font-semibold text-sm md:text-lg
+                  transition-all duration-300
+                  hover:scale-105
+                  hover:-translate-y-1
+                  whitespace-nowrap
+                `}
+              >
+                <Icon className="text-base md:text-xl flex-shrink-0" />
+                <span className="truncate">{label}</span>
+              </a>
+            ))}
           </div>
-        </AnimatedSection>
+        </div>
       </div>
     </section>
   )

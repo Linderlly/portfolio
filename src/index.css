@@ -1,11 +1,22 @@
 /**
- * Estilos globais do portfólio
- * Configurações de reset, tipografia, utilitários e temas
+ * index.css - Estilos globais do portfólio
+ * 
+ * Organização:
+ * 1. Imports e Reset
+ * 2. Variáveis e Configurações Base
+ * 3. Utilitários Customizados
+ * 4. Animações
+ * 5. Correções Modo Claro/Escuro
+ * 6. Componentes Específicos
+ * 7. Responsividade
+ * 
+ * @author Linderlly Santana
  */
 
 @import "tailwindcss";
 
-/* ===== Reset e Configurações Base ===== */
+/* RESET E CONFIGURAÇÕES BASE */
+
 * {
   margin: 0;
   padding: 0;
@@ -14,11 +25,16 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -26,9 +42,13 @@ body {
 #root {
   width: 100%;
   min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* ===== Utilitários Customizados ===== */
+/* UTILITÁRIOS CUSTOMIZADOS */
+
 .container-custom {
   width: 100%;
   max-width: 1200px;
@@ -36,19 +56,17 @@ body {
   padding-inline: 24px;
 }
 
-/* Efeito Glassmorphism - Melhorado para ambos os modos */
+/* Glassmorphism */
 .glass {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
 
-/* Modo escuro - glass */
 .dark .glass {
   background: rgba(15, 23, 42, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Modo claro - glass */
 :not(.dark) .glass {
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -63,7 +81,7 @@ body {
   background-clip: text;
 }
 
-/* ===== Espaçamento entre seções (responsivo) ===== */
+/* Espaçamento entre seções */
 .section-spacer {
   height: 64px;
 }
@@ -80,7 +98,7 @@ body {
   }
 }
 
-/* ===== Efeito de elevação ao passar o mouse ===== */
+/* Efeito de elevação */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -90,7 +108,23 @@ body {
   box-shadow: 0 12px 40px rgba(6, 182, 212, 0.15);
 }
 
-/* ===== Scrollbar Personalizada ===== */
+/* Line Clamp */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* SCROLLBAR PERSONALIZADA */
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -108,7 +142,9 @@ body {
   background: #22d3ee;
 }
 
-/* ===== Animações ===== */
+/* ANIMAÇÕES */
+
+/* Fade in up */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -124,7 +160,7 @@ body {
   animation: fadeInUp 0.6s ease forwards;
 }
 
-/* ===== Animação de rotação lenta para o botão de idioma ===== */
+/* Rotação horária (anel da foto) */
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
@@ -135,387 +171,102 @@ body {
 }
 
 .animate-spin-slow {
-  animation: spin-slow 8s linear infinite;
+  animation: spin-slow 4s linear infinite;
 }
 
-/* ===== Estilos para o botão de idioma em mobile ===== */
-@media (max-width: 480px) {
-  .language-toggle-container {
-    bottom: 20px;
-    right: 20px;
+/* Rotação anti-horária (anel da foto) */
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
   }
-  
-  .language-toggle-container .glass {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+  to {
+    transform: rotate(0deg);
   }
 }
 
-/* ===== Suporte para touch devices ===== */
-@media (hover: none) {
-  .language-toggle-container .group-hover\:opacity-100 {
-    opacity: 0 !important;
+.animate-spin-reverse {
+  animation: spin-reverse 6s linear infinite;
+}
+
+/* Pulso suave (brilho da foto) */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
   }
-  
-  .language-toggle-container .group-hover\:text-cyan-300 {
-    color: #22d3ee !important;
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
   }
 }
 
-/* ===== CORREÇÕES PARA MODO CLARO ===== */
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+/* Menu mobile - slide down */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 500px;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  overflow: hidden;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.3s ease forwards;
+}
+
+/* Menu mobile */
+.menu-item {
+  opacity: 0;
+  animation: fadeInScale 0.3s ease forwards;
+}
+
+.menu-item:nth-child(1) { animation-delay: 0.05s; }
+.menu-item:nth-child(2) { animation-delay: 0.1s; }
+.menu-item:nth-child(3) { animation-delay: 0.15s; }
+.menu-item:nth-child(4) { animation-delay: 0.2s; }
+.menu-item:nth-child(5) { animation-delay: 0.25s; }
+
+/* CORREÇÕES MODO CLARO */
 
 /* Cards em modo claro */
-:not(.dark) .bg-slate-900\/70 {
-  background: rgba(255, 255, 255, 0.8) !important;
-  border-color: #e2e8f0 !important;
-}
-
-:not(.dark) .border-slate-800 {
-  border-color: #e2e8f0 !important;
-}
-
-:not(.dark) .hover\:border-cyan-400:hover {
-  border-color: #06b6d4 !important;
-}
-
-/* Textos em modo claro */
-:not(.dark) .text-gray-400 {
-  color: #475569 !important;
-}
-
-:not(.dark) .text-slate-500 {
-  color: #475569 !important;
-}
-
-:not(.dark) .text-slate-600 {
-  color: #334155 !important;
-}
-
-:not(.dark) .text-gray-300 {
-  color: #475569 !important;
-}
-
-:not(.dark) .text-slate-300 {
-  color: #1e293b !important;
-}
-
-:not(.dark) .text-slate-400 {
-  color: #475569 !important;
-}
-
-/* Títulos em modo claro */
-:not(.dark) h1,
-:not(.dark) h2,
-:not(.dark) h3,
-:not(.dark) h4,
-:not(.dark) h5,
-:not(.dark) h6 {
-  color: #0f172a !important;
-}
-
-/* Parágrafos em modo claro */
-:not(.dark) p {
-  color: #334155 !important;
-}
-
-/* Links de navegação em modo claro */
-:not(.dark) .text-gray-300 {
-  color: #475569 !important;
-}
-
-:not(.dark) .hover\:text-cyan-400:hover {
-  color: #06b6d4 !important;
-}
-
-/* Botões em modo claro */
-:not(.dark) .bg-slate-800 {
-  background: #e2e8f0 !important;
-  color: #0f172a !important;
-}
-
-:not(.dark) .bg-slate-800:hover {
-  background: #cbd5e1 !important;
-}
-
-/* Badges de tecnologias em modo claro */
-:not(.dark) .bg-cyan-500\/10 {
-  background: rgba(6, 182, 212, 0.1) !important;
-}
-
-:not(.dark) .text-cyan-400 {
-  color: #0891b2 !important;
-}
-
-:not(.dark) .border-cyan-500\/20 {
-  border-color: rgba(6, 182, 212, 0.2) !important;
-}
-
-/* Footer em modo claro */
-:not(.dark) .border-t {
-  border-color: #e2e8f0 !important;
-}
-
-:not(.dark) .text-gray-500 {
-  color: #64748b !important;
-}
-
-/* Hover em cards no modo claro */
-:not(.dark) .hover\:shadow-2xl:hover {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
-}
-
-:not(.dark) .hover\:shadow-cyan-500\/10:hover {
-  box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.2) !important;
-}
-
-/* Glass em modo claro para cards */
-:not(.dark) .bg-slate-900\/70 {
-  background: rgba(255, 255, 255, 0.8) !important;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
-
-/* Categoria de skills em modo claro */
-:not(.dark) .text-cyan-400\/60 {
-  color: rgba(6, 182, 212, 0.7) !important;
-}
-
-/* ===== CORREÇÃO: Cards com fundo no modo escuro ===== */
-.dark .bg-white\/80 {
-  background: rgba(15, 23, 42, 0.7) !important;
-}
-
-.dark .bg-slate-900\/70 {
-  background: rgba(15, 23, 42, 0.7) !important;
-}
-
-.dark .border-slate-200 {
-  border-color: rgba(255, 255, 255, 0.06) !important;
-}
-
-/* Corrigir textos no modo escuro dentro dos cards */
-.dark .text-slate-800 {
-  color: #f1f5f9 !important;
-}
-
-.dark .text-slate-600 {
-  color: #94a3b8 !important;
-}
-
-.dark .text-slate-700 {
-  color: #cbd5e1 !important;
-}
-
-/* Corrigir botões no modo escuro */
-.dark .bg-slate-200 {
-  background: #1e293b !important;
-  color: #f1f5f9 !important;
-}
-
-.dark .bg-slate-200:hover {
-  background: #334155 !important;
-}
-
-.dark .text-slate-800 {
-  color: #f1f5f9 !important;
-}
-
-/* Glass effect no modo escuro para botão de idioma */
-.dark .language-toggle-container .glass {
-  background: rgba(15, 23, 42, 0.8) !important;
-}
-
-/* Navbar - Correção do fundo */
-header {
-  background: rgba(255, 255, 255, 0.7) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-}
-
-.dark header {
-  background: rgba(15, 23, 42, 0.85) !important;
-}
-
-/* About - Correção do glass effect */
-#about .rounded-3xl {
-  background: rgba(255, 255, 255, 0.7) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-}
-
-.dark #about .rounded-3xl {
-  background: rgba(15, 23, 42, 0.7) !important;
-}
-
-/* Contact - Correção do glass effect */
-#contact .rounded-3xl {
-  background: rgba(255, 255, 255, 0.7) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-}
-
-.dark #contact .rounded-3xl {
-  background: rgba(15, 23, 42, 0.7) !important;
-}
-
-/* Footer - Correção */
-footer {
-  background: rgba(255, 255, 255, 0.3) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-}
-
-.dark footer {
-  background: rgba(15, 23, 42, 0.3) !important;
-}
-
-/* Skills - Correção */
-#skills .bg-white\/70 {
-  background: rgba(255, 255, 255, 0.7) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-}
-
-.dark #skills .bg-white\/70 {
-  background: rgba(15, 23, 42, 0.7) !important;
-}
-
-/* Projects - Correção */
-#projects .bg-white\/70 {
-  background: rgba(255, 255, 255, 0.7) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-}
-
-.dark #projects .bg-white\/70 {
-  background: rgba(15, 23, 42, 0.7) !important;
-}
-
-/* Certificates - Correção */
-#certificates .bg-white\/70 {
-  background: rgba(255, 255, 255, 0.7) !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
-}
-
-.dark #certificates .bg-white\/70 {
-  background: rgba(15, 23, 42, 0.7) !important;
-}
-
-/* Correção de textos em modo escuro */
-.dark .text-slate-700 {
-  color: #cbd5e1 !important;
-}
-
-.dark .text-slate-600 {
-  color: #94a3b8 !important;
-}
-
-.dark .text-slate-800 {
-  color: #f1f5f9 !important;
-}
-
-/* Correção de bordas em modo escuro */
-.dark .border-slate-200\/50 {
-  border-color: rgba(51, 65, 85, 0.5) !important;
-}
-
-/* Hover em modo escuro */
-.dark .hover\:border-cyan-400:hover {
-  border-color: #22d3ee !important;
-}
-
-.dark .hover\:shadow-cyan-500\/10:hover {
-  box-shadow: 0 20px 60px -12px rgba(6, 182, 212, 0.15) !important;
-}
-
-/* Força todos os títulos a ficarem brancos no modo escuro */
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6,
-.dark .text-slate-900 {
-  color: #ffffff !important;
-}
-
-/* Títulos com gradiente mantêm o efeito */
-.dark .gradient-text {
-  color: transparent !important;
-  -webkit-text-fill-color: transparent !important;
-}
-
-/* Subtítulos e textos secundários no modo escuro */
-.dark .text-slate-800 {
-  color: #f1f5f9 !important;
-}
-
-.dark .text-slate-700 {
-  color: #e2e8f0 !important;
-}
-
-.dark .text-slate-600 {
-  color: #cbd5e1 !important;
-}
-
-/* Descrições em modo escuro */
-.dark .text-gray-400 {
-  color: #94a3b8 !important;
-}
-
-.dark .text-slate-400 {
-  color: #94a3b8 !important;
-}
-
-.dark .text-slate-500 {
-  color: #94a3b8 !important;
-}
-
-/* ===== Line Clamp para textos longos ===== */
-.line-clamp-2 {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.line-clamp-3 {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-@supports (padding: max(0px)) {
-  body {
-    padding-left: env(safe-area-inset-left);
-    padding-right: env(safe-area-inset-right);
-  }
-}
-
-/* Garantir que os cards tenham fundo sólido no modo claro */
 html:not(.dark) .card-solid,
 html:not(.dark) [class*="bg-white"] {
   background-color: #ffffff !important;
 }
 
-/* Garantir que os cards tenham fundo sólido no modo escuro */
-html.dark .card-solid,
-html.dark [class*="bg-slate-900"] {
-  background-color: #0f172a !important;
-}
-
-/* Forçar bordas visíveis */
 html:not(.dark) [class*="border-slate-200"] {
   border-color: #e2e8f0 !important;
 }
 
-html.dark [class*="border-slate-800"] {
-  border-color: #1e293b !important;
+html:not(.dark) .hover\:border-cyan-400:hover {
+  border-color: #06b6d4 !important;
 }
 
-/* Forçar textos escuros no modo claro */
+/* Textos em modo claro */
 html:not(.dark) [class*="text-slate-700"] {
   color: #334155 !important;
 }
@@ -528,13 +279,42 @@ html:not(.dark) [class*="text-slate-500"] {
   color: #64748b !important;
 }
 
-/* Forçar textos claros no modo escuro */
-html.dark [class*="text-slate-300"] {
-  color: #cbd5e1 !important;
+html:not(.dark) .text-gray-400 {
+  color: #475569 !important;
 }
 
-html.dark [class*="text-slate-400"] {
-  color: #94a3b8 !important;
+html:not(.dark) .text-gray-300 {
+  color: #475569 !important;
+}
+
+/* Títulos em modo claro */
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) h5,
+html:not(.dark) h6 {
+  color: #0f172a !important;
+}
+
+/* Parágrafos em modo claro */
+html:not(.dark) p {
+  color: #334155 !important;
+}
+
+/* Links em modo claro */
+html:not(.dark) .hover\:text-cyan-400:hover {
+  color: #06b6d4 !important;
+}
+
+/* Botões em modo claro */
+html:not(.dark) .bg-slate-800 {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+html:not(.dark) .bg-slate-800:hover {
+  background: #cbd5e1 !important;
 }
 
 /* Badges no modo claro */
@@ -550,52 +330,115 @@ html:not(.dark) [class*="border-cyan-500/30"] {
   border-color: rgba(6, 182, 212, 0.4) !important;
 }
 
-/* Botão Voltar - Modo Claro */
-html:not(.dark) .btn-back {
-  background-color: #f1f5f9 !important;
-  color: #334155 !important;
-  border-color: #cbd5e1 !important;
+html:not(.dark) .text-cyan-400 {
+  color: #0891b2 !important;
 }
 
-html:not(.dark) .btn-back:hover {
-  background-color: #06b6d4 !important;
-  color: #ffffff !important;
-  border-color: #06b6d4 !important;
+html:not(.dark) .text-cyan-400\/60 {
+  color: rgba(6, 182, 212, 0.7) !important;
 }
 
-/* Botão Voltar - Modo Escuro */
-html.dark .btn-back {
-  background-color: #1e293b !important;
-  color: #cbd5e1 !important;
-  border-color: #334155 !important;
+/* Footer em modo claro */
+html:not(.dark) .text-gray-500 {
+  color: #64748b !important;
 }
 
-html.dark .btn-back:hover {
-  background-color: #06b6d4 !important;
-  color: #ffffff !important;
-  border-color: #06b6d4 !important;
+html:not(.dark) .border-t {
+  border-color: #e2e8f0 !important;
 }
 
-/* Header do Card - Modo Claro */
-html:not(.dark) .card-header {
-  background-color: #f8fafc !important;
-  border-bottom-color: #e2e8f0 !important;
+/* Hover em cards no modo claro */
+html:not(.dark) .hover\:shadow-2xl:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
 }
 
-/* Header do Card - Modo Escuro */
-html.dark .card-header {
-  background-color: rgba(2, 6, 23, 0.5) !important;
-  border-bottom-color: #1e293b !important;
+html:not(.dark) .hover\:shadow-cyan-500\/10:hover {
+  box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.2) !important;
 }
 
-/* Card sólido - reforço */
-html:not(.dark) .card-solid {
-  background-color: #ffffff !important;
-}
+/* CORREÇÕES MODO ESCURO */
 
-html.dark .card-solid {
+/* Cards em modo escuro */
+html.dark .card-solid,
+html.dark [class*="bg-slate-900"] {
   background-color: #0f172a !important;
 }
+
+html.dark [class*="border-slate-800"] {
+  border-color: #1e293b !important;
+}
+
+/* Títulos em modo escuro */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6,
+html.dark .text-slate-900 {
+  color: #ffffff !important;
+}
+
+/* Gradiente mantém o efeito */
+html.dark .gradient-text {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Textos em modo escuro */
+html.dark [class*="text-slate-300"] {
+  color: #cbd5e1 !important;
+}
+
+html.dark [class*="text-slate-400"] {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-slate-800 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-gray-400 {
+  color: #94a3b8 !important;
+}
+
+/* Botões em modo escuro */
+html.dark .bg-slate-200 {
+  background: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark .bg-slate-200:hover {
+  background: #334155 !important;
+}
+
+/* Bordas em modo escuro */
+html.dark .border-slate-200\/50 {
+  border-color: rgba(51, 65, 85, 0.5) !important;
+}
+
+/* Hover em modo escuro */
+html.dark .hover\:border-cyan-400:hover {
+  border-color: #22d3ee !important;
+}
+
+html.dark .hover\:shadow-cyan-500\/10:hover {
+  box-shadow: 0 20px 60px -12px rgba(6, 182, 212, 0.15) !important;
+}
+
+/* BOTÕES E COMPONENTES ESPECÍFICOS */
 
 /* Botão Voltar - Modo Claro */
 html:not(.dark) .btn-back {
@@ -623,12 +466,13 @@ html.dark .btn-back:hover {
   border-color: #06b6d4 !important;
 }
 
-/* Header do Card */
+/* Header do Card - Modo Claro */
 html:not(.dark) .card-header {
   background-color: #f8fafc !important;
   border-bottom: 2px solid #e2e8f0 !important;
 }
 
+/* Header do Card - Modo Escuro */
 html.dark .card-header {
   background-color: rgba(2, 6, 23, 0.5) !important;
   border-bottom: 2px solid #1e293b !important;
@@ -641,4 +485,126 @@ html:not(.dark) .card-solid {
 
 html.dark .card-solid {
   background-color: #0f172a !important;
+}
+
+/* NAVBAR, ABOUT, CONTACT, FOOTER */
+
+/* Navbar */
+header {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+.dark header {
+  background: rgba(15, 23, 42, 0.85) !important;
+}
+
+/* About - glass effect */
+#about .rounded-3xl {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+.dark #about .rounded-3xl {
+  background: rgba(15, 23, 42, 0.7) !important;
+}
+
+/* Contact - glass effect */
+#contact .rounded-3xl {
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+
+.dark #contact .rounded-3xl {
+  background: rgba(15, 23, 42, 0.7) !important;
+}
+
+/* Footer */
+footer {
+  background: rgba(255, 255, 255, 0.3) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+.dark footer {
+  background: rgba(15, 23, 42, 0.3) !important;
+}
+
+/* Language toggle no modo escuro */
+.dark .language-toggle-container .glass {
+  background: rgba(15, 23, 42, 0.8) !important;
+}
+
+/* ABOUT */
+
+/* Texto do About - modo escuro (destacado como antes) */
+.dark .about-text p {
+  color: #e2e8f0 !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+}
+
+/* Texto do About - modo claro */
+html:not(.dark) .about-text p {
+  color: #334155 !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+}
+
+/* Espaçamento entre parágrafos */
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.about-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* SCROLL COM OFFSET (títulos visíveis) */
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+@media (min-width: 768px) {
+  section[id] {
+    scroll-margin-top: 120px;
+  }
+}
+
+/* RESPONSIVIDADE - Mobile */
+
+/* Suporte para safe-area (iPhone notch) */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* Botão de idioma em mobile */
+@media (max-width: 480px) {
+  .language-toggle-container {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .language-toggle-container .glass {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+}
+
+/* Touch devices */
+@media (hover: none) {
+  .language-toggle-container .group-hover\:opacity-100 {
+    opacity: 0 !important;
+  }
+  
+  .language-toggle-container .group-hover\:text-cyan-300 {
+    color: #22d3ee !important;
+  }
 }

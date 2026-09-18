@@ -1,6 +1,6 @@
 /**
- * Barra de navegação fixa com menu responsivo
- * Inclui alternância de tema, links sociais e menu mobile
+ * Navbar.jsx - Barra de navegação fixa com menu responsivo
+ * Menu mobile com animação de entrada
  * 
  * @component
  * @author Linderlly Santana
@@ -24,7 +24,6 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
-  /** Links de navegação principais */
   const NAV_LINKS = [
     { href: '#about', label: t('nav.about') },
     { href: '#skills', label: t('nav.skills') },
@@ -34,13 +33,11 @@ export default function Navbar() {
     { href: '#contact', label: t('nav.contact') }
   ]
 
-  /** Links sociais */
   const SOCIAL_LINKS = [
     { href: 'https://github.com/Linderlly', icon: FaGithub, label: 'GitHub' },
     { href: 'https://www.linkedin.com/in/linderlly-santana/', icon: FaLinkedin, label: 'LinkedIn' }
   ]
 
-  /** Fecha o menu mobile ao redimensionar para desktop */
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) setMenuOpen(false)
@@ -49,7 +46,6 @@ export default function Navbar() {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  /** Adiciona sombra ao navbar ao rolar a página */
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
@@ -57,6 +53,18 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Bloqueia scroll quando o menu mobile está aberto
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [menuOpen])
 
   const closeMenu = () => setMenuOpen(false)
 
@@ -66,13 +74,13 @@ export default function Navbar() {
         fixed top-0 left-0 w-full z-50
         transition-all duration-300
         ${scrolled ? 'shadow-lg shadow-black/10 dark:shadow-black/40' : ''}
-        bg-white/70 dark:bg-slate-950/80
+        bg-white/80 dark:bg-slate-950/90
         backdrop-blur-xl
         border-b border-slate-200/50 dark:border-slate-800/50
       `}
     >
       <nav className="container-custom px-4 md:px-6 py-3 md:py-4 flex items-center justify-between">
-        {/* Logo / Marca */}
+        {/* Logo */}
         <h1 className="text-xl md:text-2xl font-bold gradient-text">
           Linderlly Santana
         </h1>
@@ -135,7 +143,7 @@ export default function Navbar() {
 
         {/* Botão Menu Mobile */}
         <button 
-          className="md:hidden text-2xl p-2 text-slate-700 dark:text-slate-300" 
+          className="md:hidden text-2xl p-2 text-slate-700 dark:text-slate-300 relative z-[60]" 
           onClick={() => setMenuOpen(prev => !prev)}
           aria-label={menuOpen ? 'Fechar menu' : 'Abrir menu'}
         >
@@ -143,20 +151,36 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Menu Mobile */}
+      {/* Menu Mobile com animação */}
       {menuOpen && (
-        <div className="md:hidden bg-white/95 dark:bg-slate-950/95 backdrop-blur-xl border-t border-slate-200/50 dark:border-slate-800/50">
-          <ul className="flex flex-col items-center gap-5 py-6 text-base">
-            {NAV_LINKS.map(link => (
-              <li key={link.href}>
+        <div className="
+          md:hidden
+          bg-white/95 dark:bg-slate-950/95
+          backdrop-blur-xl
+          border-t border-slate-200/50 dark:border-slate-800/50
+          animate-slide-down
+          overflow-hidden
+        ">
+          <ul className="flex flex-col items-center gap-1 py-6 px-4">
+            {NAV_LINKS.map((link, index) => (
+              <li 
+                key={link.href}
+                className="menu-item w-full"
+                style={{ animationDelay: `${0.05 * (index + 1)}s` }}
+              >
                 <a 
                   href={link.href} 
                   onClick={closeMenu}
                   className="
+                    block w-full text-center
+                    py-3 px-4
+                    rounded-xl
                     text-slate-700 dark:text-slate-300
                     hover:text-cyan-600 dark:hover:text-cyan-400
-                    transition-colors duration-300
-                    block px-4 py-2
+                    hover:bg-cyan-500/10 dark:hover:bg-cyan-500/10
+                    transition-all duration-300
+                    font-medium
+                    text-base
                   "
                 >
                   {link.label}
@@ -164,11 +188,17 @@ export default function Navbar() {
               </li>
             ))}
             
-            {/* Tema e redes sociais no menu mobile */}
-            <li className="flex gap-6 text-xl mt-2">
+            {/* Tema e redes sociais */}
+            <li className="menu-item flex gap-6 text-xl mt-4 pt-4 border-t border-slate-200/50 dark:border-slate-800/50 w-full justify-center">
               <button 
                 onClick={toggleTheme}
-                className="text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                className="
+                  p-3 rounded-full
+                  text-slate-700 dark:text-slate-300
+                  hover:text-cyan-600 dark:hover:text-cyan-400
+                  hover:bg-cyan-500/10
+                  transition-all duration-300
+                "
                 aria-label="Alternar tema"
               >
                 {darkMode ? <FaSun /> : <FaMoon />}
@@ -179,7 +209,13 @@ export default function Navbar() {
                   href={href}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-slate-700 dark:text-slate-300 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors"
+                  className="
+                    p-3 rounded-full
+                    text-slate-700 dark:text-slate-300
+                    hover:text-cyan-600 dark:hover:text-cyan-400
+                    hover:bg-cyan-500/10
+                    transition-all duration-300
+                  "
                   aria-label={label}
                 >
                   <Icon />

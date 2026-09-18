@@ -20,8 +20,13 @@
     "title": "Tecnologias tenho conhecimento"
   },
   "projects": {
-    "title": "Meus Projetos",
-    "viewProject": "Ver Projeto →"
+  "title": "Meus Projetos",
+  "subtitle": "Uma seleção dos meus principais projetos",
+  "pageTitle": "Meus Projetos",
+  "pageSubtitle": "Todos os projetos que desenvolvi ao longo da minha trajetória",
+  "viewAll": "Ver todos os projetos",
+  "back": "Voltar",
+  "viewProject": "Ver Projeto →"
   },
   "certificates": {
   "title": "Certificados",
@@ -175,6 +180,10 @@
     {
       "title": "Gerenciador de Tarefas",
       "description": "Aplicativo criado com Flutter e Firebase para organização de tarefas em tempo real e colaboração."
+    },
+    {
+      "title": "Campeonato Manager",
+      "description": "Aplicativo web desenvolvido com React Native para gerenciamento de campeonatos esportivos de e-Sports, incluindo cadastro de equipes, partidas e classificação."
     }
   ]
   

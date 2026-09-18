@@ -35,7 +35,7 @@ export default function Skills() {
   return (
     <section 
       id="skills" 
-      className="px-4 md:px-6 py-10 md:py-16"
+      className="px-4 md:px-6 py-10 md:py-16 scroll-mt-24"
     >
       <div className="container-custom">
         <AnimatedSection direction="up" delay={0.1}>

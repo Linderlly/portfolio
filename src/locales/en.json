@@ -20,8 +20,13 @@
     "title": "Technologies I'm familiar with"
   },
   "projects": {
-    "title": "My Projects",
-    "viewProject": "View Project →"
+  "title": "My Projects",
+  "subtitle": "A selection of my main projects",
+  "pageTitle": "My Projects",
+  "pageSubtitle": "All the projects I developed throughout my journey",
+  "viewAll": "View all projects",
+  "back": "Back",
+  "viewProject": "View Project →"
   },
   "certificates": {
   "title": "Certificates",
@@ -175,6 +180,10 @@
     {
       "title": "Task Manager",
       "description": "Application created with Flutter and Firebase for real-time task organization and collaboration."
+    },
+    {
+      "title": "Tournament Manager",
+      "description": "Web application developed with React Native for managing e-sports tournaments, including team registration, matches, and standings."
     }
   ]
 }
