@@ -1,6 +1,6 @@
 /**
  * About.jsx - Seção "Sobre Mim"
- * Texto mais compacto e com espaçamento reduzido
+ * 
  * 
  * @component
  * @author Linderlly Santana
@@ -19,15 +19,17 @@ export default function About() {
     >
       <div className="container-custom">
         <AnimatedSection direction="up" delay={0.1}>
+          {/* Card principal do About */}
           <div className="
-            card-solid
+            about-card
             rounded-3xl
             p-6 md:p-12
-            border-2 border-slate-200 dark:border-slate-800
-            hover:border-cyan-400/30
+            border-2
             transition-all duration-300
             shadow-lg shadow-slate-200/20 dark:shadow-slate-800/20
+            hover:border-cyan-400/30
           ">
+            {/* Título da seção */}
             <h2 className="
               text-center font-bold
               text-3xl md:text-5xl
@@ -37,6 +39,7 @@ export default function About() {
               {t('about.title')}
             </h2>
 
+            {/* Texto do About dividido em parágrafos */}
             <div className="flex justify-center">
               <div className="
                 w-full max-w-4xl

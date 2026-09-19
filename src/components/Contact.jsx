@@ -1,6 +1,6 @@
 /**
  * Contact.jsx - Seção de contato com links para redes sociais
- * Botões lado a lado em mobile e desktop
+ * Botões compactos e harmoniosos
  * 
  * @component
  * @author Linderlly Santana
@@ -39,7 +39,7 @@ export default function Contact() {
   return (
     <section 
       id="contact" 
-      className="px-4 md:px-5 py-10 md:py-16 flex justify-center scroll-mt-24"
+      className="px-4 md:px-5 py-10 md:py-16 flex justify-center"
     >
       <div className="w-full max-w-6xl">
         <div className="
@@ -75,12 +75,12 @@ export default function Contact() {
             {t('contact.description')}
           </p>
 
-          {/* Botões */}
+          {/* Botoes do contato - compactos */}
           <div className="
             w-full
             flex flex-row
             justify-center items-center
-            gap-3 sm:gap-4 md:gap-5
+            gap-3 sm:gap-4
           ">
             {CONTACT_LINKS.map(({ id, href, icon: Icon, label, color }) => (
               <a
@@ -90,20 +90,20 @@ export default function Contact() {
                 rel={id !== 'email' ? 'noreferrer' : undefined}
                 className={`
                   flex-1 sm:flex-initial
-                  min-w-0 sm:min-w-[140px]
-                  h-14 md:h-16
-                  px-3 sm:px-6 md:px-8
-                  flex items-center justify-center gap-2 md:gap-3
+                  min-w-0 sm:min-w-[110px]
+                  h-11 md:h-12
+                  px-4 sm:px-6
+                  flex items-center justify-center gap-2
                   ${color}
-                  rounded-2xl
-                  font-semibold text-sm md:text-lg
+                  rounded-xl
+                  font-semibold text-xs md:text-sm
                   transition-all duration-300
                   hover:scale-105
-                  hover:-translate-y-1
+                  hover:-translate-y-0.5
                   whitespace-nowrap
                 `}
               >
-                <Icon className="text-base md:text-xl flex-shrink-0" />
+                <Icon className="text-sm md:text-base flex-shrink-0" />
                 <span className="truncate">{label}</span>
               </a>
             ))}

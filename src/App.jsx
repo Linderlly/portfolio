@@ -25,6 +25,11 @@ export default function App() {
     return () => clearTimeout(timer)
   }, [])
 
+  useEffect(() => {
+    document.body.style.overflow = ''
+    document.documentElement.style.overflow = ''
+  }, [])
+
   if (loading) return <Loader />
 
   return (

@@ -1,16 +1,36 @@
 /**
- * Botão flutuante para voltar ao topo
- * Aparece apenas após o usuário rolar uma parte da página
+ * ScrollToTop.jsx - Componente que:
+ * 1. Rola ao topo ao mudar de rota
+ * 2. Exibe botão flutuante para voltar ao topo
  * 
  * @component
  * @author Linderlly Santana
  */
 
 import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
 import { FaArrowUp } from 'react-icons/fa'
 
 export default function ScrollToTop() {
   const [visible, setVisible] = useState(false)
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    // Salva o valor atual antes de mexer
+    const prevOverflow = document.body.style.overflow
+
+    // Reseta qualquer overflow que possa ter ficado
+    document.body.style.overflow = ''
+    document.documentElement.style.overflow = ''
+
+    // Rola ao topo SEM bloquear
+    window.scrollTo(0, 0)
+
+    // Restaura o overflow anterior (se houver)
+    return () => {
+      document.body.style.overflow = prevOverflow
+    }
+  }, [pathname])
 
   useEffect(() => {
     const handleScroll = () => {

@@ -161,38 +161,44 @@ export default function ProjectsSection() {
         </div>
 
         <div className="h-16 md:h-24" aria-hidden="true" />
-        {/* Botão "Ver todos os projetos" */}
-        <AnimatedSection direction="up" delay={0.4}>
+          
+        {/* Botao "Ver todos os projetos" */}
+         <AnimatedSection direction="up" delay={0.4}>
           <div className="flex justify-center mt-20 md:mt-28 mb-8 md:mb-12">
-            <button
-              onClick={handleViewAll}
-              className="
-                group
-                inline-flex items-center justify-center
-                gap-3
-                h-12 md:h-14
-                px-6 md:px-8
-                bg-cyan-500 hover:bg-cyan-400
-                text-white font-semibold
-                text-sm md:text-base
-                rounded-2xl
-                shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50
-                transition-all duration-300
-                hover:scale-105 hover:-translate-y-1
-                whitespace-nowrap
-                leading-none
-              "
-            >
-              <span>{t('projects.viewAll')}</span>
-              <FaArrowRight className="
-                text-sm md:text-base
-                transition-transform duration-300
-                group-hover:translate-x-1
-              " />
-            </button>
+            <div className="glow-wrapper">
+              <button
+                onClick={handleViewAll}
+                className="
+                  group
+                  relative
+                  inline-flex items-center justify-center
+                  gap-3
+                  h-12 md:h-14
+                  w-64 md:w-72
+                  bg-cyan-500 hover:bg-cyan-400
+                  text-white font-semibold
+                  text-sm md:text-base
+                  rounded-2xl
+                  shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50
+                  transition-all duration-300
+                  hover:scale-105 hover:-translate-y-1
+                  whitespace-nowrap
+                  leading-none
+                "
+              >
+                <span>{t('projects.viewAll')}</span>
+                <FaArrowRight className="
+                  text-sm md:text-base
+                  transition-transform duration-300
+                  group-hover:translate-x-1
+                " />
+              </button>
+            </div>
           </div>
         </AnimatedSection>
+
         <div className="h-16 md:h-24" aria-hidden="true" />
+
       </div>
     </section>
   )

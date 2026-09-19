@@ -6,7 +6,7 @@
  * @author Linderlly Santana
  */
 
-import { useEffect, useContext } from 'react'
+import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { 
   FaArrowLeft, 
@@ -45,10 +45,6 @@ export default function ExperiencesPage() {
   const { t, language } = useLanguage()
   const navigate = useNavigate()
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' })
-  }, [])
-
   const handleGoBack = () => {
     navigate('/')
   }
@@ -56,7 +52,7 @@ export default function ExperiencesPage() {
   return (
     <div
       className={`
-        min-h-screen flex flex-col transition-all duration-500
+        min-h-screen transition-all duration-500
         ${darkMode ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}
       `}
     >
@@ -71,7 +67,6 @@ export default function ExperiencesPage() {
         shadow-lg shadow-black/5 dark:shadow-black/20
       ">
         <div className="container-custom px-4 md:px-6 h-full flex items-center justify-between gap-4">
-          {/* Botão Voltar */}
           <button
             onClick={handleGoBack}
             className="
@@ -104,7 +99,7 @@ export default function ExperiencesPage() {
       <div className="h-20 md:h-24" aria-hidden="true" />
 
       {/* Conteúdo */}
-      <main className="flex-1 pb-16 px-4 md:px-6">
+      <main className="pb-16 px-4 md:px-6">
         <div className="container-custom max-w-7xl">
           
           {/* Título */}
@@ -129,7 +124,7 @@ export default function ExperiencesPage() {
             </div>
           </AnimatedSection>
 
-          {/* Grid de experiências */}
+          {/* Grid de experiências - 2 COLUNAS */}
           <div className="
             grid 
             grid-cols-1 
@@ -317,7 +312,6 @@ export default function ExperiencesPage() {
               )
             })}
           </div>
-
         </div>
       </main>
 

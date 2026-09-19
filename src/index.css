@@ -2,20 +2,27 @@
  * index.css - Estilos globais do portfólio
  * 
  * Organização:
- * 1. Imports e Reset
- * 2. Variáveis e Configurações Base
- * 3. Utilitários Customizados
+ * 1. Reset e Configurações Base
+ * 2. Utilitários Customizados
+ * 3. Scrollbar Personalizada
  * 4. Animações
- * 5. Correções Modo Claro/Escuro
- * 6. Componentes Específicos
- * 7. Responsividade
+ * 5. Correções Modo Claro
+ * 6. Correções Modo Escuro
+ * 7. Botões e Componentes Específicos
+ * 8. Navbar, About, Contact, Footer
+ * 9. About Card - Correção
+ * 10. Scroll com Offset
+ * 11. Responsividade - Mobile
+ * 12. Correção Scroll Mobile
  * 
  * @author Linderlly Santana
  */
 
 @import "tailwindcss";
 
-/* RESET E CONFIGURAÇÕES BASE */
+/* ==================================================
+   1. RESET E CONFIGURAÇÕES BASE
+   ================================================== */
 
 * {
   margin: 0;
@@ -34,7 +41,6 @@ body {
   overflow-x: hidden;
   width: 100%;
   min-height: 100vh;
-  min-height: 100dvh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,12 +48,11 @@ body {
 #root {
   width: 100%;
   min-height: 100vh;
-  min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
 }
 
-/* UTILITÁRIOS CUSTOMIZADOS */
+/* ==================================================
+   2. UTILITÁRIOS CUSTOMIZADOS
+   ================================================== */
 
 .container-custom {
   width: 100%;
@@ -98,16 +103,6 @@ body {
   }
 }
 
-/* Efeito de elevação */
-.hover-lift {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(6, 182, 212, 0.15);
-}
-
 /* Line Clamp */
 .line-clamp-2 {
   display: -webkit-box;
@@ -123,7 +118,9 @@ body {
   overflow: hidden;
 }
 
-/* SCROLLBAR PERSONALIZADA */
+/* ==================================================
+   3. SCROLLBAR PERSONALIZADA
+   ================================================== */
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -142,9 +139,10 @@ body {
   background: #22d3ee;
 }
 
-/* ANIMAÇÕES */
+/* ==================================================
+   4. ANIMAÇÕES
+   ================================================== */
 
-/* Fade in up */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -160,51 +158,33 @@ body {
   animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Rotação horária (anel da foto) */
 @keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 .animate-spin-slow {
   animation: spin-slow 4s linear infinite;
 }
 
-/* Rotação anti-horária (anel da foto) */
 @keyframes spin-reverse {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
 }
 
 .animate-spin-reverse {
   animation: spin-reverse 6s linear infinite;
 }
 
-/* Pulso suave (brilho da foto) */
 @keyframes pulse-slow {
-  0%, 100% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.6;
-    transform: scale(1.05);
-  }
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
 }
 
 .animate-pulse-slow {
   animation: pulse-slow 3s ease-in-out infinite;
 }
 
-/* Menu mobile - slide down */
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -231,14 +211,12 @@ body {
 
 .animate-slide-down {
   animation: slideDown 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  overflow: hidden;
 }
 
 .animate-fade-in-scale {
   animation: fadeInScale 0.3s ease forwards;
 }
 
-/* Menu mobile */
 .menu-item {
   opacity: 0;
   animation: fadeInScale 0.3s ease forwards;
@@ -249,10 +227,12 @@ body {
 .menu-item:nth-child(3) { animation-delay: 0.15s; }
 .menu-item:nth-child(4) { animation-delay: 0.2s; }
 .menu-item:nth-child(5) { animation-delay: 0.25s; }
+.menu-item:nth-child(6) { animation-delay: 0.3s; }
 
-/* CORREÇÕES MODO CLARO */
+/* ==================================================
+   5. CORREÇÕES MODO CLARO
+   ================================================== */
 
-/* Cards em modo claro */
 html:not(.dark) .card-solid,
 html:not(.dark) [class*="bg-white"] {
   background-color: #ffffff !important;
@@ -262,11 +242,6 @@ html:not(.dark) [class*="border-slate-200"] {
   border-color: #e2e8f0 !important;
 }
 
-html:not(.dark) .hover\:border-cyan-400:hover {
-  border-color: #06b6d4 !important;
-}
-
-/* Textos em modo claro */
 html:not(.dark) [class*="text-slate-700"] {
   color: #334155 !important;
 }
@@ -279,15 +254,6 @@ html:not(.dark) [class*="text-slate-500"] {
   color: #64748b !important;
 }
 
-html:not(.dark) .text-gray-400 {
-  color: #475569 !important;
-}
-
-html:not(.dark) .text-gray-300 {
-  color: #475569 !important;
-}
-
-/* Títulos em modo claro */
 html:not(.dark) h1,
 html:not(.dark) h2,
 html:not(.dark) h3,
@@ -297,27 +263,6 @@ html:not(.dark) h6 {
   color: #0f172a !important;
 }
 
-/* Parágrafos em modo claro */
-html:not(.dark) p {
-  color: #334155 !important;
-}
-
-/* Links em modo claro */
-html:not(.dark) .hover\:text-cyan-400:hover {
-  color: #06b6d4 !important;
-}
-
-/* Botões em modo claro */
-html:not(.dark) .bg-slate-800 {
-  background: #e2e8f0 !important;
-  color: #0f172a !important;
-}
-
-html:not(.dark) .bg-slate-800:hover {
-  background: #cbd5e1 !important;
-}
-
-/* Badges no modo claro */
 html:not(.dark) [class*="bg-cyan-500/10"] {
   background-color: rgba(6, 182, 212, 0.15) !important;
 }
@@ -330,35 +275,10 @@ html:not(.dark) [class*="border-cyan-500/30"] {
   border-color: rgba(6, 182, 212, 0.4) !important;
 }
 
-html:not(.dark) .text-cyan-400 {
-  color: #0891b2 !important;
-}
+/* ==================================================
+   6. CORREÇÕES MODO ESCURO
+   ================================================== */
 
-html:not(.dark) .text-cyan-400\/60 {
-  color: rgba(6, 182, 212, 0.7) !important;
-}
-
-/* Footer em modo claro */
-html:not(.dark) .text-gray-500 {
-  color: #64748b !important;
-}
-
-html:not(.dark) .border-t {
-  border-color: #e2e8f0 !important;
-}
-
-/* Hover em cards no modo claro */
-html:not(.dark) .hover\:shadow-2xl:hover {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
-}
-
-html:not(.dark) .hover\:shadow-cyan-500\/10:hover {
-  box-shadow: 0 25px 50px -12px rgba(6, 182, 212, 0.2) !important;
-}
-
-/* CORREÇÕES MODO ESCURO */
-
-/* Cards em modo escuro */
 html.dark .card-solid,
 html.dark [class*="bg-slate-900"] {
   background-color: #0f172a !important;
@@ -368,7 +288,6 @@ html.dark [class*="border-slate-800"] {
   border-color: #1e293b !important;
 }
 
-/* Títulos em modo escuro */
 html.dark h1,
 html.dark h2,
 html.dark h3,
@@ -379,13 +298,11 @@ html.dark .text-slate-900 {
   color: #ffffff !important;
 }
 
-/* Gradiente mantém o efeito */
 html.dark .gradient-text {
   color: transparent !important;
   -webkit-text-fill-color: transparent !important;
 }
 
-/* Textos em modo escuro */
 html.dark [class*="text-slate-300"] {
   color: #cbd5e1 !important;
 }
@@ -410,37 +327,10 @@ html.dark .text-slate-500 {
   color: #94a3b8 !important;
 }
 
-html.dark .text-gray-400 {
-  color: #94a3b8 !important;
-}
+/* ==================================================
+   7. BOTÕES E COMPONENTES ESPECÍFICOS
+   ================================================== */
 
-/* Botões em modo escuro */
-html.dark .bg-slate-200 {
-  background: #1e293b !important;
-  color: #f1f5f9 !important;
-}
-
-html.dark .bg-slate-200:hover {
-  background: #334155 !important;
-}
-
-/* Bordas em modo escuro */
-html.dark .border-slate-200\/50 {
-  border-color: rgba(51, 65, 85, 0.5) !important;
-}
-
-/* Hover em modo escuro */
-html.dark .hover\:border-cyan-400:hover {
-  border-color: #22d3ee !important;
-}
-
-html.dark .hover\:shadow-cyan-500\/10:hover {
-  box-shadow: 0 20px 60px -12px rgba(6, 182, 212, 0.15) !important;
-}
-
-/* BOTÕES E COMPONENTES ESPECÍFICOS */
-
-/* Botão Voltar - Modo Claro */
 html:not(.dark) .btn-back {
   background-color: #f1f5f9 !important;
   color: #334155 !important;
@@ -453,7 +343,6 @@ html:not(.dark) .btn-back:hover {
   border-color: #06b6d4 !important;
 }
 
-/* Botão Voltar - Modo Escuro */
 html.dark .btn-back {
   background-color: #1e293b !important;
   color: #cbd5e1 !important;
@@ -466,19 +355,16 @@ html.dark .btn-back:hover {
   border-color: #06b6d4 !important;
 }
 
-/* Header do Card - Modo Claro */
 html:not(.dark) .card-header {
   background-color: #f8fafc !important;
   border-bottom: 2px solid #e2e8f0 !important;
 }
 
-/* Header do Card - Modo Escuro */
 html.dark .card-header {
   background-color: rgba(2, 6, 23, 0.5) !important;
   border-bottom: 2px solid #1e293b !important;
 }
 
-/* Card sólido */
 html:not(.dark) .card-solid {
   background-color: #ffffff !important;
 }
@@ -487,20 +373,20 @@ html.dark .card-solid {
   background-color: #0f172a !important;
 }
 
-/* NAVBAR, ABOUT, CONTACT, FOOTER */
+/* ==================================================
+   8. NAVBAR, ABOUT, CONTACT, FOOTER
+   ================================================== */
 
-/* Navbar */
 header {
   background: rgba(255, 255, 255, 0.7) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .dark header {
   background: rgba(15, 23, 42, 0.85) !important;
 }
 
-/* About - glass effect */
 #about .rounded-3xl {
   background: rgba(255, 255, 255, 0.7) !important;
   backdrop-filter: blur(14px) !important;
@@ -511,7 +397,6 @@ header {
   background: rgba(15, 23, 42, 0.7) !important;
 }
 
-/* Contact - glass effect */
 #contact .rounded-3xl {
   background: rgba(255, 255, 255, 0.7) !important;
   backdrop-filter: blur(14px) !important;
@@ -522,7 +407,6 @@ header {
   background: rgba(15, 23, 42, 0.7) !important;
 }
 
-/* Footer */
 footer {
   background: rgba(255, 255, 255, 0.3) !important;
   backdrop-filter: blur(8px) !important;
@@ -533,28 +417,39 @@ footer {
   background: rgba(15, 23, 42, 0.3) !important;
 }
 
-/* Language toggle no modo escuro */
 .dark .language-toggle-container .glass {
   background: rgba(15, 23, 42, 0.8) !important;
 }
 
-/* ABOUT */
+/* ==================================================
+   9. ABOUT CARD - CORREÇÃO
+   ================================================== */
 
-/* Texto do About - modo escuro (destacado como antes) */
+/* Modo claro */
+html:not(.dark) .about-card {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Modo escuro */
+html.dark .about-card {
+  background-color: #0f172a !important;
+  border-color: #1e293b !important;
+}
+
+/* Texto do About */
 .dark .about-text p {
   color: #e2e8f0 !important;
   font-weight: 500 !important;
   line-height: 1.7 !important;
 }
 
-/* Texto do About - modo claro */
 html:not(.dark) .about-text p {
   color: #334155 !important;
   font-weight: 500 !important;
   line-height: 1.7 !important;
 }
 
-/* Espaçamento entre parágrafos */
 .about-text p {
   margin-bottom: 1rem;
 }
@@ -563,7 +458,9 @@ html:not(.dark) .about-text p {
   margin-bottom: 0;
 }
 
-/* SCROLL COM OFFSET (títulos visíveis) */
+/* ==================================================
+   10. SCROLL COM OFFSET
+   ================================================== */
 
 section[id] {
   scroll-margin-top: 100px;
@@ -575,9 +472,10 @@ section[id] {
   }
 }
 
-/* RESPONSIVIDADE - Mobile */
+/* ==================================================
+   11. RESPONSIVIDADE - MOBILE
+   ================================================== */
 
-/* Suporte para safe-area (iPhone notch) */
 @supports (padding: max(0px)) {
   body {
     padding-left: env(safe-area-inset-left);
@@ -585,26 +483,216 @@ section[id] {
   }
 }
 
-/* Botão de idioma em mobile */
 @media (max-width: 480px) {
   .language-toggle-container {
     bottom: 20px;
     right: 20px;
   }
-  
-  .language-toggle-container .glass {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+}
+
+/* ==================================================
+   12. SCROLL MOBILE
+   ================================================== */
+
+@media (max-width: 768px) {
+  /* Força scroll nativo em html e body */
+  html, body {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    height: auto !important;
+    min-height: 100% !important;
+    position: static !important;
+    -webkit-overflow-scrolling: auto !important;
+    touch-action: auto !important;
+  }
+
+  /* Remove restrições do #root */
+  #root {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 100% !important;
+    position: static !important;
+    touch-action: auto !important;
+  }
+
+  /* Header sem backdrop-filter para evitar bug de scroll */
+  header {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: #ffffff !important;
+  }
+
+  .dark header {
+    background: #020617 !important;
+  }
+
+  /* Menu mobile sem blur */
+  header > div,
+  header nav,
+  .animate-slide-down {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Glass sem blur */
+  .glass {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* About card no mobile */
+  html:not(.dark) .about-card {
+    background-color: #ffffff !important;
+    border-color: #e2e8f0 !important;
+  }
+
+  html.dark .about-card {
+    background-color: #0f172a !important;
+    border-color: #1e293b !important;
+  }
+
+  /* About e Contact no mobile */
+  .dark #about .rounded-3xl,
+  .dark #contact .rounded-3xl {
+    background: #0f172a !important;
+    border: 1px solid #1e293b !important;
+  }
+
+  html:not(.dark) #about .rounded-3xl,
+  html:not(.dark) #contact .rounded-3xl {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+
+  /* Glass no mobile */
+  .dark .glass {
+    background: #0f172a !important;
+    border: 1px solid #1e293b !important;
+  }
+
+  html:not(.dark) .glass {
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+
+  /* Cards no modo escuro */
+  .dark .card-solid {
+    background: #0f172a !important;
+  }
+
+  .dark .card-header {
+    background: rgba(2, 6, 23, 0.5) !important;
+  }
+
+  /* Footer sem blur */
+  footer {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Botão de idioma sem blur */
+  .language-toggle-container .glass,
+  .language-toggle-container button {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Main sem bloqueio */
+  main {
+    overflow: visible !important;
+    touch-action: auto !important;
+  }
+
+  /* AnimatedSection */
+  .motion-div,
+  [style*="overflow: hidden"] {
+    overflow: visible !important;
   }
 }
 
-/* Touch devices */
-@media (hover: none) {
-  .language-toggle-container .group-hover\:opacity-100 {
-    opacity: 0 !important;
+/* ==================================================
+   13. BRILHO GIRATORIO NOS BOTOES
+   ================================================== */
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.glow-wrapper {
+  position: relative;
+  display: inline-flex;
+  border-radius: 1rem;
+  padding: 3px;
+}
+
+/* Anel externo com brilho */
+.glow-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0deg,
+    #22d3ee 90deg,
+    #ffffff 180deg,
+    #06b6d4 270deg,
+    transparent 360deg
+  );
+  animation: rotate-glow 3s linear infinite;
+  z-index: 0;
+}
+
+/* Sombra luminosa difusa atras do anel */
+.glow-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0deg,
+    #22d3ee 90deg,
+    #ffffff 180deg,
+    #06b6d4 270deg,
+    transparent 360deg
+  );
+  animation: rotate-glow 3s linear infinite;
+  filter: blur(10px);
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.glow-wrapper > button {
+  position: relative;
+  z-index: 1;
+  border-radius: calc(1rem - 3px);
+}
+
+.glow-wrapper:hover::before,
+.glow-wrapper:hover::after {
+  animation-duration: 1.5s;
+}
+
+.glow-wrapper:hover::after {
+  opacity: 1;
+}
+
+@keyframes rotate-glow {
+  to {
+    --angle: 360deg;
   }
-  
-  .language-toggle-container .group-hover\:text-cyan-300 {
-    color: #22d3ee !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow-wrapper::before,
+  .glow-wrapper::after {
+    animation: none;
   }
+}
+.glow-wrapper::before {
+  animation: rotate-glow 4s linear infinite !important;
+  transform: rotate(0deg) !important;
 }

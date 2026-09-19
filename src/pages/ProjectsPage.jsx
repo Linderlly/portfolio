@@ -6,9 +6,9 @@
  * @author Linderlly Santana
  */
 
-import { useEffect, useContext } from 'react'
+import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { FaArrowLeft, FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
+import { FaArrowLeft } from 'react-icons/fa'
 import { ThemeContext } from '../context/ThemeContext'
 import { useLanguage } from '../context/LanguageContext'
 import AnimatedSection from '../components/AnimatedSection'
@@ -23,10 +23,6 @@ export default function ProjectsPage() {
   const { t } = useLanguage()
   const navigate = useNavigate()
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' })
-  }, [])
-
   const handleGoBack = () => {
     navigate('/')
   }
@@ -34,7 +30,7 @@ export default function ProjectsPage() {
   return (
     <div
       className={`
-        min-h-screen flex flex-col transition-all duration-500
+        min-h-screen transition-all duration-500
         ${darkMode ? 'bg-slate-950 text-white' : 'bg-slate-50 text-slate-900'}
       `}
     >
@@ -81,7 +77,7 @@ export default function ProjectsPage() {
       <div className="h-20 md:h-24" aria-hidden="true" />
 
       {/* Conteúdo */}
-      <main className="flex-1 pb-16 px-4 md:px-6">
+      <main className="pb-16 px-4 md:px-6">
         <div className="container-custom max-w-7xl">
 
           {/* Título */}

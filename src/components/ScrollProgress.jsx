@@ -1,6 +1,5 @@
 /**
- * Barra de progresso de leitura
- * Mostra quanto da página foi lida com uma barra colorida no topo
+ * ScrollProgress.jsx - Barra de progresso de leitura
  * 
  * @component
  * @author Linderlly Santana
@@ -19,7 +18,6 @@ export default function ScrollProgress() {
       setProgress(scrollPercent)
     }
 
-    // Calcula o progresso na primeira renderização
     handleScroll()
 
     window.addEventListener('scroll', handleScroll, { passive: true })

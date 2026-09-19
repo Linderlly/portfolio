@@ -50,21 +50,28 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20)
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  // Bloqueia scroll quando o menu mobile está aberto
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = ''
     }
+
     return () => {
       document.body.style.overflow = ''
     }
   }, [menuOpen])
+
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = ''
+      document.documentElement.style.overflow = ''
+    }
+  }, [])
 
   const closeMenu = () => setMenuOpen(false)
 
@@ -159,7 +166,6 @@ export default function Navbar() {
           backdrop-blur-xl
           border-t border-slate-200/50 dark:border-slate-800/50
           animate-slide-down
-          overflow-hidden
         ">
           <ul className="flex flex-col items-center gap-1 py-6 px-4">
             {NAV_LINKS.map((link, index) => (
