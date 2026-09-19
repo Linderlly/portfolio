@@ -282,26 +282,27 @@ Identifying and resolving hardware, software, and network problems;`},highlights
                         px-2.5 py-1 text-[10px] md:text-xs\r
                         text-slate-500 dark:text-slate-400\r
                         font-medium\r
-                      `,children:[`+`,e.technologies.length-3]})]})]})},e.id)})}),(0,k.jsx)(`div`,{className:`h-16 md:h-24`,"aria-hidden":`true`}),(0,k.jsx)(xm,{direction:`up`,delay:.4,children:(0,k.jsx)(`div`,{className:`flex justify-center`,children:(0,k.jsxs)(`button`,{onClick:()=>{n(`/experiencias`)},className:`\r
-                group\r
-                inline-flex items-center justify-center\r
-                gap-3\r
-                h-12 md:h-14\r
-                px-6 md:px-8\r
-                bg-cyan-500 hover:bg-cyan-400\r
-                text-white font-semibold\r
-                text-sm md:text-base\r
-                rounded-2xl\r
-                shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50\r
-                transition-all duration-300\r
-                hover:scale-105 hover:-translate-y-1\r
-                whitespace-nowrap\r
-                leading-none\r
-              `,children:[(0,k.jsx)(`span`,{children:e(`experiences.viewAll`)}),(0,k.jsx)(sm,{className:`\r
-                text-sm md:text-base\r
-                transition-transform duration-300\r
-                group-hover:translate-x-1\r
-              `})]})})}),(0,k.jsx)(`div`,{className:`h-16 md:h-24`,"aria-hidden":`true`})]})})}var Am=[{id:1,titleKey:`projectsData.0.title`,descriptionKey:`projectsData.0.description`,image:`/portfolio/assets/quiz-Dd2BzUhv.png`,link:`https://linderlly.github.io/site-educacional/`,tech:[`HTML`,`CSS`,`JavaScript`,`Firebase`],category:`web`,featured:!0},{id:2,titleKey:`projectsData.1.title`,descriptionKey:`projectsData.1.description`,image:`/portfolio/assets/ecommerce-D--a7ozP.png`,link:`https://linderlly.github.io/ecommerce/#/`,tech:[`Vue.js`,`TypeScript`,`Tailwind`],category:`web`,featured:!0},{id:3,titleKey:`projectsData.2.title`,descriptionKey:`projectsData.2.description`,image:`/portfolio/assets/memorygame-DxTkC-hn.png`,link:`https://linderlly.github.io/memorygame/`,tech:[`JavaScript`,`CSS`,`HTML5`],category:`web`,featured:!0},{id:4,titleKey:`projectsData.3.title`,descriptionKey:`projectsData.3.description`,image:`/portfolio/assets/gerenciador_alunos-DEaFAIVP.png`,link:`https://github.com/Linderlly/gerenciador-alunos`,tech:[`React Native`,`Firebase`,`Expo`],category:`mobile`,featured:!1},{id:5,titleKey:`projectsData.4.title`,descriptionKey:`projectsData.4.description`,image:`/portfolio/assets/gerenciador_tarefas-BApAFdfu.png`,link:`https://github.com/Linderlly/gerenciador-tarefas`,tech:[`Flutter`,`Firebase`,`Dart`],category:`mobile`,featured:!1},{id:6,titleKey:`projectsData.5.title`,descriptionKey:`projectsData.5.description`,image:`/portfolio/assets/campeonato_manager-CF9077QK.png`,link:`https://linderlly.github.io/campeonato_manager/`,tech:[`React Native`,`JavaScript`,`Vite`],category:`web`,featured:!1}];function jm(){let{t:e}=hr(),t=Et(),n=Am.slice(0,3);return(0,k.jsx)(`section`,{id:`projects`,className:`px-4 md:px-6 py-10 md:py-16 scroll-mt-24`,children:(0,k.jsxs)(`div`,{className:`container-custom`,children:[(0,k.jsx)(xm,{direction:`up`,delay:.1,children:(0,k.jsxs)(`div`,{className:`text-center mb-10 md:mb-14`,children:[(0,k.jsx)(`h2`,{className:`\r
+                      `,children:[`+`,e.technologies.length-3]})]})]})},e.id)})}),(0,k.jsx)(`div`,{className:`h-16 md:h-24`,"aria-hidden":`true`}),(0,k.jsx)(xm,{direction:`up`,delay:.4,children:(0,k.jsx)(`div`,{className:`flex justify-center mt-20 md:mt-28 mb-8 md:mb-12`,children:(0,k.jsx)(`div`,{className:`glow-wrapper`,children:(0,k.jsxs)(`button`,{onClick:()=>{n(`/experiencias`)},className:`\r
+                  group\r
+                  relative\r
+                  inline-flex items-center justify-center\r
+                  gap-3\r
+                  h-12 md:h-14\r
+                  w-64 md:w-72\r
+                  bg-cyan-500 hover:bg-cyan-400\r
+                  text-white font-semibold\r
+                  text-sm md:text-base\r
+                  rounded-2xl\r
+                  shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50\r
+                  transition-all duration-300\r
+                  hover:scale-105 hover:-translate-y-1\r
+                  whitespace-nowrap\r
+                  leading-none\r
+                `,children:[(0,k.jsx)(`span`,{children:e(`experiences.viewAll`)}),(0,k.jsx)(sm,{className:`\r
+                  text-sm md:text-base\r
+                  transition-transform duration-300\r
+                  group-hover:translate-x-1\r
+                `})]})})})}),(0,k.jsx)(`div`,{className:`h-16 md:h-24`,"aria-hidden":`true`})]})})}var Am=[{id:1,titleKey:`projectsData.0.title`,descriptionKey:`projectsData.0.description`,image:`/portfolio/assets/quiz-Dd2BzUhv.png`,link:`https://linderlly.github.io/site-educacional/`,tech:[`HTML`,`CSS`,`JavaScript`,`Firebase`],category:`web`,featured:!0},{id:2,titleKey:`projectsData.1.title`,descriptionKey:`projectsData.1.description`,image:`/portfolio/assets/ecommerce-D--a7ozP.png`,link:`https://linderlly.github.io/ecommerce/#/`,tech:[`Vue.js`,`TypeScript`,`Tailwind`],category:`web`,featured:!0},{id:3,titleKey:`projectsData.2.title`,descriptionKey:`projectsData.2.description`,image:`/portfolio/assets/memorygame-DxTkC-hn.png`,link:`https://linderlly.github.io/memorygame/`,tech:[`JavaScript`,`CSS`,`HTML5`],category:`web`,featured:!0},{id:4,titleKey:`projectsData.3.title`,descriptionKey:`projectsData.3.description`,image:`/portfolio/assets/gerenciador_alunos-DEaFAIVP.png`,link:`https://github.com/Linderlly/gerenciador-alunos`,tech:[`React Native`,`Firebase`,`Expo`],category:`mobile`,featured:!1},{id:5,titleKey:`projectsData.4.title`,descriptionKey:`projectsData.4.description`,image:`/portfolio/assets/gerenciador_tarefas-BApAFdfu.png`,link:`https://github.com/Linderlly/gerenciador-tarefas`,tech:[`Flutter`,`Firebase`,`Dart`],category:`mobile`,featured:!1},{id:6,titleKey:`projectsData.5.title`,descriptionKey:`projectsData.5.description`,image:`/portfolio/assets/campeonato_manager-CF9077QK.png`,link:`https://linderlly.github.io/campeonato_manager/`,tech:[`React Native`,`JavaScript`,`Vite`],category:`web`,featured:!1}];function jm(){let{t:e}=hr(),t=Et(),n=Am.slice(0,3);return(0,k.jsx)(`section`,{id:`projects`,className:`px-4 md:px-6 py-10 md:py-16 scroll-mt-24`,children:(0,k.jsxs)(`div`,{className:`container-custom`,children:[(0,k.jsx)(xm,{direction:`up`,delay:.1,children:(0,k.jsxs)(`div`,{className:`text-center mb-10 md:mb-14`,children:[(0,k.jsx)(`h2`,{className:`\r
               font-bold\r
               text-3xl md:text-5xl\r
               mb-4\r
@@ -360,26 +361,27 @@ Identifying and resolving hardware, software, and network problems;`},highlights
                     text-xs md:text-sm font-semibold\r
                     text-white\r
                     transition-all duration-300\r
-                  `,children:e(`projects.viewProject`)})]})]})},t.id))}),(0,k.jsx)(`div`,{className:`h-16 md:h-24`,"aria-hidden":`true`}),(0,k.jsx)(xm,{direction:`up`,delay:.4,children:(0,k.jsx)(`div`,{className:`flex justify-center mt-20 md:mt-28 mb-8 md:mb-12`,children:(0,k.jsxs)(`button`,{onClick:()=>{t(`/projetos`)},className:`\r
-                group\r
-                inline-flex items-center justify-center\r
-                gap-3\r
-                h-12 md:h-14\r
-                px-6 md:px-8\r
-                bg-cyan-500 hover:bg-cyan-400\r
-                text-white font-semibold\r
-                text-sm md:text-base\r
-                rounded-2xl\r
-                shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50\r
-                transition-all duration-300\r
-                hover:scale-105 hover:-translate-y-1\r
-                whitespace-nowrap\r
-                leading-none\r
-              `,children:[(0,k.jsx)(`span`,{children:e(`projects.viewAll`)}),(0,k.jsx)(sm,{className:`\r
-                text-sm md:text-base\r
-                transition-transform duration-300\r
-                group-hover:translate-x-1\r
-              `})]})})}),(0,k.jsx)(`div`,{className:`h-16 md:h-24`,"aria-hidden":`true`})]})})}var Mm=[{id:1,titleKey:`certificatesData.0.title`,descriptionKey:`certificatesData.0.description`,image:`/portfolio/assets/certificado1-De1WlRc6.png`,pdf:`/portfolio/assets/certificado1-Dd184tpo.pdf`},{id:2,titleKey:`certificatesData.1.title`,descriptionKey:`certificatesData.1.description`,image:`/portfolio/assets/certificado2-btipgBom.png`,pdf:`/portfolio/assets/certificado2-wX9ZDl30.pdf`},{id:3,titleKey:`certificatesData.2.title`,descriptionKey:`certificatesData.2.description`,image:`/portfolio/assets/certificado3-B87NkKpS.png`,pdf:`/portfolio/assets/certificado3-By3N7_rE.pdf`},{id:4,titleKey:`certificatesData.3.title`,descriptionKey:`certificatesData.3.description`,image:`/portfolio/assets/certificado4-DHyW9hAP.png`,pdf:`/portfolio/assets/certificado4-DQILR1KU.pdf`},{id:5,titleKey:`certificatesData.4.title`,descriptionKey:`certificatesData.4.description`,image:`/portfolio/assets/C_sharp_basico-qyHO6upf.png`,pdf:`/portfolio/assets/C_sharp_basico-66PQ844w.pdf`},{id:6,titleKey:`certificatesData.5.title`,descriptionKey:`certificatesData.5.description`,image:`/portfolio/assets/C_sharp_intermediario-BXEcIzkR.png`,pdf:`/portfolio/assets/C_sharp_intermediario-CCjfDXFV.pdf`},{id:7,titleKey:`certificatesData.6.title`,descriptionKey:`certificatesData.6.description`,image:`/portfolio/assets/C_sharp_av1-CiXNVMO4.png`,pdf:`/portfolio/assets/C_sharp_av1-BiqQ4dPB.pdf`},{id:8,titleKey:`certificatesData.7.title`,descriptionKey:`certificatesData.7.description`,image:`/portfolio/assets/C_sharp_av2-BsrvDx1V.png`,pdf:`/portfolio/assets/C_sharp_av2-CqhqafvS.pdf`},{id:9,titleKey:`certificatesData.8.title`,descriptionKey:`certificatesData.8.description`,image:`/portfolio/assets/angular-C9r2FEPL.png`,pdf:`/portfolio/assets/angular-DIYNQvbd.pdf`},{id:10,titleKey:`certificatesData.9.title`,descriptionKey:`certificatesData.9.description`,image:`/portfolio/assets/ionic-5X0KEep2.png`,pdf:`/portfolio/assets/ionic-CsBUMKVx.pdf`},{id:11,titleKey:`certificatesData.10.title`,descriptionKey:`certificatesData.10.description`,image:`/portfolio/assets/cordova-YNvv85A4.png`,pdf:`/portfolio/assets/cordova-D5jfnsuw.pdf`},{id:12,titleKey:`certificatesData.11.title`,descriptionKey:`certificatesData.11.description`,image:`/portfolio/assets/excel-6gNN2oSg.png`,pdf:`/portfolio/assets/excel-Dd96Dhjn.pdf`},{id:13,titleKey:`certificatesData.12.title`,descriptionKey:`certificatesData.12.description`,image:`/portfolio/assets/Excel_Av1-CXiGKex6.png`,pdf:`/portfolio/assets/Excel_Av1-BHH0D5Xh.pdf`},{id:14,titleKey:`certificatesData.13.title`,descriptionKey:`certificatesData.13.description`,image:`/portfolio/assets/Excel_Av2-B3KVKg_W.png`,pdf:`/portfolio/assets/Excel_Av2-DyDxBmSM.pdf`},{id:15,titleKey:`certificatesData.14.title`,descriptionKey:`certificatesData.14.description`,image:`/portfolio/assets/games-CjbjAEiQ.png`,pdf:`/portfolio/assets/games-BaTeYPJr.pdf`},{id:16,titleKey:`certificatesData.15.title`,descriptionKey:`certificatesData.15.description`,image:`/portfolio/assets/IA-6sP4jOkQ.png`,pdf:`/portfolio/assets/IA-Bx6SwStw.pdf`},{id:17,titleKey:`certificatesData.16.title`,descriptionKey:`certificatesData.16.description`,image:`/portfolio/assets/logica-B1guUbNh.png`,pdf:`/portfolio/assets/logica-DawVjDXs.pdf`},{id:18,titleKey:`certificatesData.17.title`,descriptionKey:`certificatesData.17.description`,image:`/portfolio/assets/manutencao_moveis-DT98nUNU.png`,pdf:`/portfolio/assets/manutencao_moveis-BNqV2TZo.pdf`},{id:19,titleKey:`certificatesData.18.title`,descriptionKey:`certificatesData.18.description`,image:`/portfolio/assets/PowerBI-D5OB3hg2.png`,pdf:`/portfolio/assets/PowerBI-ijtXGOvA.pdf`},{id:20,titleKey:`certificatesData.19.title`,descriptionKey:`certificatesData.19.description`,image:`/portfolio/assets/python-Cy8JEtbD.png`,pdf:`/portfolio/assets/python-BjF1t7Qs.pdf`},{id:21,titleKey:`certificatesData.20.title`,descriptionKey:`certificatesData.20.description`,image:`/portfolio/assets/Seguranca-K45logcy.png`,pdf:`/portfolio/assets/Seguranca-CcrPYbN4.pdf`},{id:22,titleKey:`certificatesData.21.title`,descriptionKey:`certificatesData.21.description`,image:`/portfolio/assets/SQL-CrbG0qD5.png`,pdf:`/portfolio/assets/SQL-LfQax7Zh.pdf`},{id:23,titleKey:`certificatesData.22.title`,descriptionKey:`certificatesData.22.description`,image:`/portfolio/assets/trabalhoEQ-D_DHwvbk.png`,pdf:`/portfolio/assets/trabalhoEQ-D-2W6W_M.pdf`},{id:24,titleKey:`certificatesData.23.title`,descriptionKey:`certificatesData.23.description`,image:`/portfolio/assets/inovatech-CupJ68zl.png`,pdf:`/portfolio/assets/inovatech-D_A9F43-.pdf`}];function Nm(){let{t:e}=hr(),t=Et(),n=Mm.slice(0,3);return(0,k.jsx)(`section`,{id:`certificates`,className:`px-4 md:px-6 py-10 md:py-16 scroll-mt-24`,children:(0,k.jsxs)(`div`,{className:`container-custom`,children:[(0,k.jsx)(xm,{direction:`up`,delay:.1,children:(0,k.jsxs)(`div`,{className:`text-center mb-10 md:mb-14`,children:[(0,k.jsx)(`h2`,{className:`\r
+                  `,children:e(`projects.viewProject`)})]})]})},t.id))}),(0,k.jsx)(`div`,{className:`h-16 md:h-24`,"aria-hidden":`true`}),(0,k.jsx)(xm,{direction:`up`,delay:.4,children:(0,k.jsx)(`div`,{className:`flex justify-center mt-20 md:mt-28 mb-8 md:mb-12`,children:(0,k.jsx)(`div`,{className:`glow-wrapper`,children:(0,k.jsxs)(`button`,{onClick:()=>{t(`/projetos`)},className:`\r
+                  group\r
+                  relative\r
+                  inline-flex items-center justify-center\r
+                  gap-3\r
+                  h-12 md:h-14\r
+                  w-64 md:w-72\r
+                  bg-cyan-500 hover:bg-cyan-400\r
+                  text-white font-semibold\r
+                  text-sm md:text-base\r
+                  rounded-2xl\r
+                  shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50\r
+                  transition-all duration-300\r
+                  hover:scale-105 hover:-translate-y-1\r
+                  whitespace-nowrap\r
+                  leading-none\r
+                `,children:[(0,k.jsx)(`span`,{children:e(`projects.viewAll`)}),(0,k.jsx)(sm,{className:`\r
+                  text-sm md:text-base\r
+                  transition-transform duration-300\r
+                  group-hover:translate-x-1\r
+                `})]})})})}),(0,k.jsx)(`div`,{className:`h-16 md:h-24`,"aria-hidden":`true`})]})})}var Mm=[{id:1,titleKey:`certificatesData.0.title`,descriptionKey:`certificatesData.0.description`,image:`/portfolio/assets/certificado1-De1WlRc6.png`,pdf:`/portfolio/assets/certificado1-Dd184tpo.pdf`},{id:2,titleKey:`certificatesData.1.title`,descriptionKey:`certificatesData.1.description`,image:`/portfolio/assets/certificado2-btipgBom.png`,pdf:`/portfolio/assets/certificado2-wX9ZDl30.pdf`},{id:3,titleKey:`certificatesData.2.title`,descriptionKey:`certificatesData.2.description`,image:`/portfolio/assets/certificado3-B87NkKpS.png`,pdf:`/portfolio/assets/certificado3-By3N7_rE.pdf`},{id:4,titleKey:`certificatesData.3.title`,descriptionKey:`certificatesData.3.description`,image:`/portfolio/assets/certificado4-DHyW9hAP.png`,pdf:`/portfolio/assets/certificado4-DQILR1KU.pdf`},{id:5,titleKey:`certificatesData.4.title`,descriptionKey:`certificatesData.4.description`,image:`/portfolio/assets/C_sharp_basico-qyHO6upf.png`,pdf:`/portfolio/assets/C_sharp_basico-66PQ844w.pdf`},{id:6,titleKey:`certificatesData.5.title`,descriptionKey:`certificatesData.5.description`,image:`/portfolio/assets/C_sharp_intermediario-BXEcIzkR.png`,pdf:`/portfolio/assets/C_sharp_intermediario-CCjfDXFV.pdf`},{id:7,titleKey:`certificatesData.6.title`,descriptionKey:`certificatesData.6.description`,image:`/portfolio/assets/C_sharp_av1-CiXNVMO4.png`,pdf:`/portfolio/assets/C_sharp_av1-BiqQ4dPB.pdf`},{id:8,titleKey:`certificatesData.7.title`,descriptionKey:`certificatesData.7.description`,image:`/portfolio/assets/C_sharp_av2-BsrvDx1V.png`,pdf:`/portfolio/assets/C_sharp_av2-CqhqafvS.pdf`},{id:9,titleKey:`certificatesData.8.title`,descriptionKey:`certificatesData.8.description`,image:`/portfolio/assets/angular-C9r2FEPL.png`,pdf:`/portfolio/assets/angular-DIYNQvbd.pdf`},{id:10,titleKey:`certificatesData.9.title`,descriptionKey:`certificatesData.9.description`,image:`/portfolio/assets/ionic-5X0KEep2.png`,pdf:`/portfolio/assets/ionic-CsBUMKVx.pdf`},{id:11,titleKey:`certificatesData.10.title`,descriptionKey:`certificatesData.10.description`,image:`/portfolio/assets/cordova-YNvv85A4.png`,pdf:`/portfolio/assets/cordova-D5jfnsuw.pdf`},{id:12,titleKey:`certificatesData.11.title`,descriptionKey:`certificatesData.11.description`,image:`/portfolio/assets/excel-6gNN2oSg.png`,pdf:`/portfolio/assets/excel-Dd96Dhjn.pdf`},{id:13,titleKey:`certificatesData.12.title`,descriptionKey:`certificatesData.12.description`,image:`/portfolio/assets/Excel_Av1-CXiGKex6.png`,pdf:`/portfolio/assets/Excel_Av1-BHH0D5Xh.pdf`},{id:14,titleKey:`certificatesData.13.title`,descriptionKey:`certificatesData.13.description`,image:`/portfolio/assets/Excel_Av2-B3KVKg_W.png`,pdf:`/portfolio/assets/Excel_Av2-DyDxBmSM.pdf`},{id:15,titleKey:`certificatesData.14.title`,descriptionKey:`certificatesData.14.description`,image:`/portfolio/assets/games-CjbjAEiQ.png`,pdf:`/portfolio/assets/games-BaTeYPJr.pdf`},{id:16,titleKey:`certificatesData.15.title`,descriptionKey:`certificatesData.15.description`,image:`/portfolio/assets/IA-6sP4jOkQ.png`,pdf:`/portfolio/assets/IA-Bx6SwStw.pdf`},{id:17,titleKey:`certificatesData.16.title`,descriptionKey:`certificatesData.16.description`,image:`/portfolio/assets/logica-B1guUbNh.png`,pdf:`/portfolio/assets/logica-DawVjDXs.pdf`},{id:18,titleKey:`certificatesData.17.title`,descriptionKey:`certificatesData.17.description`,image:`/portfolio/assets/manutencao_moveis-DT98nUNU.png`,pdf:`/portfolio/assets/manutencao_moveis-BNqV2TZo.pdf`},{id:19,titleKey:`certificatesData.18.title`,descriptionKey:`certificatesData.18.description`,image:`/portfolio/assets/PowerBI-D5OB3hg2.png`,pdf:`/portfolio/assets/PowerBI-ijtXGOvA.pdf`},{id:20,titleKey:`certificatesData.19.title`,descriptionKey:`certificatesData.19.description`,image:`/portfolio/assets/python-Cy8JEtbD.png`,pdf:`/portfolio/assets/python-BjF1t7Qs.pdf`},{id:21,titleKey:`certificatesData.20.title`,descriptionKey:`certificatesData.20.description`,image:`/portfolio/assets/Seguranca-K45logcy.png`,pdf:`/portfolio/assets/Seguranca-CcrPYbN4.pdf`},{id:22,titleKey:`certificatesData.21.title`,descriptionKey:`certificatesData.21.description`,image:`/portfolio/assets/SQL-CrbG0qD5.png`,pdf:`/portfolio/assets/SQL-LfQax7Zh.pdf`},{id:23,titleKey:`certificatesData.22.title`,descriptionKey:`certificatesData.22.description`,image:`/portfolio/assets/trabalhoEQ-D_DHwvbk.png`,pdf:`/portfolio/assets/trabalhoEQ-D-2W6W_M.pdf`},{id:24,titleKey:`certificatesData.23.title`,descriptionKey:`certificatesData.23.description`,image:`/portfolio/assets/inovatech-CupJ68zl.png`,pdf:`/portfolio/assets/inovatech-D_A9F43-.pdf`}];function Nm(){let{t:e}=hr(),t=Et(),n=Mm.slice(0,3);return(0,k.jsx)(`section`,{id:`certificates`,className:`px-4 md:px-6 py-10 md:py-16 scroll-mt-24`,children:(0,k.jsxs)(`div`,{className:`container-custom`,children:[(0,k.jsx)(xm,{direction:`up`,delay:.1,children:(0,k.jsxs)(`div`,{className:`text-center mb-10 md:mb-14`,children:[(0,k.jsx)(`h2`,{className:`\r
               font-bold\r
               text-3xl md:text-5xl\r
               mb-4\r
@@ -446,26 +448,27 @@ Identifying and resolving hardware, software, and network problems;`},highlights
                         py-2 rounded-lg\r
                         text-xs font-semibold\r
                         transition-all hover:scale-105\r
-                      `,children:[(0,k.jsx)($p,{}),e(`certificates.view`)]})]})]})]})},t.id))}),(0,k.jsx)(`div`,{className:`h-16 md:h-24`,"aria-hidden":`true`}),(0,k.jsx)(xm,{direction:`up`,delay:.4,children:(0,k.jsx)(`div`,{className:`flex justify-center`,children:(0,k.jsxs)(`button`,{onClick:()=>{t(`/certificados`)},className:`\r
-                group\r
-                inline-flex items-center justify-center\r
-                gap-3\r
-                h-12 md:h-14\r
-                px-6 md:px-8\r
-                bg-cyan-500 hover:bg-cyan-400\r
-                text-white font-semibold\r
-                text-sm md:text-base\r
-                rounded-2xl\r
-                shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50\r
-                transition-all duration-300\r
-                hover:scale-105 hover:-translate-y-1\r
-                whitespace-nowrap\r
-                leading-none\r
-              `,children:[(0,k.jsx)(`span`,{children:e(`certificates.viewAll`)}),(0,k.jsx)(sm,{className:`\r
-                text-sm md:text-base\r
-                transition-transform duration-300\r
-                group-hover:translate-x-1\r
-              `})]})})}),(0,k.jsx)(`div`,{className:`h-16 md:h-24`,"aria-hidden":`true`})]})})}function Pm(){let{t:e}=hr(),t=[{id:`email`,href:`mailto:linderllysantana22@gmail.com`,icon:em,label:e(`contact.email`),color:`bg-cyan-500 hover:bg-cyan-400 text-white shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50`},{id:`linkedin`,href:`https://www.linkedin.com/in/linderlly-santana/`,icon:Up,label:e(`contact.linkedin`),color:`bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-white`},{id:`github`,href:`https://github.com/Linderlly`,icon:Wp,label:e(`contact.github`),color:`bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-white`}];return(0,k.jsx)(`section`,{id:`contact`,className:`px-4 md:px-5 py-10 md:py-16 flex justify-center scroll-mt-24`,children:(0,k.jsx)(`div`,{className:`w-full max-w-6xl`,children:(0,k.jsxs)(`div`,{className:`\r
+                      `,children:[(0,k.jsx)($p,{}),e(`certificates.view`)]})]})]})]})},t.id))}),(0,k.jsx)(`div`,{className:`h-16 md:h-24`,"aria-hidden":`true`}),(0,k.jsx)(xm,{direction:`up`,delay:.4,children:(0,k.jsx)(`div`,{className:`flex justify-center mt-20 md:mt-28 mb-8 md:mb-12`,children:(0,k.jsx)(`div`,{className:`glow-wrapper`,children:(0,k.jsxs)(`button`,{onClick:()=>{t(`/certificados`)},className:`\r
+                  group\r
+                  relative\r
+                  inline-flex items-center justify-center\r
+                  gap-3\r
+                  h-12 md:h-14\r
+                  w-64 md:w-72\r
+                  bg-cyan-500 hover:bg-cyan-400\r
+                  text-white font-semibold\r
+                  text-sm md:text-base\r
+                  rounded-2xl\r
+                  shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50\r
+                  transition-all duration-300\r
+                  hover:scale-105 hover:-translate-y-1\r
+                  whitespace-nowrap\r
+                  leading-none\r
+                `,children:[(0,k.jsx)(`span`,{children:e(`certificates.viewAll`)}),(0,k.jsx)(sm,{className:`\r
+                  text-sm md:text-base\r
+                  transition-transform duration-300\r
+                  group-hover:translate-x-1\r
+                `})]})})})}),(0,k.jsx)(`div`,{className:`h-16 md:h-24`,"aria-hidden":`true`})]})})}function Pm(){let{t:e}=hr(),t=[{id:`email`,href:`mailto:linderllysantana22@gmail.com`,icon:em,label:e(`contact.email`),color:`bg-cyan-500 hover:bg-cyan-400 text-white shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50`},{id:`linkedin`,href:`https://www.linkedin.com/in/linderlly-santana/`,icon:Up,label:e(`contact.linkedin`),color:`bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-white`},{id:`github`,href:`https://github.com/Linderlly`,icon:Wp,label:e(`contact.github`),color:`bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-white`}];return(0,k.jsx)(`section`,{id:`contact`,className:`px-4 md:px-5 py-10 md:py-16 flex justify-center`,children:(0,k.jsx)(`div`,{className:`w-full max-w-6xl`,children:(0,k.jsxs)(`div`,{className:`\r
           rounded-3xl\r
           p-6 md:p-14\r
           text-center\r
@@ -493,21 +496,21 @@ Identifying and resolving hardware, software, and network problems;`},highlights
             w-full\r
             flex flex-row\r
             justify-center items-center\r
-            gap-3 sm:gap-4 md:gap-5\r
+            gap-3 sm:gap-4\r
           `,children:t.map(({id:e,href:t,icon:n,label:r,color:i})=>(0,k.jsxs)(`a`,{href:t,target:e===`email`?void 0:`_blank`,rel:e===`email`?void 0:`noreferrer`,className:`
                   flex-1 sm:flex-initial
-                  min-w-0 sm:min-w-[140px]
-                  h-14 md:h-16
-                  px-3 sm:px-6 md:px-8
-                  flex items-center justify-center gap-2 md:gap-3
+                  min-w-0 sm:min-w-[110px]
+                  h-11 md:h-12
+                  px-4 sm:px-6
+                  flex items-center justify-center gap-2
                   ${i}
-                  rounded-2xl
-                  font-semibold text-sm md:text-lg
+                  rounded-xl
+                  font-semibold text-xs md:text-sm
                   transition-all duration-300
                   hover:scale-105
-                  hover:-translate-y-1
+                  hover:-translate-y-0.5
                   whitespace-nowrap
-                `,children:[(0,k.jsx)(n,{className:`text-base md:text-xl flex-shrink-0`}),(0,k.jsx)(`span`,{className:`truncate`,children:r})]},e))})]})})})}function Fm(){let{t:e}=hr();return(0,k.jsx)(`footer`,{className:`\r
+                `,children:[(0,k.jsx)(n,{className:`text-sm md:text-base flex-shrink-0`}),(0,k.jsx)(`span`,{className:`truncate`,children:r})]},e))})]})})})}function Fm(){let{t:e}=hr();return(0,k.jsx)(`footer`,{className:`\r
       py-6 md:py-8 \r
       px-4 md:px-6 \r
       border-t border-slate-200/50 dark:border-slate-800/50\r
