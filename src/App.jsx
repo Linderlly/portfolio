@@ -1,12 +1,14 @@
 /**
  * App.jsx - Componente raiz com roteamento
  * 
+ * 
  * @component
  * @author Linderlly Santana
  */
 
 import { useContext, useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { motion } from 'framer-motion'
 import { ThemeContext } from './context/ThemeContext'
 import { LanguageProvider } from './context/LanguageContext'
 
@@ -21,27 +23,28 @@ export default function App() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 500)
+    const timer = setTimeout(() => setLoading(false), 1800)
     return () => clearTimeout(timer)
-  }, [])
-
-  useEffect(() => {
-    document.body.style.overflow = ''
-    document.documentElement.style.overflow = ''
   }, [])
 
   if (loading) return <Loader />
 
   return (
     <LanguageProvider>
-      <BrowserRouter basename="/portfolio">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/experiencias" element={<ExperiencesPage />} />
-          <Route path="/certificados" element={<CertificatesPage />} />
-          <Route path="/projetos" element={<ProjectsPage />} />
-        </Routes>
-      </BrowserRouter>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <BrowserRouter basename="/portfolio">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/experiencias" element={<ExperiencesPage />} />
+            <Route path="/certificados" element={<CertificatesPage />} />
+            <Route path="/projetos" element={<ProjectsPage />} />
+          </Routes>
+        </BrowserRouter>
+      </motion.div>
     </LanguageProvider>
   )
 }
